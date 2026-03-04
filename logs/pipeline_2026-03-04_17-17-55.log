@@ -1,0 +1,793 @@
+2026-03-04 17:17:55 | INFO     | __main__:main:171 - Starting LLM Analysis Pipeline v2 - All Recipes Validation
+2026-03-04 17:17:55 | INFO     | __main__:main:172 - ============================================================
+2026-03-04 17:17:55 | INFO     | llm_pipeline.tweak_extractor:__init__:33 - Initialized TweakExtractor with model: gpt-3.5-turbo
+2026-03-04 17:17:55 | INFO     | llm_pipeline.recipe_modifier:__init__:33 - Initialized RecipeModifier with similarity threshold: 0.7
+2026-03-04 17:17:55 | INFO     | llm_pipeline.enhanced_recipe_generator:__init__:31 - Initialized EnhancedRecipeGenerator v2.0.0
+2026-03-04 17:17:55 | INFO     | llm_pipeline.pipeline:__init__:56 - Initialized LLM Analysis Pipeline v2.0.0
+2026-03-04 17:17:55 | INFO     | llm_pipeline.pipeline:__init__:57 - Output directory: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced
+2026-03-04 17:17:55 | INFO     | __main__:test_all_recipes:120 - Pipeline initialized successfully
+2026-03-04 17:17:55 | INFO     | llm_pipeline.pipeline:process_recipe_directory:246 - Found 15 recipe files to process
+2026-03-04 17:17:55 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:17:55 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_20144_banana-banana-bread.json
+2026-03-04 17:17:55 | INFO     | llm_pipeline.pipeline:parse_reviews_data:109 - No featured tweaks found, falling back to base reviews
+2026-03-04 17:17:55 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Banana Banana Bread — 9 reviews, 5 with modifications
+2026-03-04 17:17:55 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:17:55 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: So I didn't follow the banana part I had five bananas that I used about medium size just so they did...
+2026-03-04 17:17:58 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:17:58 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: A simple recipe. Easy to make. I used the half recipe as I only had 2 bananas. I baked it in a mini ...
+2026-03-04 17:18:01 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:18:01 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: It was very easy to make and my family all loved it! The only thing I changed was I used granulated ...
+2026-03-04 17:18:03 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:18:03 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I added vanilla, cinnamon, a little nutmeg and semisweet chocolate chunks. Perfect...
+2026-03-04 17:18:04 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:18:04 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Came out great. Next time I make I might try and add some all spice or nutmeg and see what that woul...
+2026-03-04 17:18:06 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:18:06 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 9 raw modifications from 5 reviews
+2026-03-04 17:18:06 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 9 raw modifications
+2026-03-04 17:18:12 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:18:12 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2.3333332538605 cups mashed overripe bananas'
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2.3333332538605 cups mashed overripe bananas' with '2 cups mashed bananas' (similarity: 1.00)
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:18:12 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Cannot find 'Stir in eggs and mashed bananas until well blended.' in instructions
+2026-03-04 17:18:12 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 2/5: addition
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 3/5: addition
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 1 edits
+2026-03-04 17:18:12 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='Enjoy!'
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added 'Enjoy your Bananarama Bread!' after 'Enjoy!' (similarity: 1.00)
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:18:12 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find '2.3333332538605 cups mashed overripe bananas' in ingredients
+2026-03-04 17:18:12 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 4/5: quantity_adjustment
+2026-03-04 17:18:12 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find '9x5-inch loaf pan' in instructions
+2026-03-04 17:18:12 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find '60 minutes' in instructions
+2026-03-04 17:18:12 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 5/5: technique_change
+2026-03-04 17:18:12 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 7 ingredients and 7 instructions
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 2 total changes made
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 3 line diffs
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:18:12 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Banana Banana Bread
+2026-03-04 17:18:12 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 2 changes from 2 modifications, 3 line diffs
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Banana Banana Bread (Community Enhanced)
+2026-03-04 17:18:12 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_20144_banana-banana-bread.json
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Banana Banana Bread (Community Enhanced)
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_24059_creamy-rice-pudding.json
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:parse_reviews_data:109 - No featured tweaks found, falling back to base reviews
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Creamy Rice Pudding — 9 reviews, 3 with modifications
+2026-03-04 17:18:12 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:18:12 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: It should be noted to temper the eggs in. I did not, even though I added them at the same time as th...
+2026-03-04 17:18:14 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:18:14 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Followed exactly only using less raisinsINCREDIBLEThat old fashioned comforting taste of simple food...
+2026-03-04 17:18:15 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:18:15 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I decided to make this recipe because the reviews were high and I needed to use up some milk. I serv...
+2026-03-04 17:18:17 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:18:17 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 5 raw modifications from 3 reviews
+2026-03-04 17:18:17 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 5 raw modifications
+2026-03-04 17:18:22 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: quantity_adjustment
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying quantity_adjustment with 1 edits
+2026-03-04 17:18:22 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='0.66666668653488 cup golden raisins'
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '0.66666668653488 cup golden raisins' with '0.5 cup golden raisins' (similarity: 1.00)
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 2/5: addition
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 1 edits
+2026-03-04 17:18:22 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='0.5 teaspoon vanilla extract'
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added '1 teaspoon cinnamon for added flavor' after '0.5 teaspoon vanilla extract' (similarity: 1.00)
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:18:22 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Cannot find 'Off heat, stir in butter and vanilla extract until combined.' in instructions
+2026-03-04 17:18:22 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 3/5: technique_change
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 4/5: addition
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 1 edits
+2026-03-04 17:18:22 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='Serve warm.'
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added 'Sprinkle with cinnamon and other desired toppings before serving.' after 'Serve warm.' (similarity: 1.00)
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 5/5: addition
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 1 edits
+2026-03-04 17:18:22 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='Serve warm.'
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added 'Divide the pudding into two containers for serving and presentation purposes.' after 'Serve warm.' (similarity: 1.00)
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:18:22 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 10 ingredients and 7 instructions
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 4 total changes made
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 5 line diffs
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:18:22 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Creamy Rice Pudding
+2026-03-04 17:18:22 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 4 changes from 4 modifications, 5 line diffs
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Creamy Rice Pudding (Community Enhanced)
+2026-03-04 17:18:22 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_24059_creamy-rice-pudding.json
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Creamy Rice Pudding (Community Enhanced)
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_13434_mama-39-s-italian-wedding-soup.json
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 11 featured tweaks as primary source
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Mama&#39;s Italian Wedding Soup — 11 reviews, 11 with modifications
+2026-03-04 17:18:22 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:18:22 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I replaced the onion with some garlic powder. I also browned the meatballs in a frying pan before pu...
+2026-03-04 17:18:25 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:18:25 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I replaced the onion with some garlic powder. I also browned the meatballs in a frying pan before pu...
+2026-03-04 17:18:28 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:18:28 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Just made this, but with a few changes.....used 2 boxes of Chicken broth and 1 Vegetable broth and c...
+2026-03-04 17:18:31 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:18:31 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I changed very little. I sautéed celery carrot onion and garlic in a bit of butter until slightly br...
+2026-03-04 17:18:34 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:18:34 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I made this in the slow cooker. I put the cooker on high. Added the broth, vegetables, pasta, and ad...
+2026-03-04 17:18:37 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:18:37 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Just added 2-3 T lemon juice to broth. Also added garlic powder to meatballs and cooked the carrots ...
+2026-03-04 17:18:41 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:18:41 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Made this with the same ingredients, but added the pasta 15 minutes before it was done and then the ...
+2026-03-04 17:18:46 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:18:46 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I made this with homemade chicken bone broth and grassfed ground beef, and I didn't have regular bre...
+2026-03-04 17:18:50 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:18:50 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This about the fourth time making this. I always add onion, celery and carrot sautéed in oil with ga...
+2026-03-04 17:18:54 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:18:54 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I made this with a lot of changes, based on what I had available. First, I used a mix about 50% grou...
+2026-03-04 17:19:01 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 6 modification(s) from review
+2026-03-04 17:19:01 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Scrumptious! Like many, I changed the recipe a bit for my taste. I added a bit of Italian seasoning,...
+2026-03-04 17:19:06 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 6 modification(s) from review
+2026-03-04 17:19:06 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 42 raw modifications from 11 reviews
+2026-03-04 17:19:06 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 42 raw modifications
+2026-03-04 17:19:15 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:19:15 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:19:15 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:19:15 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:19:15 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 pound extra-lean ground beef'
+2026-03-04 17:19:15 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 pound extra-lean ground beef' with '1 pound ground turkey' (similarity: 1.00)
+2026-03-04 17:19:15 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Cannot find 'In a large stockpot heat chicken broth to boiling' in instructions
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Cannot find 'Cook, stirring frequently, at a slow boil for 10 minutes' in instructions
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 2/5: technique_change
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Cannot find 'Shape mixture into 3/4-inch balls and set aside.' in instructions
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 3/5: addition
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find 'slow boil for 10 minutes' in instructions
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 4/5: technique_change
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find 'In a large stockpot heat chicken broth to boiling' in instructions
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 5/5: addition
+2026-03-04 17:19:15 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 10 ingredients and 2 instructions
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 1 total changes made
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 2 line diffs
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:19:15 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Mama&#39;s Italian Wedding Soup
+2026-03-04 17:19:15 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 1 changes from 1 modifications, 2 line diffs
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Mama&#39;s Italian Wedding Soup (Community Enhanced)
+2026-03-04 17:19:15 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_13434_mama&#39;s-italian-wedding-sou.json
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Mama&#39;s Italian Wedding Soup (Community Enhanced)
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_45613_mango-teriyaki-marinade.json
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:parse_reviews_data:109 - No featured tweaks found, falling back to base reviews
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Mango Teriyaki Marinade — 0 reviews, 0 with modifications
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.pipeline:process_single_recipe:150 - No reviews with modifications found
+2026-03-04 17:19:15 | WARNING  | llm_pipeline.pipeline:process_recipe_directory:256 - ✗ Failed to process: recipe_45613_mango-teriyaki-marinade.json
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_71484_i-don-39-t-know.json
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 11 featured tweaks as primary source
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: I Don&#39;t Know — 11 reviews, 11 with modifications
+2026-03-04 17:19:15 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:19:15 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I love this title!! Perfect casserole for hard working MOMS. I had2 boxes of scalloped potatoes and ...
+2026-03-04 17:19:17 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:19:17 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I love this title!! Perfect casserole for hard working MOMS. I had2 boxes of scalloped potatoes and ...
+2026-03-04 17:19:19 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:19:19 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This has become a family favorite, my husband asked me what was for dinner I told him I didn't care,...
+2026-03-04 17:19:20 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:19:20 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This was so much better than I expected... we used fresh broc. and carrots par cooked before I put t...
+2026-03-04 17:19:23 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:19:23 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I made this and it’s basically a deconstructed cottage pie. They called for a 9x13 pan but I used a9...
+2026-03-04 17:19:25 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:19:25 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I have made something like this when I would crave the campfire hobo dinners.One of my favorite chea...
+2026-03-04 17:19:27 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:19:27 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Great and super easy! I could see this working with a variety of different vegetables. After reading...
+2026-03-04 17:19:30 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:19:30 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I followed a lot of the tips here (added bacon to beef, seasoned the beef (onion, garlic, some orega...
+2026-03-04 17:19:34 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:19:34 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Mom made this when my sister and I were kids. Instead of using frozen mixed veggies, Mom would use f...
+2026-03-04 17:19:37 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:19:37 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I use cream of chicken soup instead of mushroom for a change and chicken bits in it....
+2026-03-04 17:19:39 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:19:39 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I made this for dinner and my dad and I loved it. I made a few tweaks though. I used ground turkey i...
+2026-03-04 17:19:42 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:19:42 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 25 raw modifications from 11 reviews
+2026-03-04 17:19:42 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 25 raw modifications
+2026-03-04 17:19:49 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:19:49 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 (10.75 ounce) can condensed cream of mushroom soup'
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 (10.75 ounce) can condensed cream of mushroom soup' with '2 boxes of scalloped potatoes, cheese sauce mix, and canned milk' (similarity: 1.00)
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:19:49 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Cannot find '1 (10.75 ounce) can condensed cream of mushroom soup' in ingredients
+2026-03-04 17:19:49 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 2/5: ingredient_substitution
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 3/5: addition
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 1 edits
+2026-03-04 17:19:49 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='1 cup shredded Cheddar cheese'
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added 'chopped garlic, Italian seasoning, garlic and onion powder, and Worcestershire sauce' after '1 cup shredded Cheddar cheese' (similarity: 1.00)
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:19:49 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find 'Drain and set aside.' in instructions
+2026-03-04 17:19:49 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 4/5: technique_change
+2026-03-04 17:19:49 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find '1 (10.75 ounce) can condensed cream of mushroom soup' in ingredients
+2026-03-04 17:19:49 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 5/5: addition
+2026-03-04 17:19:49 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 7 ingredients and 4 instructions
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 2 total changes made
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 3 line diffs
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:19:49 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: I Don&#39;t Know
+2026-03-04 17:19:49 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 2 changes from 2 modifications, 3 line diffs
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: I Don&#39;t Know (Community Enhanced)
+2026-03-04 17:19:49 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_71484_i-don&#39;t-know.json
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: I Don&#39;t Know (Community Enhanced)
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_13363_old-fashioned-onion-soup.json
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 10 featured tweaks as primary source
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Old-Fashioned Onion Soup — 10 reviews, 10 with modifications
+2026-03-04 17:19:49 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:19:49 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: First off. For anyone substituting beef broth, that is French Onion. This is Traditional Onion. Ther...
+2026-03-04 17:19:53 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:19:53 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: First off. For anyone substituting beef broth, that is French Onion. This is Traditional Onion. Ther...
+2026-03-04 17:19:57 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:19:57 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Liked doing this but in Crock pot. Usually just stovetop. I added Mushrooms, a bit less bread and as...
+2026-03-04 17:20:01 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:20:01 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Yum. I didn't put in the bread (we served it on the side). I also needed much more liquid! Next time...
+2026-03-04 17:20:03 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:20:03 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Used Chicken Stock instead of Broth (Costco), tore up the slices of bread. I think next time I'll qu...
+2026-03-04 17:20:06 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:20:06 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This is a good starter recipe. Next time I make it I will use a bit less onion andquite a bit more b...
+2026-03-04 17:20:09 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:20:09 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I love love love having dinner ready for me. My boyfriend said this was the best onion soup recipe I...
+2026-03-04 17:20:12 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:20:12 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: this was great! I made the soup in my slow cooker but did not put the bread or cheese in it until I ...
+2026-03-04 17:20:14 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:20:14 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This soup requires excellent onions to turn out as savory and flavorful as needed. If you're working...
+2026-03-04 17:20:16 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:20:16 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This recipe was very easy. I added a little sherry and mixed chicken and beef broth. I also toasted ...
+2026-03-04 17:20:19 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:20:19 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 27 raw modifications from 10 reviews
+2026-03-04 17:20:19 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 27 raw modifications
+2026-03-04 17:20:27 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:20:27 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='4.5 cups chicken broth'
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '4.5 cups chicken broth' with '4.5 cups chicken stock (Costco)' (similarity: 1.00)
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:20:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Cannot find '7 slices French or Italian bread, cut into 1 inch cubes' in instructions
+2026-03-04 17:20:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 2/5: technique_change
+2026-03-04 17:20:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Low similarity match for '4.5 cups chicken broth' (score: 0.72)
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 3/5: quantity_adjustment
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying quantity_adjustment with 2 edits
+2026-03-04 17:20:27 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='3 pounds onions, sliced'
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '3 pounds onions, sliced' with '2.5 pounds onions, sliced' (similarity: 1.00)
+2026-03-04 17:20:27 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='4.5 cups chicken broth'
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '4.5 cups chicken broth' with '6 cups beef broth' (similarity: 0.72)
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 2 changes made
+2026-03-04 17:20:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find 'Stir in bread and chicken broth.' in instructions
+2026-03-04 17:20:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 4/5: removal
+2026-03-04 17:20:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find 'Stir in bread and chicken broth.' in instructions
+2026-03-04 17:20:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 5/5: addition
+2026-03-04 17:20:27 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 4 ingredients and 2 instructions
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 3 total changes made
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 4 line diffs
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:20:27 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Old-Fashioned Onion Soup
+2026-03-04 17:20:27 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 3 changes from 2 modifications, 4 line diffs
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Old-Fashioned Onion Soup (Community Enhanced)
+2026-03-04 17:20:27 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_13363_old-fashioned-onion-soup.json
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Old-Fashioned Onion Soup (Community Enhanced)
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_144299_nikujaga-japanese-style-meat-and-potatoes-.json
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 1 featured tweaks as primary source
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Nikujaga (Japanese-Style Meat and Potatoes) — 1 reviews, 1 with modifications
+2026-03-04 17:20:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:20:27 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Overall it was pretty good but the measurements were way off. HAS to be a typo. 1/4lb of meat to ser...
+2026-03-04 17:20:30 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:20:30 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 3 raw modifications from 1 reviews
+2026-03-04 17:20:30 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 3 raw modifications
+2026-03-04 17:20:35 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 3 ranked modifications
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 3 ranked modifications after deduplication
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 3 modifications sequentially
+2026-03-04 17:20:35 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 1: Cannot find '2 cups dashi soup' in instructions
+2026-03-04 17:20:35 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 1/3: quantity_adjustment
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 2/3: addition
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 2 edits
+2026-03-04 17:20:35 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='0.25 cup soy sauce'
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added 'additional soy sauce to taste' after '0.25 cup soy sauce' (similarity: 1.00)
+2026-03-04 17:20:35 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='1 tablespoon white sugar'
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added 'additional sugar to taste' after '1 tablespoon white sugar' (similarity: 1.00)
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 2 changes made
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 3/3: ingredient_substitution
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:20:35 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 cups dashi soup'
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 cups dashi soup' with '2 cups beef broth/stock' (similarity: 1.00)
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:20:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 11 ingredients and 3 instructions
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 3 total changes made
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 6 line diffs
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:20:35 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Nikujaga (Japanese-Style Meat and Potatoes)
+2026-03-04 17:20:35 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 3 changes from 2 modifications, 6 line diffs
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Nikujaga (Japanese-Style Meat and Potatoes) (Community Enhanced)
+2026-03-04 17:20:35 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_144299_nikujaga-(japanese-style-meat-.json
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Nikujaga (Japanese-Style Meat and Potatoes) (Community Enhanced)
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_11679_homemade-mac-and-cheese.json
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 11 featured tweaks as primary source
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Homemade Mac and Cheese — 11 reviews, 11 with modifications
+2026-03-04 17:20:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:20:35 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Added a teaspoon of dry mustard to the roux. I've made this several times, absolutely love it. Panko...
+2026-03-04 17:20:37 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:20:37 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Added a teaspoon of dry mustard to the roux. I've made this several times, absolutely love it. Panko...
+2026-03-04 17:20:39 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:20:39 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Loved the recipe. My favorite. I did use the 1/2 c of Parmesan, 1/2 c gouda, 1/2 c Cheddar & 1 c sha...
+2026-03-04 17:20:44 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:20:44 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I wanted to cook some pork chops I had thawed, but I didn't have a box of the cheap macaroni and che...
+2026-03-04 17:20:49 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:20:49 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Thanks for sharing!! 
+I took a little inspo from our trip to Hattie B’s (pimento Mac night cheese) i...
+2026-03-04 17:20:50 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:20:50 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I am giving this recipe 4 stars because it is an awesome base....but I must tell you, that it can be...
+2026-03-04 17:21:01 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 6 modification(s) from review
+2026-03-04 17:21:01 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I love making homemade mac and cheese. But I usually make my own breadcrumbs. I place a few slices o...
+2026-03-04 17:21:03 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:21:03 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: If you are making it for kids, it is perfect, reduce the amount of milk and add a little half-and-ha...
+2026-03-04 17:21:07 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:21:07 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I followed the recipe to the letter except I added one teaspoon dry mustard and I didn’t bother with...
+2026-03-04 17:21:10 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:21:10 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Absolutely delicious, I added extra cheese on top after it was cooked then browned it under the gril...
+2026-03-04 17:21:12 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:21:12 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I also mixed the milk with heavy cream, (so that I didn’t use all my husbands milk for morning coffe...
+2026-03-04 17:21:15 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:21:15 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 29 raw modifications from 11 reviews
+2026-03-04 17:21:15 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 29 raw modifications
+2026-03-04 17:21:25 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 6 ranked modifications
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:21:25 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 cups shredded sharp Cheddar cheese'
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 cups shredded sharp Cheddar cheese' with '1/2 cup finely grated Parmesan cheese, 1/2 cup gouda, 1/2 cup Cheddar, 1 cup sharp Cheddar' (similarity: 1.00)
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 2/5: ingredient_substitution
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:21:25 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2.5 cups milk, or more as needed'
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2.5 cups milk, or more as needed' with '2 cups milk and 0.5 cup heavy cream' (similarity: 1.00)
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:21:25 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Cannot find 'Whisk in flour and stir until the mixture becomes paste-like and light golden brown, 3 to 5 minutes.' in instructions
+2026-03-04 17:21:25 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 3/5: addition
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 4/5: technique_change
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying technique_change with 1 edits
+2026-03-04 17:21:25 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='Bake in the preheated oven until topping is golden brown and macaroni and cheese is gooey and bubbling, about 30 minutes.'
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added 'Hit the broiler on high for 1-2 minutes and keep watch.' after 'Bake in the preheated oven until topping is golden brown and macaroni and cheese is gooey and bubbling, about 30 minutes.' (similarity: 1.00)
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:21:25 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find '2 cups shredded sharp Cheddar cheese' in ingredients
+2026-03-04 17:21:25 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 5/5: quantity_adjustment
+2026-03-04 17:21:25 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 10 ingredients and 10 instructions
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 3 total changes made
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 5 line diffs
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:21:25 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Homemade Mac and Cheese
+2026-03-04 17:21:25 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 3 changes from 3 modifications, 5 line diffs
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Homemade Mac and Cheese (Community Enhanced)
+2026-03-04 17:21:25 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_11679_homemade-mac-and-cheese.json
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Homemade Mac and Cheese (Community Enhanced)
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_23878_chinese-chicken-soup.json
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 11 featured tweaks as primary source
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Chinese Chicken Soup — 11 reviews, 11 with modifications
+2026-03-04 17:21:25 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:21:25 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This soup was so good! I cooked chicken thighs in sesame oil and turmeric, then chopped them. I adde...
+2026-03-04 17:21:29 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:21:29 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This soup was so good! I cooked chicken thighs in sesame oil and turmeric, then chopped them. I adde...
+2026-03-04 17:21:34 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:21:34 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: 11.17.20 ... https://www.allrecipes.com/recipe/23878/chinese-chicken-soup/ ... Chinese Chicken Soup ...
+2026-03-04 17:21:39 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:21:39 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This soup is amazing. This is a new favorite in our home. The only thing I do not add is chicken bro...
+2026-03-04 17:21:44 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:21:44 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This is delicious as a base and lends itself to all kinds of variations: beef, shrimp, etc. Chop the...
+2026-03-04 17:21:45 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:21:45 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Delicious! I didn't have red chili paste, so I substituted sriracha sauce. Also use shredded cabbage...
+2026-03-04 17:21:47 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:21:47 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I had a 1lb marg tub of frozen leftover homemade chicken & noodles. I wanted to do this for dinner. ...
+2026-03-04 17:21:53 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:21:53 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I added shallots, bok choy and a shredded carrot and the celery to the broth and simmered for about ...
+2026-03-04 17:21:56 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:21:56 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This soup is really good. I was skeptical about the lettuce, it didn't make a lot of sense to me to ...
+2026-03-04 17:22:01 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:22:01 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I freely admit I can't follow directions to save my life. lol My changes were to add 1/2 can corn, 1...
+2026-03-04 17:22:04 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:22:04 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I have to agree with the others who stated that the celery is undercooked. I sliced mine thin (about...
+2026-03-04 17:22:07 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:22:07 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 40 raw modifications from 11 reviews
+2026-03-04 17:22:07 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 40 raw modifications
+2026-03-04 17:22:39 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 7 edits
+2026-03-04 17:22:39 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 cup chopped celery'
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 cup chopped celery' with '1 cup chopped carrots and yellow onion' (similarity: 1.00)
+2026-03-04 17:22:39 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 cup shredded lettuce'
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 cup shredded lettuce' with '1 cup chopped cabbage' (similarity: 1.00)
+2026-03-04 17:22:39 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 tablespoons chile paste'
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 tablespoons chile paste' with '2 tablespoons sriracha sauce' (similarity: 1.00)
+2026-03-04 17:22:39 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 cup shredded lettuce'
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_edit:103 - Could not find '1 cup shredded lettuce' in ingredients (best similarity: 0.51)
+2026-03-04 17:22:39 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 tablespoons chile paste'
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_edit:103 - Could not find '2 tablespoons chile paste' in ingredients (best similarity: 0.65)
+2026-03-04 17:22:39 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 (3 ounce) package ramen noodles'
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 (3 ounce) package ramen noodles' with '1 cup cooked spaghetti noodles' (similarity: 1.00)
+2026-03-04 17:22:39 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 cup shredded lettuce'
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_edit:103 - Could not find '1 cup shredded lettuce' in ingredients (best similarity: 0.51)
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 4 changes made
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Cannot find '2 tablespoons sesame oil' in instructions
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Low similarity match for 'Add chile paste, ginger, and turmeric; cook and stir until fragrant, 1 to 2 minutes.' (score: 0.77)
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Cannot find 'simmer for 3 minutes' in instructions
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 2/5: technique_change
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Low similarity match for '1 cup chopped celery' (score: 0.78)
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Low similarity match for '1 cup chopped carrots' (score: 0.76)
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Low similarity match for '1 cup chopped celery' (score: 0.78)
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Low similarity match for '1 cup chopped celery' (score: 0.78)
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Low similarity match for '1 cup chopped celery' (score: 0.78)
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Cannot find 'add noodles and simmer for 3 minutes' in instructions
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 3/5: addition
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find '2 tablespoons chile paste' in ingredients
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 4/5: quantity_adjustment
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Low similarity match for '1 cup chopped celery' (score: 0.78)
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find '1 (3 ounce) package ramen noodles' in ingredients
+2026-03-04 17:22:39 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 5/5: removal
+2026-03-04 17:22:39 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 12 ingredients and 3 instructions
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 4 total changes made
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 8 line diffs
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:22:39 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Chinese Chicken Soup
+2026-03-04 17:22:39 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 4 changes from 1 modifications, 8 line diffs
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Chinese Chicken Soup (Community Enhanced)
+2026-03-04 17:22:39 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_23878_chinese-chicken-soup.json
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Chinese Chicken Soup (Community Enhanced)
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_23600_world-39-s-best-lasagna.json
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 11 featured tweaks as primary source
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: World&#39;s Best Lasagna — 11 reviews, 11 with modifications
+2026-03-04 17:22:39 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:22:39 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I have been on a long search and agree this is the best lasagna I have found. The sauce is fantastic...
+2026-03-04 17:22:42 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:22:42 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I have been on a long search and agree this is the best lasagna I have found. The sauce is fantastic...
+2026-03-04 17:22:45 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:22:45 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I must comment on the reactions to the sugar in the sauce...the purpose of the sugar is to counter t...
+2026-03-04 17:22:50 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:22:50 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This lasagna is great and the sauce itself is awesome too. My husband told me that this sauce is bet...
+2026-03-04 17:22:57 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:22:57 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: WITH ALL DUE RESPECT TO THE OWNER OF THE RECIPE A 9 X 13 IS NOT BIG ENOUGH I ASSEMBLED IT VERY CAREF...
+2026-03-04 17:22:58 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:22:58 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This is a good basic start, however, I felt it calls for too much salt and sugar.
+
+I always add a pi...
+2026-03-04 17:23:02 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:23:02 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Made it for my husband’s birthday. Best lasagna either of us have EVER had - including at great Ital...
+2026-03-04 17:23:08 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 5 modification(s) from review
+2026-03-04 17:23:08 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: The tomato paste is way too overpowering in this recipe....
+2026-03-04 17:23:09 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:23:09 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Italian seasoning and tomato sauce are added ingredients. I use hot Italian sausage, which isn't ver...
+2026-03-04 17:23:12 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:23:12 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Never buy frozen lasagna again! This is easy to freeze after enjoying a couple freshly made portions...
+2026-03-04 17:23:14 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:23:14 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I've made this recipe about 15 times now. The last 3 times we've used our homemade tomato sauce that...
+2026-03-04 17:23:17 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:23:17 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 27 raw modifications from 11 reviews
+2026-03-04 17:23:17 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 27 raw modifications
+2026-03-04 17:23:26 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:23:26 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:23:26 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 3 edits
+2026-03-04 17:23:26 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 (28 ounce) can crushed tomatoes'
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 (28 ounce) can crushed tomatoes' with 'homemade tomato sauce' (similarity: 1.00)
+2026-03-04 17:23:26 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 (6.5 ounce) cans canned tomato sauce'
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 (6.5 ounce) cans canned tomato sauce' with 'homemade tomato sauce' (similarity: 1.00)
+2026-03-04 17:23:26 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 (6 ounce) cans tomato paste'
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 (6 ounce) cans tomato paste' with 'homemade tomato sauce' (similarity: 1.00)
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 3 changes made
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 2/5: ingredient_substitution
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:23:26 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 pound sweet Italian sausage'
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 pound sweet Italian sausage' with '1 pound spicy Italian sausage' (similarity: 1.00)
+2026-03-04 17:23:26 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:23:27 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 3/5: quantity_adjustment
+2026-03-04 17:23:27 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying quantity_adjustment with 3 edits
+2026-03-04 17:23:27 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 pound sweet Italian sausage'
+2026-03-04 17:23:27 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 pound sweet Italian sausage' with '1 pound sweet Italian sausage, 1 pound lean ground beef' (similarity: 0.86)
+2026-03-04 17:23:27 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='0.75 pound lean ground beef'
+2026-03-04 17:23:27 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '0.75 pound lean ground beef' with '1 pound lean ground beef' (similarity: 1.00)
+2026-03-04 17:23:27 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1.5 teaspoons salt, divided, or to taste'
+2026-03-04 17:23:27 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1.5 teaspoons salt, divided, or to taste' with 'about 1 teaspoon salt' (similarity: 1.00)
+2026-03-04 17:23:27 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 3 changes made
+2026-03-04 17:23:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find '9x13-inch baking dish' in instructions
+2026-03-04 17:23:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 4/5: technique_change
+2026-03-04 17:23:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find '9x13-inch baking dish' in instructions
+2026-03-04 17:23:27 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 5/5: technique_change
+2026-03-04 17:23:27 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 20 ingredients and 10 instructions
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 7 total changes made
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 12 line diffs
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:23:27 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: World&#39;s Best Lasagna
+2026-03-04 17:23:27 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 7 changes from 3 modifications, 12 line diffs
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: World&#39;s Best Lasagna (Community Enhanced)
+2026-03-04 17:23:27 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_23600_world&#39;s-best-lasagna.json
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: World&#39;s Best Lasagna (Community Enhanced)
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_77935_creamy-sweet-potato-with-ginger-soup.json
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 5 featured tweaks as primary source
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Creamy Sweet Potato With Ginger Soup — 5 reviews, 5 with modifications
+2026-03-04 17:23:27 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:23:27 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I made this with canned yams. I added roasted Brussels Sprouts and peppers. I drizzled heavy cream a...
+2026-03-04 17:23:30 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:23:30 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: It was amazing!! The portion is only enough for 2-3 people. Very good as is but when I make it again...
+2026-03-04 17:23:31 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:23:31 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I had one large sweet potato that needed to be used, and 3 white potatoes, so I used those to make t...
+2026-03-04 17:23:34 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:23:34 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Def has a kick! Very thick.. Even w 2% milk- will use more broth next time. Used fresh grated ginger...
+2026-03-04 17:23:36 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:23:36 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Great soup! The vegetables caramelize beautifully with this method (though I think it would also wor...
+2026-03-04 17:23:38 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:23:38 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 9 raw modifications from 5 reviews
+2026-03-04 17:23:38 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 9 raw modifications
+2026-03-04 17:23:45 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:23:45 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1.5 pounds peeled raw sweet potatoes, cut into 1-inch chunks'
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1.5 pounds peeled raw sweet potatoes, cut into 1-inch chunks' with '1.5 pounds canned yams' (similarity: 1.00)
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 2/5: addition
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 1 edits
+2026-03-04 17:23:45 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='Garnish: chopped honey-roasted peanuts'
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added 'Roasted Brussels sprouts and peppers' after 'Garnish: chopped honey-roasted peanuts' (similarity: 1.00)
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:23:45 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Cannot find 'Taste, and add salt and pepper if needed. Heat through, ladle into bowls, garnish and serve.' in instructions
+2026-03-04 17:23:45 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 3/5: addition
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 4/5: ingredient_substitution
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:23:45 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1.5 teaspoons ground ginger'
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1.5 teaspoons ground ginger' with 'Fresh ginger, to taste' (similarity: 1.00)
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:23:45 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 5: Cannot find '1.5 pounds peeled raw sweet potatoes, cut into 1-inch chunks' in ingredients
+2026-03-04 17:23:45 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 5/5: ingredient_substitution
+2026-03-04 17:23:45 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 14 ingredients and 7 instructions
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 3 total changes made
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 5 line diffs
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:23:45 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Creamy Sweet Potato With Ginger Soup
+2026-03-04 17:23:45 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 3 changes from 3 modifications, 5 line diffs
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Creamy Sweet Potato With Ginger Soup (Community Enhanced)
+2026-03-04 17:23:45 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_77935_creamy-sweet-potato-with-ginge.json
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Creamy Sweet Potato With Ginger Soup (Community Enhanced)
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_19117_spicy-apple-cake.json
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 2 featured tweaks as primary source
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Spicy Apple Cake — 2 reviews, 2 with modifications
+2026-03-04 17:23:45 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:23:45 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Mmmm, this cake was so good. I made it exactly as directed except I used a different frosting only b...
+2026-03-04 17:23:48 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:23:48 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Will make this one again! (maybe for Thanksgiving dessert) I would prefer some more apple chunks in ...
+2026-03-04 17:23:49 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 1 modification(s) from review
+2026-03-04 17:23:49 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 3 raw modifications from 2 reviews
+2026-03-04 17:23:49 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 3 raw modifications
+2026-03-04 17:23:53 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 2 ranked modifications
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 2 ranked modifications after deduplication
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:23:53 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 2 modifications sequentially
+2026-03-04 17:23:53 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/2: addition
+2026-03-04 17:23:53 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 1 edits
+2026-03-04 17:23:53 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 cups apple - peeled, cored, and chopped'
+2026-03-04 17:23:53 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 cups apple - peeled, cored, and chopped' with '3 cups apple - peeled, cored, and chopped' (similarity: 1.00)
+2026-03-04 17:23:53 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:23:53 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 2: Cannot find 'Let cool.' in instructions
+2026-03-04 17:23:53 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 2/2: ingredient_substitution
+2026-03-04 17:23:53 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 18 ingredients and 5 instructions
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 1 total changes made
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 2 line diffs
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:23:53 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Spicy Apple Cake
+2026-03-04 17:23:53 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 1 changes from 1 modifications, 2 line diffs
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Spicy Apple Cake (Community Enhanced)
+2026-03-04 17:23:53 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_19117_spicy-apple-cake.json
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Spicy Apple Cake (Community Enhanced)
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_284494_spiced-purple-plum-jam.json
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:parse_reviews_data:109 - No featured tweaks found, falling back to base reviews
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Spiced Purple Plum Jam — 0 reviews, 0 with modifications
+2026-03-04 17:23:53 | WARNING  | llm_pipeline.pipeline:process_single_recipe:150 - No reviews with modifications found
+2026-03-04 17:23:53 | WARNING  | llm_pipeline.pipeline:process_recipe_directory:256 - ✗ Failed to process: recipe_284494_spiced-purple-plum-jam.json
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_10813_best-chocolate-chip-cookies.json
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 11 featured tweaks as primary source
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Best Chocolate Chip Cookies — 11 reviews, 11 with modifications
+2026-03-04 17:23:53 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:23:53 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I've tried a lot of different chocolate chip cookie recipes and this is the best one by far! The onl...
+2026-03-04 17:23:56 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:23:56 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I've tried a lot of different chocolate chip cookie recipes and this is the best one by far! The onl...
+2026-03-04 17:23:59 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:23:59 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: These chocolate chip cookies were very, very good. I have been trying chocolate chip cookie recipes ...
+2026-03-04 17:24:01 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:24:01 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Superb. I give 4 1/2 stars to the original recipe since it calls for 50/50 white & brown sugar. Sinc...
+2026-03-04 17:24:04 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:24:04 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Perfect Chocolate Chip recipe. I did not use hot water or nuts and I rolled into two logs and wrappe...
+2026-03-04 17:24:07 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:24:07 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This cookie was amazing! They baked perfectly in my oven at 325 for 12 minutes. I followed a couple ...
+2026-03-04 17:24:11 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:24:11 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I did as another rater suggested: skipped dissolving baking soda in water and increased the vanilla ...
+2026-03-04 17:24:13 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:24:13 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: These are awesome cookies. I followed the advice of others by making the following tweaks: (1) I use...
+2026-03-04 17:24:17 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:24:17 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: They came out a little more crunchy than I would've liked. I chilled the dough in the fridge for abo...
+2026-03-04 17:24:21 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:24:21 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: To make these as Christmas cookies, I used 1 cup plain white sugar and 1 cup of Moreno or pure cane ...
+2026-03-04 17:24:25 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:24:25 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Best cookies I have ever made. I will say that you should weigh your flour in grams. All-Purpose flo...
+2026-03-04 17:24:27 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:24:27 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 34 raw modifications from 11 reviews
+2026-03-04 17:24:27 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 34 raw modifications
+2026-03-04 17:24:35 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: quantity_adjustment
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying quantity_adjustment with 2 edits
+2026-03-04 17:24:35 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 cup white sugar'
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 cup white sugar' with '0.5 cup white sugar' (similarity: 1.00)
+2026-03-04 17:24:35 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 cup packed brown sugar'
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 cup packed brown sugar' with '1.5 cups packed brown sugar' (similarity: 1.00)
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 2 changes made
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 2/5: removal
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying removal with 1 edits
+2026-03-04 17:24:35 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying remove edit: find='1 cup chopped walnuts'
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_edit:137 - Removed '1 cup chopped walnuts' (similarity: 1.00)
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:24:35 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 3: Cannot find 'about 10 minutes' in instructions
+2026-03-04 17:24:35 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 3/5: technique_change
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 4/5: addition
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying addition with 1 edits
+2026-03-04 17:24:35 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying add_after edit: find='2 cups semisweet chocolate chips'
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_edit:119 - Added '1 cup Skor toffee bits' after '2 cups semisweet chocolate chips' (similarity: 1.00)
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 5/5: ingredient_substitution
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:24:35 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 cup white sugar'
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 cup white sugar' with '1 cup packed brown sugar' (similarity: 0.89)
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:24:35 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 11 ingredients and 9 instructions
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 5 total changes made
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 6 line diffs
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:24:35 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Best Chocolate Chip Cookies
+2026-03-04 17:24:35 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 5 changes from 4 modifications, 6 line diffs
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Best Chocolate Chip Cookies (Community Enhanced)
+2026-03-04 17:24:35 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_10813_best-chocolate-chip-cookies.json
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Best Chocolate Chip Cookies (Community Enhanced)
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_recipe_directory:250 - 
+============================================================
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:136 - Processing recipe file: ../data/recipe_13437_maryland-crab-soup.json
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:parse_reviews_data:87 - Using 11 featured tweaks as primary source
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:144 - Loaded recipe: Maryland Crab Soup — 11 reviews, 11 with modifications
+2026-03-04 17:24:35 | INFO     | llm_pipeline.pipeline:process_single_recipe:154 - Step 1+2: Extracting & ranking modifications...
+2026-03-04 17:24:35 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I am also from Maryland and although I made a number of adjustments, this is a very good basic recip...
+2026-03-04 17:24:39 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:24:39 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I am also from Maryland and although I made a number of adjustments, this is a very good basic recip...
+2026-03-04 17:24:43 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:24:43 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: REVIEW: This was suuuuch a good soup! I started to dance knowing I was experiencing a piece of my ch...
+2026-03-04 17:24:49 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:24:49 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I live in western PA. no fresh blue crab in my neighborhood. i did however have a package of imitati...
+2026-03-04 17:24:52 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:24:52 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I did make a few little changes to this recipe. I sauteed carrots onions and celery before I added t...
+2026-03-04 17:24:54 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:24:54 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This is an excellent recipe. I sauteed onion and green pepper in a little butter/magarine first then...
+2026-03-04 17:24:57 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:24:57 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I used 1 can of fire roasted tomatoes and 1 can stewed tomatoes. I left out the lima beans and added...
+2026-03-04 17:25:00 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:25:00 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: This is a real deal for good crab soup and that is coming from someone in Baltimore who has made cra...
+2026-03-04 17:25:04 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:25:04 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Great recipe, everybody liked it. I made it a few times. The second time I changed a few things and ...
+2026-03-04 17:25:11 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 3 modification(s) from review
+2026-03-04 17:25:11 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: Gives a good base so you can make it your own. So as a native of Southern Maryland I had to change i...
+2026-03-04 17:25:14 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 2 modification(s) from review
+2026-03-04 17:25:14 | DEBUG    | llm_pipeline.tweak_extractor:extract_modification:57 - Extracting from review: I’ve used this recipe many different ways. I prefer using a 28 oz can of crushed tomatoes and using ...
+2026-03-04 17:25:18 | INFO     | llm_pipeline.tweak_extractor:extract_modification:83 - Extracted 4 modification(s) from review
+2026-03-04 17:25:18 | INFO     | llm_pipeline.tweak_extractor:extract_all_modifications:200 - Phase 1 complete: 33 raw modifications from 11 reviews
+2026-03-04 17:25:18 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:120 - Phase 2: summarising 33 raw modifications
+2026-03-04 17:25:31 | INFO     | llm_pipeline.tweak_extractor:summarize_modifications:143 - Phase 2 returned 5 ranked modifications
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_single_recipe:163 - Got 5 ranked modifications after deduplication
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_single_recipe:183 - Step 3+4: Applying modifications with safety checks...
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:208 - Applying 5 modifications sequentially
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 1/5: ingredient_substitution
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 2 edits
+2026-03-04 17:25:31 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 (14.5 ounce) cans stewed tomatoes'
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 (14.5 ounce) cans stewed tomatoes' with '1 (28 oz) can crushed tomatoes' (similarity: 1.00)
+2026-03-04 17:25:31 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 cup fresh lima beans'
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 cup fresh lima beans' with '2 small bags Birdseye frozen veggies (green beans, corn, peas)' (similarity: 1.00)
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 2 changes made
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 2/5: quantity_adjustment
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying quantity_adjustment with 3 edits
+2026-03-04 17:25:31 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 cups beef broth'
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 cups beef broth' with '2 cans low sodium beef broth' (similarity: 1.00)
+2026-03-04 17:25:31 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='2 tablespoons Old Bay Seasoning TM'
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '2 tablespoons Old Bay Seasoning TM' with '3 tablespoons Old Bay Seasoning TM' (similarity: 1.00)
+2026-03-04 17:25:31 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 gallon water'
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 gallon water' with '1/4 cup brown sugar and 1 tablespoon Worcestershire sauce' (similarity: 1.00)
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 3 changes made
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 3/5: technique_change
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying technique_change with 1 edits
+2026-03-04 17:25:31 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='Bring 1 gallon water to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.'
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced 'Bring 1 gallon water to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.' with 'Bring 1 gallon water and 2 chicken bouillon cubes to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.' (similarity: 1.00)
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:25:31 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find '1 gallon water' in ingredients
+2026-03-04 17:25:31 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find '2 (14.5 ounce) cans stewed tomatoes' in ingredients
+2026-03-04 17:25:31 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:216 -   Mod 4: Cannot find '1 cup fresh lima beans' in ingredients
+2026-03-04 17:25:31 | WARNING  | llm_pipeline.recipe_modifier:apply_modifications_batch:218 - Skipping unsafe modification 4/5: addition
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:225 - Applying modification 5/5: ingredient_substitution
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modification:158 - Applying ingredient_substitution with 1 edits
+2026-03-04 17:25:31 | DEBUG    | llm_pipeline.recipe_modifier:apply_edit:83 - Applying replace edit: find='1 pound blue crab crabmeat'
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_edit:101 - Replaced '1 pound blue crab crabmeat' with '1 pound imitation crab meat' (similarity: 1.00)
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modification:189 - Applied modification successfully: 1 changes made
+2026-03-04 17:25:31 | INFO     | llm_pipeline.recipe_modifier:apply_modifications_batch:234 - Applied all modifications. Final recipe has 11 ingredients and 4 instructions
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_single_recipe:189 - Applied modifications: 7 total changes made
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_single_recipe:205 - Step 5: Building line-level diffs...
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_single_recipe:209 - Generated 14 line diffs
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_single_recipe:212 - Step 6: Generating enhanced recipe with attribution...
+2026-03-04 17:25:31 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:187 - Generating enhanced recipe for: Maryland Crab Soup
+2026-03-04 17:25:31 | INFO     | llm_pipeline.enhanced_recipe_generator:generate_enhanced_recipe:217 - Generated enhanced recipe with 7 changes from 4 modifications, 14 line diffs
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_single_recipe:216 - Generated enhanced recipe: Maryland Crab Soup (Community Enhanced)
+2026-03-04 17:25:31 | INFO     | llm_pipeline.enhanced_recipe_generator:save_enhanced_recipe:279 - Saved enhanced recipe to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/enhanced_13437_maryland-crab-soup.json
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_recipe_directory:254 - ✓ Successfully processed: Maryland Crab Soup (Community Enhanced)
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_recipe_directory:258 - 
+============================================================
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:process_recipe_directory:259 - Pipeline complete: 13/15 recipes successfully enhanced
+2026-03-04 17:25:31 | INFO     | llm_pipeline.pipeline:save_summary_report:322 - Saved pipeline summary report to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/pipeline_summary_report.json
+2026-03-04 17:25:31 | INFO     | __main__:test_all_recipes:129 - 
+============================================================
+2026-03-04 17:25:31 | SUCCESS  | __main__:test_all_recipes:130 - ✓ All recipes test complete!
+2026-03-04 17:25:31 | INFO     | __main__:test_all_recipes:131 - Enhanced recipes: 13
+2026-03-04 17:25:31 | INFO     | __main__:test_all_recipes:132 - Summary report saved to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/pipeline_summary_report.json
+2026-03-04 17:25:31 | INFO     | __main__:test_all_recipes:135 - Total line diffs across all recipes: 75
+2026-03-04 17:25:31 | INFO     | __main__:main:175 - ============================================================
+2026-03-04 17:25:31 | SUCCESS  | __main__:main:177 - All recipes validation passed! ✓
+2026-03-04 17:25:31 | INFO     | __main__:main:178 - Check 'data/enhanced/' for all enhanced recipes.
+2026-03-04 17:25:31 | INFO     | __main__:main:181 - Check 'data/enhanced/pipeline_summary_report.json' for results.

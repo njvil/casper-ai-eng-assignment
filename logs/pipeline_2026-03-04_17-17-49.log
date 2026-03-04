@@ -1,0 +1,21 @@
+2026-03-04 17:17:49 | INFO     | __main__:main:171 - Starting LLM Analysis Pipeline v2 - All Recipes Validation
+2026-03-04 17:17:49 | INFO     | __main__:main:172 - ============================================================
+2026-03-04 17:17:49 | INFO     | llm_pipeline.tweak_extractor:__init__:33 - Initialized TweakExtractor with model: gpt-3.5-turbo
+2026-03-04 17:17:49 | INFO     | llm_pipeline.recipe_modifier:__init__:33 - Initialized RecipeModifier with similarity threshold: 0.7
+2026-03-04 17:17:49 | INFO     | llm_pipeline.enhanced_recipe_generator:__init__:31 - Initialized EnhancedRecipeGenerator v2.0.0
+2026-03-04 17:17:49 | INFO     | llm_pipeline.pipeline:__init__:56 - Initialized LLM Analysis Pipeline v2.0.0
+2026-03-04 17:17:49 | INFO     | llm_pipeline.pipeline:__init__:57 - Output directory: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced
+2026-03-04 17:17:49 | INFO     | __main__:test_all_recipes:120 - Pipeline initialized successfully
+2026-03-04 17:17:49 | INFO     | llm_pipeline.pipeline:process_recipe_directory:246 - Found 0 recipe files to process
+2026-03-04 17:17:49 | INFO     | llm_pipeline.pipeline:process_recipe_directory:258 - 
+============================================================
+2026-03-04 17:17:49 | INFO     | llm_pipeline.pipeline:process_recipe_directory:259 - Pipeline complete: 0/0 recipes successfully enhanced
+2026-03-04 17:17:49 | INFO     | llm_pipeline.pipeline:save_summary_report:322 - Saved pipeline summary report to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/pipeline_summary_report.json
+2026-03-04 17:17:49 | INFO     | __main__:test_all_recipes:129 - 
+============================================================
+2026-03-04 17:17:49 | SUCCESS  | __main__:test_all_recipes:130 - ✓ All recipes test complete!
+2026-03-04 17:17:49 | INFO     | __main__:test_all_recipes:131 - Enhanced recipes: 0
+2026-03-04 17:17:49 | INFO     | __main__:test_all_recipes:132 - Summary report saved to: /home/njvil/Documents/Cursor Projects/casper-ai-eng-assignment/data/enhanced/pipeline_summary_report.json
+2026-03-04 17:17:49 | INFO     | __main__:test_all_recipes:135 - Total line diffs across all recipes: 0
+2026-03-04 17:17:49 | INFO     | __main__:main:175 - ============================================================
+2026-03-04 17:17:49 | ERROR    | __main__:main:185 - All recipes validation failed! ✗
