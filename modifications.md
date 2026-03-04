@@ -185,10 +185,32 @@ The `line_diffs` array is the primary data a UI uses to render an inline diff vi
 
 ### Confirmed run results
 
-Pipeline v2 was run against all 15 recipe files. **13 out of 15 recipes were successfully enhanced**, producing 13 enhanced JSON files in `data/enhanced/`. The pipeline correctly:
-- Used featured tweaks as primary source when available (e.g. Italian Wedding Soup with 11 featured tweaks).
-- Fell back to base reviews when no featured tweaks existed (e.g. Banana Bread).
-- Extracted multiple modifications per review (e.g. 5 modifications from a single review of Italian Wedding Soup).
-- Skipped unsafe modifications with logged warnings (e.g. `find` text not matching any recipe line).
-- Generated line-level diffs for all applied changes.
-- Saved all output to `data/enhanced/` and full logs to `logs/`.
+Pipeline v2 was run against all 15 recipe files. **13 out of 15 recipes were successfully enhanced**, producing 13 enhanced JSON files in `data/enhanced/`.
+
+### Quality audit findings
+
+An audit of all 13 enhanced recipes identified systemic issues:
+
+| Issue | Affected | Severity |
+|-------|----------|----------|
+| Instructions not updated when ingredients change | 10 of 13 | Critical |
+| Remove/shadow diffs with empty reasoning | All 13 | Medium |
+| No-op changes (from_text = to_text) | 3 | High |
+| LLM fabricated modifications not in source review | 2 | Critical |
+| Nonsensical text added as instruction | 1 | High |
+| Contradictory reasoning vs actual change | 1 | High |
+| Semantically wrong replacement (unrelated swap) | 2 | Critical |
+| reviewer: null in source_review | 6 | Medium |
+| Same review duplicated across all modifications | 4 | Medium |
+| Index-shifting artifacts producing false diffs | Multiple | Medium |
+
+**Root causes identified**:
+1. LLM extraction prompt doesn't instruct for instruction consistency when ingredients change.
+2. Modifier applies edits against the evolving recipe, so later edits may no-op against already-modified lines.
+3. Diff builder compares by index, not content — insertions cause cascading false "replace" diffs.
+4. Phase 2 prompt lacks a "no fabrication" guardrail.
+5. `reviewer` field null when scraper doesn't extract usernames (v2 scraper issue, fixed in v3).
+
+**Best-performing recipes**: Homemade Mac and Cheese (cleanest output), Old-Fashioned Onion Soup (minor no-op only).
+
+See `documentation.md` Section 10 for the full per-recipe audit and Section 13 for the corresponding improvement plan.

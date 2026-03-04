@@ -24,22 +24,20 @@
   "ingredients": [
     "1 (28 oz) can crushed tomatoes",
     "3 cups water",
-    "2 chicken bouillon cubes",
     "2 cans low sodium beef broth",
     "2 small bags Birdseye frozen veggies (green beans, corn, peas)",
     "1 cup frozen corn kernels",
-    "1 1/2 cups cubed potatoes",
-    "1/2 cup chopped savoy cabbage",
+    "1 cup sliced carrots",
+    "2 tablespoons chopped onion",
     "3 tablespoons Old Bay Seasoning TM",
     "1/4 cup brown sugar and 1 tablespoon Worcestershire sauce",
-    "1 gallon water",
     "10 blue crab claws, steamed",
-    "1 pound blue crab crabmeat"
+    "1 pound imitation crab meat"
   ],
   "instructions": [
     "Gather all ingredients.",
     "Place stewed tomatoes, 3 cups water, beef broth, lima beans, corn, sliced carrots, chopped onion, and Old Bay seasoning in a 4-quart pot. Bring to a simmer over medium heat; cover and cook for 5 minutes.",
-    "Bring 1 gallon water to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.",
+    "Bring 1 gallon water and 2 chicken bouillon cubes to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.",
     "Stir crabmeat and boiled crab claws into tomato and vegetable mixture. Cover and simmer for 10 to 15 minutes. Serve hot."
   ],
   "line_diffs": [
@@ -56,82 +54,46 @@
       "section": "ingredients",
       "line_index": 2,
       "original": "2 cups beef broth",
-      "modified": "2 chicken bouillon cubes",
+      "modified": "2 cans low sodium beef broth",
       "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
+      "source_username": "debbiesd",
+      "reasoning": "Adjusting ingredient quantities to personal preference and taste"
     },
     {
       "section": "ingredients",
       "line_index": 3,
       "original": "1 cup fresh lima beans",
-      "modified": "2 cans low sodium beef broth",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 4,
-      "original": "1 cup frozen corn kernels",
       "modified": "2 small bags Birdseye frozen veggies (green beans, corn, peas)",
       "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 5,
-      "original": "1 cup sliced carrots",
-      "modified": "1 cup frozen corn kernels",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 6,
-      "original": "2 tablespoons chopped onion",
-      "modified": "1 1/2 cups cubed potatoes",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
+      "source_username": "debbiesd",
+      "reasoning": "Using crushed tomatoes instead of stewed and Birdseye frozen veggies adds convenience and variety"
     },
     {
       "section": "ingredients",
       "line_index": 7,
       "original": "2 tablespoons Old Bay Seasoning TM",
-      "modified": "1/2 cup chopped savoy cabbage",
+      "modified": "3 tablespoons Old Bay Seasoning TM",
       "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
+      "source_username": "debbiesd",
+      "reasoning": "Adjusting ingredient quantities to personal preference and taste"
     },
     {
       "section": "ingredients",
       "line_index": 8,
       "original": "1 gallon water",
-      "modified": "3 tablespoons Old Bay Seasoning TM",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 9,
-      "original": "10 blue crab claws, steamed",
       "modified": "1/4 cup brown sugar and 1 tablespoon Worcestershire sauce",
       "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
+      "source_username": "debbiesd",
+      "reasoning": "Adjusting ingredient quantities to personal preference and taste"
     },
     {
       "section": "ingredients",
       "line_index": 10,
       "original": "1 pound blue crab crabmeat",
-      "modified": "1 gallon water",
+      "modified": "1 pound imitation crab meat",
       "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
+      "source_username": "nosugarnoflour",
+      "reasoning": "Substituting imitation crab meat for fresh blue crab due to availability"
     },
     {
       "section": "ingredients",
@@ -162,26 +124,44 @@
     },
     {
       "section": "ingredients",
-      "line_index": 5,
-      "original": "1 cup sliced carrots",
-      "modified": "",
-      "operation": "remove",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 6,
-      "original": "2 tablespoons chopped onion",
-      "modified": "",
-      "operation": "remove",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
       "line_index": 7,
       "original": "2 tablespoons Old Bay Seasoning TM",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 8,
+      "original": "1 gallon water",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 10,
+      "original": "1 pound blue crab crabmeat",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "instructions",
+      "line_index": 2,
+      "original": "Bring 1 gallon water to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.",
+      "modified": "Bring 1 gallon water and 2 chicken bouillon cubes to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.",
+      "operation": "replace",
+      "source_username": "Cheryliscious",
+      "reasoning": "Cooking the soup longer on low heat allows flavors to develop and intensify"
+    },
+    {
+      "section": "instructions",
+      "line_index": 2,
+      "original": "Bring 1 gallon water to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.",
       "modified": "",
       "operation": "remove",
       "source_username": null,
@@ -224,24 +204,12 @@
       "modification_type": [
         "quantity_adjustment"
       ],
-      "reasoning": "Adjusting the amount of potatoes, cabbage, beef broth, brown sugar, and Worcestershire sauce to personal preference",
+      "reasoning": "Adjusting ingredient quantities to personal preference and taste",
       "changes_made": [
-        {
-          "type": "ingredient",
-          "from_text": "1 cup sliced carrots",
-          "to_text": "1 1/2 cups cubed potatoes",
-          "operation": "replace"
-        },
         {
           "type": "ingredient",
           "from_text": "2 cups beef broth",
           "to_text": "2 cans low sodium beef broth",
-          "operation": "replace"
-        },
-        {
-          "type": "ingredient",
-          "from_text": "2 tablespoons chopped onion",
-          "to_text": "1/2 cup chopped savoy cabbage",
           "operation": "replace"
         },
         {
@@ -252,9 +220,9 @@
         },
         {
           "type": "ingredient",
-          "from_text": "",
+          "from_text": "1 gallon water",
           "to_text": "1/4 cup brown sugar and 1 tablespoon Worcestershire sauce",
-          "operation": "add"
+          "operation": "replace"
         }
       ],
       "mention_count": 2
@@ -266,39 +234,54 @@
         "rating": 5
       },
       "modification_type": [
-        "quantity_adjustment"
+        "technique_change"
       ],
-      "reasoning": "Doubling the Old Bay seasoning and adding chicken bouillon enhances flavor",
+      "reasoning": "Cooking the soup longer on low heat allows flavors to develop and intensify",
+      "changes_made": [
+        {
+          "type": "instruction",
+          "from_text": "Bring 1 gallon water to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.",
+          "to_text": "Bring 1 gallon water and 2 chicken bouillon cubes to a boil in a large pot. Add crab claws and boil for 6 minutes; drain.",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    },
+    {
+      "source_review": {
+        "text": "I live in western PA. no fresh blue crab in my neighborhood. i did however have a package of imitation crab meat. I know all you marylanders are kringing lol. I made the recipe pretty much as written with that exception and a couple of others . I only had 1 can of stewed tomatoes so I used that and 1 can of diced and I had a can of Delallo's red clam sauce so I added that. {a little olive oil , garlic and basil never hurt anyone } It was great and I made a crab salad with peas and bacon with the other half of the package of \"crabby meat\". also great. I didn't have limas so added potatoes. I thought edamame would be a good substitute too.",
+        "reviewer": "nosugarnoflour",
+        "rating": 5
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Substituting imitation crab meat for fresh blue crab due to availability",
       "changes_made": [
         {
           "type": "ingredient",
-          "from_text": "3 tablespoons Old Bay Seasoning TM",
-          "to_text": "3 tablespoons Old Bay Seasoning TM",
+          "from_text": "1 pound blue crab crabmeat",
+          "to_text": "1 pound imitation crab meat",
           "operation": "replace"
-        },
-        {
-          "type": "ingredient",
-          "from_text": "",
-          "to_text": "2 chicken bouillon cubes",
-          "operation": "add"
         }
       ],
       "mention_count": 1
     }
   ],
   "enhancement_summary": {
-    "total_changes": 9,
+    "total_changes": 7,
     "change_types": [
+      "ingredient_substitution",
       "quantity_adjustment",
-      "ingredient_substitution"
+      "technique_change"
     ],
-    "expected_impact": "Using crushed tomatoes instead of stewed and Birdseye frozen veggies adds convenience and variety; Adjusting the amount of potatoes, cabbage, beef broth, brown sugar, and Worcestershire sauce to personal preference; Doubling the Old Bay seasoning and adding chicken bouillon enhances flavor"
+    "expected_impact": "Using crushed tomatoes instead of stewed and Birdseye frozen veggies adds convenience and variety; Adjusting ingredient quantities to personal preference and taste; Cooking the soup longer on low heat allows flavors to develop and intensify (and 1 more improvements)"
   },
   "description": "This crab soup recipe is authentic Chesapeake Bay food made with Old Bay, lima beans, corn, carrots, and Maryland blue back-fin crab meat and claws.",
   "servings": "10",
   "prep_time": null,
   "cook_time": null,
   "total_time": null,
-  "created_at": "2026-03-04T17:12:28.187590",
+  "created_at": "2026-03-04T17:25:31.514101",
   "pipeline_version": "2.0.0"
 }

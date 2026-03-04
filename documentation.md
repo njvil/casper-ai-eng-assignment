@@ -492,12 +492,56 @@ Playwright scraping is ~10-15 seconds per recipe (page load + JS settle). This i
 
 ### Confirmed run results
 
-Pipeline v2 was run against all 15 recipe files. **13 out of 15 recipes were successfully enhanced**, producing 13 enhanced JSON files in `data/enhanced/`. Observations from the logs:
+Pipeline v2 was run against all 15 recipe files. **13 out of 15 recipes were successfully enhanced**, producing 13 enhanced JSON files in `data/enhanced/`. The pipeline architecture works — featured tweak preference, multi-modification extraction, safety validation, and Phase 2 summarisation all function correctly.
 
-- **Featured tweak preference works**: Recipes scraped via `scraper_v3.py` (e.g. Italian Wedding Soup with 11 featured tweaks) use those exclusively. Recipes from `scraper_v2.py` fall back to base reviews.
-- **Multi-modification extraction works**: A single review of Italian Wedding Soup yielded 5 distinct modifications. Banana Bread reviews yielded 1-3 each.
-- **Safety validation catches bad edits**: Several modifications were skipped because their `find` text didn't match any recipe line (e.g. `"Stir in eggs and mashed bananas until well blended."` didn't exist in the instructions). These were logged as warnings rather than silently failing.
-- **Phase 2 summarisation works**: 9 raw modifications from 5 Banana Bread reviews were summarised down to 5 ranked modifications.
+However, an audit of all 13 enhanced recipes revealed **systemic quality issues** in the LLM output and the modifier's handling of sequential edits.
+
+### Quality audit: systemic issues found across 13 enhanced recipes
+
+| Issue | Recipes affected | Severity |
+|-------|-----------------|----------|
+| **Instructions not updated to match modified ingredients** | 10 of 13 | Critical |
+| **Remove/shadow diffs with empty reasoning** | All 13 | Medium |
+| **No-op changes (from_text = to_text)** | 3 (Onion Soup, Cookies, Lasagna) | High |
+| **Fabricated modifications not in source review** | 2 (Rice Pudding, Sweet Potato Soup) | Critical |
+| **Nonsensical text added as instruction** | 1 (Banana Bread: "Enjoy your Bananarama Bread!") | High |
+| **Contradictory reasoning vs actual change** | 1 (Banana Bread: "more bananas" but quantity decreased) | High |
+| **Semantically wrong replacement (unrelated items swapped)** | 2 (Crab Soup: water replaced with brown sugar; Nikujaga: index-shift artifacts) | Critical |
+| **reviewer: null in source_review** | 6 recipes | Medium |
+| **Same review duplicated across all modifications** | 4 recipes | Medium |
+| **Misclassified modification_type** | 1 (Apple Cake: "addition" should be "quantity_adjustment") | Low |
+| **Copy-pasted reasoning across line_diffs** | 1 (Chinese Chicken Soup) | Low |
+| **Vague replacement losing quantity precision** | 2 (Lasagna: 3x "homemade tomato sauce"; Sweet Potato: "Fresh ginger, to taste") | Medium |
+
+### Detailed findings by recipe
+
+**Best results** (2 recipes with minor issues only):
+- **Homemade Mac and Cheese**: Cleanest output. Well-sourced modifications, sensible changes. Only issue: 2 remove diffs with empty reasoning.
+- **Old-Fashioned Onion Soup**: Mostly clean, but has one no-op change where `from_text` equals `to_text` because the modifier used the already-modified value from a prior edit.
+
+**Critical issues** (most impactful problems):
+
+1. **Instructions never updated when ingredients change** (10 of 13 recipes): When an ingredient is replaced (e.g. "walnuts" → "Skor toffee bits"), the instructions still reference the original ("Stir in flour, chocolate chips, and walnuts"). The pipeline only modifies `ingredients` and `instructions` lists via the LLM's `edits`, but the LLM rarely emits instruction edits to match ingredient changes — and the pipeline doesn't detect or fix the inconsistency.
+
+2. **No-op changes from sequential application** (3 recipes): When multiple modifications target the same ingredient line sequentially, the second modification's `from_text` is the already-modified value, not the original. If the Phase 2 summarisation already resolved them into the same value, the result is `from_text == to_text`. The modifier applies this as a no-op but records it as a successful change.
+
+3. **LLM hallucinations / fabrications** (2 recipes): The LLM occasionally invents modifications not present in the source review. Rice Pudding got "Divide the pudding into two containers" from a review that never said this. Sweet Potato Soup got "Fresh ginger, to taste" from a review about canned yams.
+
+4. **Nonsensical additions** (1 recipe): Banana Bread received "Enjoy your Bananarama Bread!" as an instruction — marketing-style text fabricated by the LLM.
+
+5. **Index-shifting artifacts in line_diffs** (multiple recipes): When `add_after` inserts a new ingredient, all subsequent ingredients shift down by one. The diff builder compares by index, so it reports every shifted line as a "replace" with empty reasoning. These false diffs are confusing for users.
+
+### Root causes
+
+1. **The LLM extraction prompt doesn't instruct for instruction consistency.** When an ingredient changes, the LLM should also emit an instruction edit if the instructions reference that ingredient. The prompt currently only says "extract what the user changed", not "ensure instructions remain consistent".
+
+2. **The modifier applies edits against the evolving recipe, not the original.** Each edit's `find` text is matched against the recipe *after* all prior edits. If two modifications from different reviews change the same line, the second `find` may not match the now-modified text, or may match it as a no-op.
+
+3. **The diff builder compares by index, not by content.** Insertions cause all subsequent lines to shift, producing false diffs. A content-aware diff (e.g. `difflib.SequenceMatcher` on the two lists) would correctly identify the insertion and leave unchanged lines alone.
+
+4. **The Phase 2 summarisation prompt lacks a "no fabrication" instruction.** The LLM should be explicitly told to only use modifications that are directly stated in the source reviews, not inferred or invented.
+
+5. **The `reviewer` field is null when reviews don't have a username** — this is a data issue from `scraper_v2.py` which doesn't extract usernames from the current DOM structure. `scraper_v3.py` does extract them, so this improves as more recipes are scraped via v3.
 
 ---
 
@@ -513,31 +557,47 @@ The pipeline's `output_dir` defaults to `PROJECT_ROOT / "data" / "enhanced"` (an
 
 ## 13. Future Improvements
 
+### Critical (from audit findings)
+
+1. **Instruction consistency pass**: After ingredient modifications are applied, run a follow-up LLM call (or post-processing step) that checks whether the instructions reference any replaced/removed ingredient names and updates them accordingly. Currently 10 of 13 recipes have stale instructions that reference ingredients no longer in the recipe.
+
+2. **Content-aware diff builder**: Replace the current index-based diff comparison with `difflib.SequenceMatcher` operating on the two ingredient/instruction lists. This correctly identifies insertions and removals without producing false "replace" diffs from index shifting. Each real diff should carry attribution from the modification that caused it.
+
+3. **No-op change detection**: Before recording a `ChangeRecord`, compare `from_text` and `to_text`. If they are identical, skip the record. This eliminates the 3-recipe pattern where sequential modifications against the same line produce no-ops.
+
+4. **Anti-hallucination guardrail in prompts**: Add explicit instructions to both Phase 1 and Phase 2 prompts: "Only extract modifications that are directly and explicitly stated in the review text. Do not infer, invent, or extrapolate changes the reviewer did not describe." This addresses the fabricated modifications found in Rice Pudding and Sweet Potato Soup.
+
+5. **Post-apply validation**: After all modifications are applied, run a sanity check that verifies: (a) no instruction references an ingredient that was removed, (b) no line_diff has empty reasoning, (c) no added instruction is nonsensical/marketing text. Flag or reject failing recipes.
+
 ### High priority
 
-1. **Two-pass `has_modification` detection**: Use the regex as a quick pre-filter, then a lightweight LLM call to confirm. This eliminates false positives like "I used this recipe as-is" without the cost of running full extraction on every review.
+6. **Two-pass `has_modification` detection**: Use the regex as a quick pre-filter, then a lightweight LLM call to confirm. This eliminates false positives like "I used this recipe as-is" without the cost of running full extraction on every review.
 
-2. **Instruction modification improvements**: The fuzzy matching (`SequenceMatcher`) works well for short ingredient lines but is less reliable for long instruction strings. Consider using the LLM to identify the exact instruction text to find, or switch to a more robust matching strategy for instructions.
+7. **Instruction modification improvements**: The fuzzy matching (`SequenceMatcher`) works well for short ingredient lines but is less reliable for long instruction strings. Consider using the LLM to identify the exact instruction text to find, or switch to a more robust matching strategy for instructions.
 
-3. **Proper test suite**: Replace the manual `test_pipeline.py` runner with pytest tests that use mocked LLM responses and assert specific outputs. This would catch regressions when prompts or models change.
+8. **Proper test suite**: Replace the manual `test_pipeline.py` runner with pytest tests that use mocked LLM responses and assert specific outputs. Include golden-file tests against known-good enhanced recipe JSONs to catch regressions.
 
 ### Medium priority
 
-4. **Nutrition recalculation**: The enhanced recipe copies the original nutrition data even after ingredient changes. At minimum, flag it as stale. Ideally, recalculate based on modified ingredients.
+9. **Reviewer attribution fix**: Populate `reviewer` field on all `source_review` entries. Currently 6 recipes have `reviewer: null` because `scraper_v2.py` doesn't extract usernames from the current DOM. For v2 scraped data, backfill from `featured_tweaks` username field where available.
 
-5. **Confidence scoring**: Add a `confidence_score` field to each modification based on: (a) how many reviewers mention it, (b) average rating of those reviewers, (c) fuzzy match quality when applying. This helps downstream consumers decide which modifications to trust.
+10. **Precision in replacements**: The Phase 2 prompt should instruct the LLM to preserve quantity specificity. "28 oz can crushed tomatoes" should not become the vague "homemade tomato sauce" — either preserve the original or provide a specific substitute with quantities.
 
-6. **Deterministic mode**: Seed the random number generator and set LLM temperature to 0 for reproducible runs. Useful for testing and debugging.
+11. **Nutrition recalculation**: The enhanced recipe copies the original nutrition data even after ingredient changes. At minimum, flag it as stale. Ideally, recalculate based on modified ingredients.
+
+12. **Confidence scoring**: Add a `confidence_score` field to each modification based on: (a) how many reviewers mention it, (b) average rating of those reviewers, (c) fuzzy match quality when applying.
+
+13. **Deterministic mode**: Set LLM temperature to 0 and seed any randomness for reproducible runs.
 
 ### Nice to have
 
-7. **Review pagination**: AllRecipes only shows a limited number of reviews per page. The scraper could click "Load More" or paginate to capture more reviews.
+14. **Review pagination**: The scraper could click "Load More" or paginate to capture more reviews.
 
-8. **Cross-recipe learning**: Modifications that work across many similar recipes (e.g. "add vanilla to any cookie recipe") could be identified and suggested proactively.
+15. **Cross-recipe learning**: Modifications that work across many similar recipes (e.g. "add vanilla to any cookie recipe") could be identified and suggested proactively.
 
-9. **User feedback loop**: Allow users to vote on whether a modification actually improved their result. This creates a feedback signal that could replace the current proxy metrics (rating, helpful count).
+16. **User feedback loop**: Allow users to vote on whether a modification actually improved their result.
 
-10. **API endpoint**: Wrap the pipeline in a FastAPI service that accepts a recipe URL and returns the enhanced recipe JSON. This decouples the scraping from the enhancement and enables a web UI.
+17. **API endpoint**: Wrap the pipeline in a FastAPI service that accepts a recipe URL and returns the enhanced recipe JSON.
 
 ---
 

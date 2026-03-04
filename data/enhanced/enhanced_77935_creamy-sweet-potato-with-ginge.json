@@ -40,7 +40,7 @@
     "1.5 cups half-and-half (or whole milk)",
     "Salt and freshly ground pepper, to taste",
     "Garnish: chopped honey-roasted peanuts",
-    "Roasted Brussels Sprouts and peppers"
+    "Roasted Brussels sprouts and peppers"
   ],
   "instructions": [
     "Gather the ingredients.",
@@ -59,7 +59,7 @@
       "modified": "1.5 pounds canned yams",
       "operation": "replace",
       "source_username": null,
-      "reasoning": "Using canned yams instead of raw sweet potatoes may alter the texture and flavor of the soup"
+      "reasoning": "Using canned yams instead of raw sweet potatoes adds convenience and may affect flavor and texture"
     },
     {
       "section": "ingredients",
@@ -74,10 +74,10 @@
       "section": "ingredients",
       "line_index": 13,
       "original": "",
-      "modified": "Roasted Brussels Sprouts and peppers",
+      "modified": "Roasted Brussels sprouts and peppers",
       "operation": "add",
       "source_username": null,
-      "reasoning": "Adding roasted Brussels Sprouts and peppers introduces a new flavor and texture element to the soup"
+      "reasoning": "Adding roasted Brussels sprouts and peppers introduces a new flavor and texture element to the soup"
     },
     {
       "section": "ingredients",
@@ -108,7 +108,7 @@
       "modification_type": [
         "ingredient_substitution"
       ],
-      "reasoning": "Using canned yams instead of raw sweet potatoes may alter the texture and flavor of the soup",
+      "reasoning": "Using canned yams instead of raw sweet potatoes adds convenience and may affect flavor and texture",
       "changes_made": [
         {
           "type": "ingredient",
@@ -128,12 +128,12 @@
       "modification_type": [
         "addition"
       ],
-      "reasoning": "Adding roasted Brussels Sprouts and peppers introduces a new flavor and texture element to the soup",
+      "reasoning": "Adding roasted Brussels sprouts and peppers introduces a new flavor and texture element to the soup",
       "changes_made": [
         {
           "type": "ingredient",
           "from_text": "",
-          "to_text": "Roasted Brussels Sprouts and peppers",
+          "to_text": "Roasted Brussels sprouts and peppers",
           "operation": "add"
         }
       ],
@@ -166,13 +166,13 @@
       "ingredient_substitution",
       "addition"
     ],
-    "expected_impact": "Using canned yams instead of raw sweet potatoes may alter the texture and flavor of the soup; Adding roasted Brussels Sprouts and peppers introduces a new flavor and texture element to the soup; Using fresh ginger will enhance the ginger flavor of the soup"
+    "expected_impact": "Using canned yams instead of raw sweet potatoes adds convenience and may affect flavor and texture; Adding roasted Brussels sprouts and peppers introduces a new flavor and texture element to the soup; Using fresh ginger will enhance the ginger flavor of the soup"
   },
   "description": "Made with sweet potatoes and seasoned with ginger, nutmeg, and cayenne pepper, this creamy soup is topped with honey-roasted peanuts.",
   "servings": "8",
   "prep_time": null,
   "cook_time": null,
   "total_time": null,
-  "created_at": "2026-03-04T17:10:19.988952",
+  "created_at": "2026-03-04T17:23:45.591861",
   "pipeline_version": "2.0.0"
 }

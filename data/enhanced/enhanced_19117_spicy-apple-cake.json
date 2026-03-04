@@ -54,7 +54,7 @@
     "Sift together flour, 1 teaspoon cinnamon, baking powder, baking soda, salt, and nutmeg. Set aside.",
     "Cream brown sugar, 1/2 cup shortening, and white sugar together in a large bowl until light and fluffy. Beat in eggs one at a time, then stir in vanilla. Beat in flour mixture alternately with milk, mixing until just combined. Stir in chopped apples.",
     "Spread batter evenly in the prepared pan. Bake in the preheated oven until a toothpick inserted into the center of cake comes out clean, 35 to 40 minutes. Let cool.",
-    "Use leftover frosting from another cake to spread over top of cooled cake."
+    "Combine confectioners&#39; sugar, 1/4 cup shortening, 1/4 teaspoon cinnamon, and nutmeg in a medium bowl. Beat until frosting is light and creamy. Beat in evaporated milk 1 tablespoon at a time until desired spreading consistency is reached. Spread over top of cooled cake."
   ],
   "line_diffs": [
     {
@@ -70,24 +70,6 @@
       "section": "ingredients",
       "line_index": 12,
       "original": "2 cups apple - peeled, cored, and chopped",
-      "modified": "",
-      "operation": "remove",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "instructions",
-      "line_index": 4,
-      "original": "Combine confectioners&#39; sugar, 1/4 cup shortening, 1/4 teaspoon cinnamon, and nutmeg in a medium bowl. Beat until frosting is light and creamy. Beat in evaporated milk 1 tablespoon at a time until desired spreading consistency is reached. Spread over top of cooled cake.",
-      "modified": "Use leftover frosting from another cake to spread over top of cooled cake.",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": "Using a different frosting can add variety and personal touch to the cake"
-    },
-    {
-      "section": "instructions",
-      "line_index": 4,
-      "original": "Combine confectioners&#39; sugar, 1/4 cup shortening, 1/4 teaspoon cinnamon, and nutmeg in a medium bowl. Beat until frosting is light and creamy. Beat in evaporated milk 1 tablespoon at a time until desired spreading consistency is reached. Spread over top of cooled cake.",
       "modified": "",
       "operation": "remove",
       "source_username": null,
@@ -114,41 +96,20 @@
         }
       ],
       "mention_count": 3
-    },
-    {
-      "source_review": {
-        "text": "Mmmm, this cake was so good. I made it exactly as directed except I used a different frosting only because I had some leftover from another cake. The next time I make this I will add one more cup of apples because more is better right?!",
-        "reviewer": null,
-        "rating": 5
-      },
-      "modification_type": [
-        "ingredient_substitution"
-      ],
-      "reasoning": "Using a different frosting can add variety and personal touch to the cake",
-      "changes_made": [
-        {
-          "type": "instruction",
-          "from_text": "Combine confectioners&#39; sugar, 1/4 cup shortening, 1/4 teaspoon cinnamon, and nutmeg in a medium bowl. Beat until frosting is light and creamy. Beat in evaporated milk 1 tablespoon at a time until desired spreading consistency is reached. Spread over top of cooled cake.",
-          "to_text": "Use leftover frosting from another cake to spread over top of cooled cake.",
-          "operation": "replace"
-        }
-      ],
-      "mention_count": 1
     }
   ],
   "enhancement_summary": {
-    "total_changes": 2,
+    "total_changes": 1,
     "change_types": [
-      "ingredient_substitution",
       "addition"
     ],
-    "expected_impact": "Adding more apples can enhance the flavor and texture of the cake. Adding more apple chunks to enhance the apple flavor and texture; Using a different frosting can add variety and personal touch to the cake"
+    "expected_impact": "Adding more apples can enhance the flavor and texture of the cake. Adding more apple chunks to enhance the apple flavor and texture"
   },
   "description": "This delicious spicy apple cake recipe is made with fresh apples, spices, and sugar. It&#39;s a wonderfully perfect treat for the apple harvest season.",
   "servings": "9",
   "prep_time": null,
   "cook_time": null,
   "total_time": null,
-  "created_at": "2026-03-04T17:11:07.656853",
+  "created_at": "2026-03-04T17:23:53.816627",
   "pipeline_version": "2.0.0"
 }

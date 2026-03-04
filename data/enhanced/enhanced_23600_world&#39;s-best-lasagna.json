@@ -37,18 +37,18 @@
     "Let the lasagna rest at room temperature for about 15 minutes before cutting; this helps it set and firm up."
   ],
   "ingredients": [
-    "1 pound hot Italian sausage",
-    "0.75 pound lean ground beef",
+    "1 pound spicy Italian sausage",
+    "1 pound lean ground beef",
     "0.5 cup minced onion",
     "2 cloves garlic, crushed",
     "homemade tomato sauce",
     "homemade tomato sauce",
     "homemade tomato sauce",
-    "lasagna sheets made from scratch",
+    "0.5 cup water",
     "2 tablespoons white sugar",
     "4 tablespoons chopped fresh parsley, divided",
     "1.5 teaspoons dried basil leaves",
-    "1.5 teaspoons salt, divided, or to taste",
+    "about 1 teaspoon salt",
     "1 teaspoon Italian seasoning",
     "0.5 teaspoon fennel seeds",
     "0.25 teaspoon ground black pepper",
@@ -75,10 +75,19 @@
       "section": "ingredients",
       "line_index": 0,
       "original": "1 pound sweet Italian sausage",
-      "modified": "1 pound hot Italian sausage",
+      "modified": "1 pound spicy Italian sausage",
       "operation": "replace",
-      "source_username": "Vlittle72",
-      "reasoning": "Hot Italian sausage adds more flavor than sweet sausage"
+      "source_username": "JBAILEY214",
+      "reasoning": "Prefer spicy Italian sausage over sweet for added flavor"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 1,
+      "original": "0.75 pound lean ground beef",
+      "modified": "1 pound lean ground beef",
+      "operation": "replace",
+      "source_username": "JoJoWife",
+      "reasoning": "Adjusting meat ratio and reducing salt for personal preference"
     },
     {
       "section": "ingredients",
@@ -87,7 +96,7 @@
       "modified": "homemade tomato sauce",
       "operation": "replace",
       "source_username": "Joy R",
-      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe"
+      "reasoning": "Using homemade tomato sauce adds a fresher flavor to the dish"
     },
     {
       "section": "ingredients",
@@ -96,7 +105,7 @@
       "modified": "homemade tomato sauce",
       "operation": "replace",
       "source_username": "Joy R",
-      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe"
+      "reasoning": "Using homemade tomato sauce adds a fresher flavor to the dish"
     },
     {
       "section": "ingredients",
@@ -105,16 +114,16 @@
       "modified": "homemade tomato sauce",
       "operation": "replace",
       "source_username": "Joy R",
-      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe"
+      "reasoning": "Using homemade tomato sauce adds a fresher flavor to the dish"
     },
     {
       "section": "ingredients",
-      "line_index": 7,
-      "original": "0.5 cup water",
-      "modified": "lasagna sheets made from scratch",
+      "line_index": 11,
+      "original": "1.5 teaspoons salt, divided, or to taste",
+      "modified": "about 1 teaspoon salt",
       "operation": "replace",
-      "source_username": "Joy R",
-      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe"
+      "source_username": "JoJoWife",
+      "reasoning": "Adjusting meat ratio and reducing salt for personal preference"
     },
     {
       "section": "ingredients",
@@ -127,6 +136,15 @@
     },
     {
       "section": "ingredients",
+      "line_index": 1,
+      "original": "0.75 pound lean ground beef",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
       "line_index": 4,
       "original": "1 (28 ounce) can crushed tomatoes",
       "modified": "",
@@ -154,8 +172,8 @@
     },
     {
       "section": "ingredients",
-      "line_index": 7,
-      "original": "0.5 cup water",
+      "line_index": 11,
+      "original": "1.5 teaspoons salt, divided, or to taste",
       "modified": "",
       "operation": "remove",
       "source_username": null,
@@ -172,7 +190,7 @@
       "modification_type": [
         "ingredient_substitution"
       ],
-      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe",
+      "reasoning": "Using homemade tomato sauce adds a fresher flavor to the dish",
       "changes_made": [
         {
           "type": "ingredient",
@@ -191,49 +209,76 @@
           "from_text": "2 (6 ounce) cans tomato paste",
           "to_text": "homemade tomato sauce",
           "operation": "replace"
-        },
-        {
-          "type": "ingredient",
-          "from_text": "0.5 cup water",
-          "to_text": "lasagna sheets made from scratch",
-          "operation": "replace"
         }
       ],
-      "mention_count": 1
+      "mention_count": 3
     },
     {
       "source_review": {
-        "text": "Italian seasoning and tomato sauce are added ingredients. I use hot Italian sausage, which isn't very hot,but gives it more flavor than the sweet. Also, I cook my seasoning in a tablespoon of hot olive oil for about a minute, then I start the recipe from there. I believe cooking them releases their flavors rather than just adding them to the pot.",
-        "reviewer": "Vlittle72",
-        "rating": 1
+        "text": "I have been on a long search and agree this is the best lasagna I have found. The sauce is fantastic, which is a big compliment from me as I'm very picky about my sauce. I read a lot of other people's comments. At the end of the day, I made the recipe as written except that I omitted the salt, use 1.25 pounds of ground beef, spicy italian sausage instead of sweet, and used only half the ricotta. How much ricotta you use is really up to personal taste. My view is a little goes a long ways. Several people mentioned doing it in three layers instead of two, but two took it up to the very top of the pan anyway. This recipe is great!",
+        "reviewer": "JBAILEY214",
+        "rating": 5
       },
       "modification_type": [
         "ingredient_substitution"
       ],
-      "reasoning": "Hot Italian sausage adds more flavor than sweet sausage",
+      "reasoning": "Prefer spicy Italian sausage over sweet for added flavor",
       "changes_made": [
         {
           "type": "ingredient",
           "from_text": "1 pound sweet Italian sausage",
-          "to_text": "1 pound hot Italian sausage",
+          "to_text": "1 pound spicy Italian sausage",
           "operation": "replace"
         }
       ],
-      "mention_count": 1
+      "mention_count": 2
+    },
+    {
+      "source_review": {
+        "text": "This lasagna is great and the sauce itself is awesome too. My husband told me that this sauce is better that the one I usually make and that one was from his mother’s recipe. This recipe makes a little more sauce that you need so I use the leftover for some pasta or ravioli few days later. I followed some suggestions from the previous reviews and from making this recipe few times here are some things I changed. \n*Used 1lb each of beef and Italian sausage\n*Used less salt (only about a teaspoon)\n*Used only 1 tablespoon of sugar in the sauce\n*Used wine instead of water\n*Used fresh chopped basil instead of dry (about ½ cup)\n*Used “ready to bake” lasagna noodles \n*Used fresh deli grade ricotta cheese not the processed stuff from the container\n*Used freshly grated Parmesan cheese\nThis is a 5 start lasagna recipe that it better than the one you order in the restaurant!! I often add spinach (fresh spinach wilted with some butter) to the ricotta cheese and it tastes great. Remember to always use as much fresh ingredients as you can – you will taste the difference (fresh ricotta and Parmesan, add fresh parsley and basil etc) Enjoy! Also, make the sauce a day earlier to save time.",
+        "reviewer": "JoJoWife",
+        "rating": 5
+      },
+      "modification_type": [
+        "quantity_adjustment"
+      ],
+      "reasoning": "Adjusting meat ratio and reducing salt for personal preference",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "1 pound spicy Italian sausage",
+          "to_text": "1 pound spicy Italian sausage",
+          "operation": "replace"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "0.75 pound lean ground beef",
+          "to_text": "1 pound lean ground beef",
+          "operation": "replace"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "1.5 teaspoons salt, divided, or to taste",
+          "to_text": "about 1 teaspoon salt",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 2
     }
   ],
   "enhancement_summary": {
-    "total_changes": 5,
+    "total_changes": 7,
     "change_types": [
-      "ingredient_substitution"
+      "ingredient_substitution",
+      "quantity_adjustment"
     ],
-    "expected_impact": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe; Hot Italian sausage adds more flavor than sweet sausage"
+    "expected_impact": "Using homemade tomato sauce adds a fresher flavor to the dish; Prefer spicy Italian sausage over sweet for added flavor; Adjusting meat ratio and reducing salt for personal preference"
   },
   "description": "This lasagna recipe from John Chandler is our most popular recipe! With sausage, ground beef, basil, and 3 types of cheese, it lives up to its name!",
   "servings": "12",
   "prep_time": null,
   "cook_time": null,
   "total_time": null,
-  "created_at": "2026-03-04T17:10:01.969023",
+  "created_at": "2026-03-04T17:23:27.007177",
   "pipeline_version": "2.0.0"
 }

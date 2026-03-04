@@ -17,12 +17,12 @@
   ],
   "original_instructions": [
     "Gather your ingredients, making sure your butter is softened, and your eggs are room temperature.",
-    "Preheat the oven to 350 degrees F (175 degrees C). Beat butter, white sugar, and brown sugar with an electric mixer in a large bowl until smooth.",
+    "Preheat the oven to 350 degrees F (175 degrees C). Beat butter, white sugar, and brown sugar in a large bowl with an electric mixer until smooth and creamy.",
     "Beat in eggs, one at a time, then stir in vanilla.",
-    "Dissolve baking soda in hot water. Add to batter along with salt.",
-    "Stir in flour, chocolate chips, and walnuts.",
-    "Drop spoonfuls of dough 2 inches apart onto ungreased baking sheets.",
-    "Bake in the preheated oven until edges are nicely browned, about 10 minutes.",
+    "Dissolve baking soda in hot water; add to batter along with salt and mix until combined.",
+    "Stir in flour, chocolate chips, and walnuts until a soft dough forms.",
+    "Drop rounded spoonfuls of cookie dough 2 inches apart onto ungreased baking sheets.",
+    "Bake in the preheated oven until edges are lightly browned, about 10 minutes.",
     "Cool on the baking sheets briefly before removing to a wire rack to cool completely.",
     "Store in an airtight container or serve immediately and enjoy!"
   ],
@@ -31,24 +31,22 @@
     "0.5 cup white sugar",
     "1.5 cups packed brown sugar",
     "2 eggs",
-    "1 egg yolk",
     "2 teaspoons vanilla extract",
     "1 teaspoon baking soda",
+    "2 teaspoons hot water",
     "0.5 teaspoon salt",
-    "1 teaspoon cream of tartar",
     "3 cups all-purpose flour",
     "2 cups semisweet chocolate chips",
-    "1 cup chopped walnuts"
+    "1 cup Skor toffee bits"
   ],
   "instructions": [
     "Gather your ingredients, making sure your butter is softened, and your eggs are room temperature.",
-    "Preheat the oven to 350 degrees F (175 degrees C). Beat butter, white sugar, and brown sugar with an electric mixer in a large bowl until smooth.",
+    "Preheat the oven to 350 degrees F (175 degrees C). Beat butter, white sugar, and brown sugar in a large bowl with an electric mixer until smooth and creamy.",
     "Beat in eggs, one at a time, then stir in vanilla.",
-    "Dissolve baking soda in hot water. Add to batter along with salt.",
-    "Stir in flour, chocolate chips, and walnuts.",
-    "Drop spoonfuls of dough 2 inches apart onto ungreased baking sheets.",
-    "Use an ice cream scoop to make 16 big cookies.",
-    "Bake in the preheated oven until edges are nicely browned, about 10 minutes.",
+    "Dissolve baking soda in hot water; add to batter along with salt and mix until combined.",
+    "Stir in flour, chocolate chips, and walnuts until a soft dough forms.",
+    "Drop rounded spoonfuls of cookie dough 2 inches apart onto ungreased baking sheets.",
+    "Bake in the preheated oven until edges are lightly browned, about 10 minutes.",
     "Cool on the baking sheets briefly before removing to a wire rack to cool completely.",
     "Store in an airtight container or serve immediately and enjoy!"
   ],
@@ -59,8 +57,8 @@
       "original": "1 cup white sugar",
       "modified": "0.5 cup white sugar",
       "operation": "replace",
-      "source_username": null,
-      "reasoning": "Increasing brown sugar and decreasing white sugar can enhance flavor and texture"
+      "source_username": "Jen Gerbrandt",
+      "reasoning": "Adjusting sugar amounts to make cookies chewier"
     },
     {
       "section": "ingredients",
@@ -68,59 +66,14 @@
       "original": "1 cup packed brown sugar",
       "modified": "1.5 cups packed brown sugar",
       "operation": "replace",
-      "source_username": null,
-      "reasoning": "Increasing brown sugar and decreasing white sugar can enhance flavor and texture"
-    },
-    {
-      "section": "ingredients",
-      "line_index": 4,
-      "original": "2 teaspoons vanilla extract",
-      "modified": "1 egg yolk",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 5,
-      "original": "1 teaspoon baking soda",
-      "modified": "2 teaspoons vanilla extract",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 6,
-      "original": "2 teaspoons hot water",
-      "modified": "1 teaspoon baking soda",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 8,
-      "original": "3 cups all-purpose flour",
-      "modified": "1 teaspoon cream of tartar",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "ingredients",
-      "line_index": 9,
-      "original": "2 cups semisweet chocolate chips",
-      "modified": "3 cups all-purpose flour",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
+      "source_username": "Jen Gerbrandt",
+      "reasoning": "Adjusting sugar amounts to make cookies chewier"
     },
     {
       "section": "ingredients",
       "line_index": 10,
       "original": "1 cup chopped walnuts",
-      "modified": "2 cups semisweet chocolate chips",
+      "modified": "1 cup Skor toffee bits",
       "operation": "replace",
       "source_username": null,
       "reasoning": ""
@@ -145,92 +98,25 @@
     },
     {
       "section": "ingredients",
-      "line_index": 6,
-      "original": "2 teaspoons hot water",
+      "line_index": 10,
+      "original": "1 cup chopped walnuts",
       "modified": "",
       "operation": "remove",
-      "source_username": null,
-      "reasoning": "Omitting water simplifies the recipe without affecting the outcome"
-    },
-    {
-      "section": "instructions",
-      "line_index": 6,
-      "original": "Bake in the preheated oven until edges are nicely browned, about 10 minutes.",
-      "modified": "Use an ice cream scoop to make 16 big cookies.",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "instructions",
-      "line_index": 7,
-      "original": "Cool on the baking sheets briefly before removing to a wire rack to cool completely.",
-      "modified": "Bake in the preheated oven until edges are nicely browned, about 10 minutes.",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
-    },
-    {
-      "section": "instructions",
-      "line_index": 8,
-      "original": "Store in an airtight container or serve immediately and enjoy!",
-      "modified": "Cool on the baking sheets briefly before removing to a wire rack to cool completely.",
-      "operation": "replace",
-      "source_username": null,
-      "reasoning": ""
+      "source_username": "Jen Gerbrandt",
+      "reasoning": "Omitting nuts simplifies the recipe"
     }
   ],
   "modifications_applied": [
     {
       "source_review": {
-        "text": "I used an ice cream scoop, that made 16 big cookies. I did add an additional egg yolk to help keep the cookie chewy.They turned out fantastic.",
-        "reviewer": null,
-        "rating": 5
-      },
-      "modification_type": [
-        "addition"
-      ],
-      "reasoning": "Adding an additional egg yolk helps keep the cookie chewy",
-      "changes_made": [
-        {
-          "type": "ingredient",
-          "from_text": "",
-          "to_text": "1 egg yolk",
-          "operation": "add"
-        }
-      ],
-      "mention_count": 1
-    },
-    {
-      "source_review": {
-        "text": "I used an ice cream scoop, that made 16 big cookies. I did add an additional egg yolk to help keep the cookie chewy.They turned out fantastic.",
-        "reviewer": null,
-        "rating": 5
-      },
-      "modification_type": [
-        "technique_change"
-      ],
-      "reasoning": "Using an ice cream scoop creates larger cookies",
-      "changes_made": [
-        {
-          "type": "instruction",
-          "from_text": "",
-          "to_text": "Use an ice cream scoop to make 16 big cookies.",
-          "operation": "add"
-        }
-      ],
-      "mention_count": 1
-    },
-    {
-      "source_review": {
-        "text": "I used an ice cream scoop, that made 16 big cookies. I did add an additional egg yolk to help keep the cookie chewy.They turned out fantastic.",
-        "reviewer": null,
+        "text": "I've tried a lot of different chocolate chip cookie recipes and this is the best one by far! The only change I've made is to the sugar amounts: 1/2 cup white sugar and 1 1/2 cups brown sugar-I think it makes them chewier. I omit the nuts and in my oven they take about 12 minutes to bake. So yummy!!",
+        "reviewer": "Jen Gerbrandt",
         "rating": 5
       },
       "modification_type": [
         "quantity_adjustment"
       ],
-      "reasoning": "Increasing brown sugar and decreasing white sugar can enhance flavor and texture",
+      "reasoning": "Adjusting sugar amounts to make cookies chewier",
       "changes_made": [
         {
           "type": "ingredient",
@@ -245,64 +131,84 @@
           "operation": "replace"
         }
       ],
-      "mention_count": 1
+      "mention_count": 3
     },
     {
       "source_review": {
-        "text": "I used an ice cream scoop, that made 16 big cookies. I did add an additional egg yolk to help keep the cookie chewy.They turned out fantastic.",
-        "reviewer": null,
+        "text": "I've tried a lot of different chocolate chip cookie recipes and this is the best one by far! The only change I've made is to the sugar amounts: 1/2 cup white sugar and 1 1/2 cups brown sugar-I think it makes them chewier. I omit the nuts and in my oven they take about 12 minutes to bake. So yummy!!",
+        "reviewer": "Jen Gerbrandt",
         "rating": 5
       },
       "modification_type": [
         "removal"
       ],
-      "reasoning": "Omitting water simplifies the recipe without affecting the outcome",
+      "reasoning": "Omitting nuts simplifies the recipe",
       "changes_made": [
         {
           "type": "ingredient",
-          "from_text": "2 teaspoons hot water",
+          "from_text": "1 cup chopped walnuts",
           "to_text": "",
           "operation": "remove"
+        }
+      ],
+      "mention_count": 2
+    },
+    {
+      "source_review": {
+        "text": "These chocolate chip cookies were very, very good. I have been trying chocolate chip cookie recipes forever to find the perfect cookie and this one is very close. They weren't too cake-like and they weren't thin and greasy, they were the perfect in-between cookie. That said, the dough is very thick once you mix all the ingredients together. A bit of advice - if you like a thinner cookie and not so cake-like, make a smaller ball of dough and when you place it on the cookie sheet be sure to flatten it quite a bit as the dough doesn't seem to spread when in the oven. If you like thick cookies, just leave them in the ball and they'll stay big. As the recipe states, they are crisp on the outside and chewy on the inside - still nice and moist the following day. I added some Skor toffee bits to the recipe and they turned out amazing - will definitely make again!! Thanks for sharing.",
+        "reviewer": "SPORTSNUT",
+        "rating": 5
+      },
+      "modification_type": [
+        "addition"
+      ],
+      "reasoning": "Adding Skor toffee bits enhances flavor and texture of the cookies",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "",
+          "to_text": "1 cup Skor toffee bits",
+          "operation": "add"
         }
       ],
       "mention_count": 1
     },
     {
       "source_review": {
-        "text": "I used an ice cream scoop, that made 16 big cookies. I did add an additional egg yolk to help keep the cookie chewy.They turned out fantastic.",
-        "reviewer": null,
-        "rating": 5
+        "text": "Superb. I give 4 1/2 stars to the original recipe since it calls for 50/50 white & brown sugar. Since then, I've used ALL brown sugar and increased the salt to 2/3 teaspoons, and it was PERFECT. The flavor was a lot richer. I've tried 4 recipes from this site and I'm glad I finally found my Master recipe. Some of the other recipes on this site calls for pudding mix in the batter - which baffles me. This is an excellent cookie (soft and chewy) that has only good old-fashioned ingredients. Most importantly, it stays chewy, not hard. Look no further folks, this is the one. (For walnut sized dough balls, and I did roll them for a more uniform look, 11-12 min. was perfect. 10 min. was still a little doughy). TIP - if your cookies sit around for a few days (if that's possible) and gets a little dry, put a fresh slice of sandwich bread in the same container as the cookies and they will moisten right up.",
+        "reviewer": "MommyFromSeattle",
+        "rating": 4
       },
       "modification_type": [
-        "addition"
+        "ingredient_substitution"
       ],
-      "reasoning": "Adding cream of tartar can help cookies retain shape and texture",
+      "reasoning": "Using all brown sugar instead of a mix creates a richer flavor",
       "changes_made": [
         {
           "type": "ingredient",
-          "from_text": "",
-          "to_text": "1 teaspoon cream of tartar",
-          "operation": "add"
+          "from_text": "0.5 cup white sugar",
+          "to_text": "0.5 cup white sugar",
+          "operation": "replace"
         }
       ],
       "mention_count": 1
     }
   ],
   "enhancement_summary": {
-    "total_changes": 6,
+    "total_changes": 5,
     "change_types": [
-      "technique_change",
-      "quantity_adjustment",
       "removal",
+      "ingredient_substitution",
+      "quantity_adjustment",
       "addition"
     ],
-    "expected_impact": "Adding an additional egg yolk helps keep the cookie chewy; Using an ice cream scoop creates larger cookies; Increasing brown sugar and decreasing white sugar can enhance flavor and texture (and 2 more improvements)"
+    "expected_impact": "Adjusting sugar amounts to make cookies chewier; Omitting nuts simplifies the recipe; Adding Skor toffee bits enhances flavor and texture of the cookies (and 1 more improvements)"
   },
   "description": "This classic chocolate chip cookie recipe makes deliciously buttery cookies with crisp edges, chewy middles, and gooey chocolate chips in every bite.",
   "servings": "48",
   "prep_time": null,
   "cook_time": null,
   "total_time": null,
-  "created_at": "2026-03-04T17:11:27.687106",
+  "created_at": "2026-03-04T17:24:35.570394",
   "pipeline_version": "2.0.0"
 }
