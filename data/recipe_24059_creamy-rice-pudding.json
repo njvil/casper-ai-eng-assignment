@@ -1,0 +1,92 @@
+{
+  "url": "https://www.allrecipes.com/recipe/24059/creamy-rice-pudding/",
+  "scraped_at": "2026-03-04T16:12:11.492841",
+  "recipe_id": "24059",
+  "title": "Creamy Rice Pudding",
+  "description": "This rice pudding with golden raisins makes a comforting dessert that everyone will love. Serve warm with a sprinkling of ground cinnamon or nutmeg.",
+  "rating": {
+    "value": "4.7",
+    "count": "6407"
+  },
+  "preptime": "PT10M",
+  "cooktime": "PT40M",
+  "totaltime": "PT50M",
+  "servings": "4",
+  "ingredients": [
+    "1.5 cups cold water",
+    "0.75 cup uncooked white rice",
+    "2 cups milk, divided",
+    "0.33333334326744 cup white sugar",
+    "0.25 teaspoon salt",
+    "1 egg, beaten",
+    "0.66666668653488 cup golden raisins",
+    "1 tablespoon butter",
+    "0.5 teaspoon vanilla extract"
+  ],
+  "instructions": [
+    "Gather all ingredients.",
+    "Bring water in a saucepan to a boil over medium heat; stir in rice. Reduce heat to low, cover, and simmer until rice is tender and liquid has been absorbed, about 20 minutes.",
+    "Combine cooked rice, 1 ½ cups milk, sugar, and salt in a clean saucepan; cook over medium heat, stirring often, until thick and creamy, about 15 minutes.",
+    "Stir in remaining ½ cup milk, egg, and raisins; cook 2 minutes, stirring constantly. Off heat, stir in butter and vanilla extract until combined.",
+    "Serve warm."
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "366 kcal",
+    "carbohydrateContent": "68 g",
+    "cholesterolContent": "64 mg",
+    "fiberContent": "1 g",
+    "proteinContent": "9 g",
+    "saturatedFatContent": "4 g",
+    "sodiumContent": "237 mg",
+    "sugarContent": "23 g",
+    "fatContent": "7 g",
+    "unsaturatedFatContent": "0 g"
+  },
+  "author": "[{'@type': 'Person', 'name': 'Allrecipes Member'}]",
+  "categories": [
+    "Dessert"
+  ],
+  "featured_tweaks": [],
+  "reviews": [
+    {
+      "text": "I have been searching for a recipe similar to what my grandma always made me growing up. She passed away 3 years ago and never used a recipe. She was a \"little of this, a dash of that and a pinch of this\" kinda gal. I am NOT! Unfortunately, I never was able to duplicate anything remotely close. This recipe was NOSTALGIA for me! It was great! Made as directed, except without the cinnamon and Raisins (personal preference). My kids loved it, and I will make it for years to come!",
+      "rating": 5
+    },
+    {
+      "text": "Did not care for rice pudding, but since I made it, know what I put in it, it’s great!",
+      "rating": 5
+    },
+    {
+      "text": "It should be noted to temper the eggs in. I did not, even though I added them at the same time as the milk. I've been picking tiny scrambled egg bits out of my yummy pudding lol I absolutely should have known better but was following the directions, too closely I suppose. I messed around with toppings and things after it was done. I felt it needed cinnamon and such. Great recipe with some tweaks!",
+      "rating": 4,
+      "has_modification": true
+    },
+    {
+      "text": "Great recipe. I also followed another review add egg(s) to milk, also some reviews said it came out runny, I deluded some corn 🌽 starch with some of the fluid from the cooked rice and it came out creamy 😋. Help this helps.",
+      "rating": 5
+    },
+    {
+      "text": "Followed exactly only using less raisinsINCREDIBLEThat old fashioned comforting taste of simple food and home. Didn't know how much I missed this until now. HIGHLY RECOMMENDEDThanks for sharing!!!",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "I decided to make this recipe because the reviews were high and I needed to use up some milk. I served into two containers for posting photos. I ended up eating both of them haha. It is so extremely delicious. I’m going to try not to eat anymore as I am trying to lose weight 😬",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "Followed the recipe exactly and loved it ! Yummy.",
+      "rating": 5
+    },
+    {
+      "text": "Added a pinch of nutmeg and 1/4 tsp cinnamon. Great recipe!",
+      "rating": 5
+    },
+    {
+      "text": "Awesome recipe",
+      "rating": 5
+    }
+  ]
+}

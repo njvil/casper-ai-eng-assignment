@@ -1,0 +1,97 @@
+{
+  "url": "https://www.allrecipes.com/recipe/20144/banana-banana-bread/",
+  "scraped_at": "2026-03-04T16:12:16.308930",
+  "recipe_id": "20144",
+  "title": "Banana Banana Bread",
+  "description": "This banana bread recipe makes an incredibly moist, delicious loaf with very ripe bananas for loads of banana flavor. It tastes even better toasted!",
+  "rating": {
+    "value": "4.7",
+    "count": "17277"
+  },
+  "preptime": "PT15M",
+  "cooktime": "PT60M",
+  "totaltime": "PT75M",
+  "servings": "12",
+  "ingredients": [
+    "2 cups all-purpose flour",
+    "1 teaspoon baking soda",
+    "0.25 teaspoon salt",
+    "0.75 cup brown sugar",
+    "0.5 cup butter",
+    "2 eggs, beaten",
+    "2.3333332538605 cups mashed overripe bananas"
+  ],
+  "instructions": [
+    "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a 9x5-inch loaf pan.",
+    "Combine flour, baking soda, and salt in a large bowl. Beat brown sugar and butter with an electric mixer in a separate large bowl until smooth. Stir in eggs and mashed bananas until well blended. Stir banana mixture into flour mixture until just combined.",
+    "Pour batter into the prepared loaf pan.",
+    "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 60 minutes.",
+    "Let bread cool in pan for 10 minutes, then turn out onto a wire rack to cool completely.",
+    "Enjoy!"
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "231 kcal",
+    "carbohydrateContent": "35 g",
+    "cholesterolContent": "51 mg",
+    "fiberContent": "2 g",
+    "proteinContent": "4 g",
+    "saturatedFatContent": "5 g",
+    "sodiumContent": "226 mg",
+    "sugarContent": "16 g",
+    "fatContent": "9 g",
+    "unsaturatedFatContent": "0 g"
+  },
+  "author": "[{'@type': 'Person', 'name': 'Shelley Albeluhn'}]",
+  "categories": [
+    "Breakfast",
+    "Brunch"
+  ],
+  "keywords": [
+    "publisher-tested"
+  ],
+  "featured_tweaks": [],
+  "reviews": [
+    {
+      "text": "I loved it! Super easy to follow, and my grandma uses it all the time, so grandma approved!",
+      "rating": 5
+    },
+    {
+      "text": "So I didn't follow the banana part I had five bananas that I used about medium size just so they didn't go to waste. Made about 2ish cups fully mashed down. But follow the recipe to the tea beyond that and it was fantastic!!! There's only one slice left and I only made it last night. I'm calling you bananarama bread though if that's okay 😬",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "I followed this recipe, making banana bread for the first time, and it was delicious. My family loved it! It was practically gone before the day was over 😭🙏",
+      "rating": 5
+    },
+    {
+      "text": "A simple recipe. Easy to make. I used the half recipe as I only had 2 bananas. I baked it in a mini muffin pan for 15 minutes. They're sure to be a hitat tomorrow's meeting!",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "It was very easy to make and my family all loved it! The only thing I changed was I used granulated sugar instead of brown sugar and I scattered some chocolate chips on top.",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "I added vanilla, cinnamon, a little nutmeg and semisweet chocolate chunks. Perfect",
+      "rating": 4,
+      "has_modification": true
+    },
+    {
+      "text": "Came out great. Next time I make I might try and add some all spice or nutmeg and see what that would be like.",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "yumm,m I made it with nut yuuuuum delicious",
+      "rating": 5
+    },
+    {
+      "text": "Absolutely delicious. Best recipe I found yet I do add a couple things to it. I like 1/4 teaspoon cinnamon, nutmeg, vanilla and I also add chopped walnuts on top of my bread.",
+      "rating": 5
+    }
+  ]
+}

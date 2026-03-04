@@ -98,10 +98,11 @@ class LLMAnalysisPipeline:
         Returns:
             List of Review objects
         """
-        reviews = []
-        raw_reviews = recipe_data.get("reviews", [])
+        reviews: List[Review] = []
+        seen_ids = set()
 
-        for review_data in raw_reviews:
+        # Base reviews scraped from the main reviews section
+        for review_data in recipe_data.get("reviews", []):
             if review_data.get("text"):
                 review = Review(
                     text=review_data["text"],
@@ -110,6 +111,25 @@ class LLMAnalysisPipeline:
                     has_modification=review_data.get("has_modification", False),
                 )
                 reviews.append(review)
+
+        # Featured tweaks from the carousel, treated as guaranteed modifications
+        for tweak_data in recipe_data.get("featured_tweaks", []):
+            if not tweak_data.get("text"):
+                continue
+
+            feedback_id = tweak_data.get("feedback_id") or tweak_data["text"]
+            if feedback_id in seen_ids:
+                continue
+
+            seen_ids.add(feedback_id)
+            reviews.append(
+                Review(
+                    text=tweak_data["text"],
+                    rating=tweak_data.get("rating"),
+                    username=tweak_data.get("username"),
+                    has_modification=True,
+                )
+            )
 
         return reviews
 

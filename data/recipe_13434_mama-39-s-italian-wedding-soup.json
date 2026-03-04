@@ -1,0 +1,190 @@
+{
+  "url": "https://www.allrecipes.com/recipe/13434/mamas-italian-wedding-soup/",
+  "scraped_at": "2026-03-04T16:19:46.497788",
+  "recipe_id": "13434",
+  "title": "Mama&#39;s Italian Wedding Soup",
+  "description": "Tiny meatballs made of ground beef, beaten egg, bread crumbs, and parmesan are combined with spinach, carrot, and pasta for this delicious Italian soup. No wedding required!",
+  "rating": {
+    "value": "4.7",
+    "count": "808"
+  },
+  "preptime": "PT20M",
+  "cooktime": "PT25M",
+  "totaltime": "PT45M",
+  "servings": "10",
+  "ingredients": [
+    "1 pound extra-lean ground beef",
+    "2 eggs, beaten",
+    "0.25 cup dried bread crumbs",
+    "2 tablespoons grated Parmesan cheese",
+    "1 teaspoon dried basil",
+    "3 tablespoons minced onion",
+    "2.5 quarts chicken broth",
+    "2 cups spinach - packed, rinsed and thinly sliced",
+    "1 cup seashell pasta",
+    "0.75 cup diced carrots"
+  ],
+  "instructions": [
+    "In a medium bowl, combine the beef, egg, bread crumbs, cheese, basil and onion. Shape mixture into 3/4-inch balls and set aside.",
+    "In a large stockpot heat chicken broth to boiling; stir in the spinach, pasta, carrot and meatballs. Return to boil; reduce heat to medium. Cook, stirring frequently, at a slow boil for 10 minutes or until pasta is al dente, and meatballs are no longer pink inside. Serve hot with Parmesan cheese sprinkled on top."
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "169 kcal",
+    "carbohydrateContent": "13 g",
+    "cholesterolContent": "71 mg",
+    "fiberContent": "1 g",
+    "proteinContent": "13 g",
+    "saturatedFatContent": "2 g",
+    "sodiumContent": "1045 mg",
+    "sugarContent": "2 g",
+    "fatContent": "7 g",
+    "unsaturatedFatContent": "0 g"
+  },
+  "author": "[{'@type': 'Person', 'name': 'Eileen Mintz'}]",
+  "categories": [
+    "Dinner"
+  ],
+  "featured_tweaks": [
+    {
+      "username": "Allrecipes Member",
+      "rating": 4,
+      "date": "02/17/2002",
+      "text": "I replaced the onion with some garlic powder. I also browned the meatballs in a frying pan before putting them in the soup.. It added a great flavor to the meatballs and the soup",
+      "helpful_count": 422,
+      "chips": [
+        "Worth the effort",
+        "Easy to follow",
+        "Crowd-pleaser"
+      ],
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "1701dcffae7204d05ab1d1a948f4c8230ad898b9_6738711",
+      "username": "Allrecipes Member",
+      "rating": 4,
+      "date": "02/17/2002",
+      "text": "I replaced the onion with some garlic powder. I also browned the meatballs in a frying pan before putting them in the soup.. It added a great flavor to the meatballs and the soup",
+      "helpful_count": 422,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "06fde68193bb6422b7d01c6e2c6cabf8c3fe8306_6738711",
+      "username": "Nancy Zoll",
+      "rating": 5,
+      "date": "02/07/2018",
+      "text": "Just made this, but with a few changes.....used 2 boxes of Chicken broth and 1 Vegetable broth and cooked down 2 Turkey wings for added flavor......worked!! Also sauteed celery, carrots , shallots & garlic....worked nicely. Saved Turkey meat for another use. Added 1 Italian sausage link into the meatballs for added flavor, plus fresh parsley. Baked the meatballs for 9 min. on 350* convection which worked well.\nWe both enjoyed the flavors of this soup very much...worth the meatball effort. Would not hesitate to serve for company with baguettes and a nice salad!",
+      "helpful_count": 0,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "8b50f02041333b1790e661dbfad20a269824901f_6738711",
+      "username": "Eaf78",
+      "rating": 5,
+      "date": "12/18/2020",
+      "text": "I changed very little. I sautéed celery carrot onion and garlic in a bit of butter until slightly browned in the soup pan, then added the broth. I baked the meatballs for ten minutes to get some of the caramel flavor from that to add to the soup before bringing everything to a boil.",
+      "helpful_count": 1,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "61c97e27ac7517081ae1467e7c555850ddb69cd5_6738711",
+      "username": "Shelley Havelange",
+      "rating": 5,
+      "date": "02/27/2020",
+      "text": "I made this in the slow cooker. I put the cooker on high. Added the broth, vegetables, pasta, and added one chopped celery (one stick). as while. Let that cook on high while I did the meat ball mixture. To the meat ball mixture. I added a 1/2 a tsp of garlic salt. As suggested previously. I cooked the meatballs at 350 F in the oven 15 min each side. Then added these precooked meatballs to the slow cooker, with the broth & vegetables. Let that cook on high 90 miN.",
+      "helpful_count": 0,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "5f04b917e1f0e68953cfe3cf0a0904caa28248a5_6738711",
+      "username": "pandavanda",
+      "rating": 5,
+      "date": "02/17/2018",
+      "text": "Just added 2-3 T lemon juice to broth. Also added garlic powder to meatballs and cooked the carrots with some chopped onion and garlic in a T of olive oil just to soften. I also cook the pasta by itself while I'm making the meatballs because I like that a little al dente. Perfecto! My family loves it and requests it about once a week. I use ground turkey and have never had any greasiness just dropping them right in soup to cook.",
+      "helpful_count": 0,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "9ffa91c4185d2fdff88ee191a0923a5d9734f687_6738711",
+      "username": "Food Lover",
+      "rating": 5,
+      "date": "02/25/2019",
+      "text": "Made this with the same ingredients, but added the pasta 15 minutes before it was done and then the meatballs and spinach just 8 minutes before the end. Added red pepper flakes to the meatballs and baked them at 350 for 22 minutes rather than cooking in the soup. I took the advice of another reviewer by creating little Parmesan/egg/bread crumb balls to add to the top of the soup in the last five minutes. Turned out terrific, my husband and I love it.",
+      "helpful_count": 1,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "0bd6253e73f717d29b71058f1c0af8f30fb3233a_6738711",
+      "username": "ScottFamily",
+      "rating": 5,
+      "date": "01/11/2012",
+      "text": "I made this with homemade chicken bone broth and grassfed ground beef, and I didn't have regular bread crumbs, so I used panko. I used a small cookie scoop to make the meatballs and that worked out really nicely (quick and easy). I did not pre-cook the meatballs, and that worked out great, not at all greasy. I would definitely make this again. My husband had two helpings and was still picking out meatballs from the children's bowls afterwards, he loved it. Thanks for the great recipe!",
+      "helpful_count": 1,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "f9a822101864cc16860223e9d58b2fe7512199c3_6738711",
+      "username": "DunhillMom",
+      "rating": 5,
+      "date": "04/14/2024",
+      "text": "This about the fourth time making this. I always add onion, celery and carrot sautéed in oil with garlic first. Then add the broth, two qts of chicken, and then 2 c water with beef Better Than Bouillon. I love dropping in the meatballs when it’s boiling. I cook pasta separately, always ditalini. I don’t like to store leftovers with the pasta in there. Gets mushy and soaks up all the broth. Make sure you use good Parmesan, not the canned stuff.Always a hit!!!",
+      "helpful_count": 3,
+      "chips": [
+        "Worth the effort",
+        "Easy to follow",
+        "Crowd-pleaser"
+      ],
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "7013c9bb1e5a9677634e1ea5481541aa205a794e_6738711",
+      "username": "Peggy Chen",
+      "rating": 4,
+      "date": "12/27/2019",
+      "text": "I made this with a lot of changes, based on what I had available. First, I used a mix about 50% ground pork, 40% beef, and 10% chicken. \n\nI doubled the amount of basil and minced onion called for. Instead of just diced carrots, I used an equivalent amount of mixed frozen veggies (carrots, corn, and peas), and added it to the meatballs. I also used panko instead of breadcrumbs. \n\nFor the broth, I didn’t have chicken broth, so I used a vegetarian mushroom broth powder that I got from Taiwan (it has MSG in it), put some dried Italian parsley in the soup, plus some salt and freshly ground black pepper.\n\nI cooked some spiral pasta in a separate pot, then ladled some from each pot into serving bowls.\n\nOverall, it was great, except I would try to use a leaner cut of ground meat next time, and maybe baking it first to render out some of the fat. As some people before me have said, cooking the meat in the soup made the soup greasy.",
+      "helpful_count": 0,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "8c8c95a87cd9ad2e936e1226bede500dc03eed18_6738711",
+      "username": "Suzannah Lenz",
+      "rating": 5,
+      "date": "06/28/2017",
+      "text": "Scrumptious! Like many, I changed the recipe a bit for my taste. I added a bit of Italian seasoning, pepper, and more breadcrumbs to the meatballs. I then chose to bake the meatballs before adding them to the soup. (350 degrees, about 12 mins) I think baking helped the flavor and to decrease the grease in the soup. \nWhen starting the soup, to build flavor, I first cooked the carrots, along with some onion and celery until soft with pepper, Italian seasoning, and garlic salt. I only had two quarts of broth/stock, so I just used that. I ended up using about double the spinach and rather than regular noodles, I substituted with a package of tri-color cheese tortellini. ( I cooked the tortellini before adding to soup)\nAll in all, really yummy soup! Great for a cool day!",
+      "helpful_count": 0,
+      "is_featured": true,
+      "has_modification": true
+    }
+  ],
+  "reviews": [
+    {
+      "text": "This about the fourth time making this. I always add onion, celery and carrot sautéed in oil with garlic first. Then add the broth, two qts of chicken, and then 2 c water with beef Better Than Bouillon. I love dropping in the meatballs when it’s boiling. I cook pasta separately, always ditalini. I don’t like to store leftovers with the pasta in there. Gets mushy and soaks up all the broth. Make sure you use good Parmesan, not the canned stuff.Always a hit!!!",
+      "rating": 5
+    },
+    {
+      "text": "I changed very little. I sautéed celery carrot onion and garlic in a bit of butter until slightly browned in the soup pan, then added the broth. I baked the meatballs for ten minutes to get some of the caramel flavor from that to add to the soup before bringing everything to a boil.",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "I followed the recipe for the most part but mined some garlic to add to the meatball mixture. the dish was amazing! Next time, I will make more broth. This will definitely make another appearance this winter.",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "Turned out nice! Needed to add salt and pepper to soup and I added garlic to the meatballs.",
+      "rating": 4,
+      "has_modification": true
+    }
+  ]
+}

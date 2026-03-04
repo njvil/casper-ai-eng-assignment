@@ -1,0 +1,215 @@
+{
+  "url": "https://www.allrecipes.com/recipe/71484/i-dont-know/",
+  "scraped_at": "2026-03-04T16:19:50.779692",
+  "recipe_id": "71484",
+  "title": "I Don&#39;t Know",
+  "description": "I would always ask my mom &#39;What&#39;s for dinner?&#39; and the response would be &#39;I don&#39;t know.&#39; I said I was going to make up a dish called &#39;I don&#39;t know&#39; dish. It turned out pretty good. Ground beef, potatoes and cheese are layered with a few vegetables in this simple one dish meal.",
+  "rating": {
+    "value": "4.3",
+    "count": "69"
+  },
+  "preptime": "PT20M",
+  "cooktime": "PT20M",
+  "totaltime": "PT40M",
+  "servings": "6",
+  "ingredients": [
+    "7 small baking potatoes, peeled and sliced",
+    "1 pound ground beef",
+    "1 (16 ounce) package frozen mixed vegetables, thawed",
+    "1 (10.75 ounce) can condensed cream of mushroom soup",
+    "1 cup shredded Cheddar cheese",
+    "salt and pepper to taste"
+  ],
+  "instructions": [
+    "Preheat the oven to 350 degrees F (175 degrees C). In a medium bowl, stir together the mixed vegetables and mushroom soup. Set aside.",
+    "Place the potatoes in a large saucepan with enough water to cover. Bring to a boil, then simmer over medium heat until tender, about 5 minutes. Drain and set aside.",
+    "Meanwhile, crumble the ground beef into a large skillet over medium-high heat. Cook until evenly browned, stirring to break up large lumps. Drain excess grease from the beef and place in the bottom of a 9x13 inch baking dish. Pour the vegetable mixture over the beef, then arrange the potato slices over the vegetables. Season with salt and pepper. Sprinkle cheese over the top.",
+    "Bake uncovered for 25 minutes in the preheated oven, until cheese is melted and the dish is heated through and bubbly."
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "471 kcal",
+    "carbohydrateContent": "49 g",
+    "cholesterolContent": "70 mg",
+    "fiberContent": "7 g",
+    "proteinContent": "26 g",
+    "saturatedFatContent": "9 g",
+    "sodiumContent": "562 mg",
+    "sugarContent": "2 g",
+    "fatContent": "20 g",
+    "unsaturatedFatContent": "0 g"
+  },
+  "author": "[{'@type': 'Person', 'name': 'KRISTEN5'}]",
+  "categories": [
+    "Dinner"
+  ],
+  "featured_tweaks": [
+    {
+      "username": "Patty Cakes",
+      "rating": 5,
+      "date": "09/01/2010",
+      "text": "I love this title!! Perfect casserole for hard working MOMS. I had2 boxes of scalloped potatoes and canned milk. I added the cheese sauce mix and the milk to make up for my lack of cream of mushroom soup. This was tasty and rib sticking. Thank You Kristen",
+      "helpful_count": 21,
+      "chips": [
+        "OK with tweaks",
+        "Needs more flavor",
+        "Missing something",
+        "Might try again",
+        "A keeper!",
+        "Family favorite"
+      ],
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "e1c221d457476208f652ea6f0d8973d3080c5952_6665008",
+      "username": "Patty Cakes",
+      "rating": 5,
+      "date": "09/01/2010",
+      "text": "I love this title!! Perfect casserole for hard working MOMS. I had2 boxes of scalloped potatoes and canned milk. I added the cheese sauce mix and the milk to make up for my lack of cream of mushroom soup. This was tasty and rib sticking. Thank You Kristen",
+      "helpful_count": 21,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "151b96cf0e1a64f222706d6db9e703999d1144e8_6665008",
+      "username": "Tiana Beckett",
+      "rating": 5,
+      "date": "10/29/2018",
+      "text": "This has become a family favorite, my husband asked me what was for dinner I told him I didn't care, he told me he didn't know. So he decided to Google \" recipe for I don't know\" this came up and we gave it a go needless to say I'm making I don't know for dinner again tonight, the only thing we did different was cream of chicken instead because I don't like cream of mushroom.",
+      "helpful_count": 11,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "442aed6c1c5be7e8c61741478e32ba80fc7e22f8_6665008",
+      "username": "Robin Webster",
+      "rating": 5,
+      "date": "03/05/2013",
+      "text": "This was so much better than I expected... we used fresh broc. and carrots par cooked before I put them in...can of cream of potato soup with some milk ... spices and it was just amazing... by husband went crazy for it. The fresh veggies made it taste so fresh... this is a keeper",
+      "helpful_count": 7,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "b0731472bac42b28667a06179b618ab478fd66dc_6665008",
+      "username": "Steve",
+      "rating": 4,
+      "date": "09/08/2025",
+      "text": "I made this and it’s basically a deconstructed cottage pie. They called for a 9x13 pan but I used a9x9 and it was perfect. I also added chopped garlic, Italian seasoning, garlic and onion powder. The potatoes are vague. A large russet potato would work. Use a mandolin if you have one.Worcestershire sauce would be a great addition to the hamburger.",
+      "helpful_count": 2,
+      "chips": [
+        "OK with tweaks",
+        "Needs more flavor"
+      ],
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "aa679d16706431409557fee6833fc7474702a80a_6665008",
+      "username": "Lil'misses",
+      "rating": 4,
+      "date": "01/25/2025",
+      "text": "I have made something like this when I would crave the campfire hobo dinners.One of my favorite cheats though, put the potatoes in the microwave to cook them then slice.....makes it easier for a quicker prep on a weeknight.",
+      "helpful_count": 3,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "f60bfeea360d78fc03dcd9f5910eade4fee876c7_6665008",
+      "username": "fabeveryday",
+      "rating": 5,
+      "date": "01/05/2025",
+      "text": "Great and super easy! I could see this working with a variety of different vegetables. After reading the reviews, I decided to add some milk to the soup mixture (and I recommend doing that), seasoned the meat and soup mixture to taste (added some garlic powder and onion powder along with salt and pepper), and was generous with the cheese.",
+      "helpful_count": 5,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "116cde466729b4aa60c98424eccb1cb455a25a49_6665008",
+      "username": "AmberDish9949",
+      "rating": 3,
+      "date": "01/27/2025",
+      "text": "I followed a lot of the tips here (added bacon to beef, seasoned the beef (onion, garlic, some oregano) added milk to soup, even added some worcestershire ) and it was just meh. We are going to try it one more time with a couple of changes - far, far more seasoning to the beef (maybe taco seasoning or creole?), a different soup or veg next time, and perhaps crisp the potatoes a bit before baking. We even talked about using tater tots instead. If after all of that it's still meh we will drop this from the rotation. There are so many good recipes on Allrecipes but this one missed the mark for us.",
+      "helpful_count": 2,
+      "chips": [
+        "Missing something"
+      ],
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "70c2e39e8772b090c61e28534f3de768bb702b94_6665008",
+      "username": "Sarah Jo",
+      "rating": 3,
+      "date": "11/19/2009",
+      "text": "Mom made this when my sister and I were kids. Instead of using frozen mixed veggies, Mom would use frozen broccoli. She also doubled the cheese. I want to say she added whatever spices she had on hand as well and added a soup can of milk. Great to make to take a walk down memory lane, but needs a little more gussied up for me now.",
+      "helpful_count": 9,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "735be8812143653ea3ecffe1ffc0d68b52d099ac_6665008",
+      "username": "QuaintFig3157",
+      "rating": 4,
+      "date": "01/25/2025",
+      "text": "I use cream of chicken soup instead of mushroom for a change and chicken bits in it.",
+      "helpful_count": 5,
+      "chips": [
+        "Might try again"
+      ],
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "b357f165e8fd456dd2c9c1f61527f5b71b61b42e_6665008",
+      "username": "Missy Kappa",
+      "rating": 5,
+      "date": "04/12/2025",
+      "text": "I made this for dinner and my dad and I loved it. I made a few tweaks though. I used ground turkey instead of beef, two cans of condensed soup, and seasoned with salt and pepper, generous amounts of garlic powder, and three packets of pizza hut red pepper flakes. Added a little spice ya know. It was so good. Had seconds.",
+      "helpful_count": 2,
+      "chips": [
+        "A keeper!",
+        "Family favorite"
+      ],
+      "is_featured": true,
+      "has_modification": true
+    }
+  ],
+  "reviews": [
+    {
+      "text": "I made this for dinner and my dad and I loved it. I made a few tweaks though. I used ground turkey instead of beef, two cans of condensed soup, and seasoned with salt and pepper, generous amounts of garlic powder, and three packets of pizza hut red pepper flakes. Added a little spice ya know. It was so good. Had seconds.",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "Great and super easy! I could see this working with a variety of different vegetables. After reading the reviews, I decided to add some milk to the soup mixture (and I recommend doing that), seasoned the meat and soup mixture to taste (added some garlic powder and onion powder along with salt and pepper), and was generous with the cheese.",
+      "rating": 5
+    },
+    {
+      "text": "Was really good but next time i think i will be adding some seasoning. my kids thought it was funny that i made I DONT KNOW for dinner LOL It was a hit with them and they are picky!!",
+      "rating": 4,
+      "has_modification": true
+    },
+    {
+      "text": "I love this recipe! And my family liked it to!\nOnly thing I would change, maybe put 2 cans of cream of mushroom soup. And a little more cheese on top ;) my family loves cheese",
+      "rating": 4,
+      "has_modification": true
+    },
+    {
+      "text": "This recipe has potential. I thought it lacked a bit of spice, so next time [yes, there will be a next time:)] I will add some garlic and maybe onions with the meat. Maybe try various spices. I used extra lean ground beef, because I prefer it. I only used the one can of soup, and thought is was enough liquid. The frozen vegetables has a bit bit of liquid in them, so using 2 cans would make it to soupy in my opinio",
+      "rating": 4,
+      "has_modification": true
+    },
+    {
+      "text": "This recipe has potential. I thought it lacked a bit of spice, so next time [yes, there will be a next time:)] I will add some garlic and maybe onions with the meat. Maybe try various spices. I used extra lean ground beef, because I prefer it. I only used the one can of soup, and thought is was enough liquid. The frozen vegetables has a bit bit of liquid in them, so using 2 cans would make it to soupy in my opinio",
+      "rating": 4,
+      "has_modification": true
+    },
+    {
+      "text": "I love this title!! Perfect casserole for hard working MOMS. I had2 boxes of scalloped potatoes and canned milk. I added the cheese sauce mix and the milk to make up for my lack of cream of mushroom soup. This was tasty and rib sticking. Thank You Kristen",
+      "rating": 5,
+      "has_modification": true
+    }
+  ]
+}

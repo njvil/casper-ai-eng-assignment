@@ -6,9 +6,11 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "beautifulsoup4>=4.13.5",
+    "cloudscraper>=1.2.71",
     "loguru>=0.7.3",
     "lxml>=6.0.2",
     "openai>=1.109.1",
+    "playwright>=1.58.0",
     "pydantic>=2.11.9",
     "python-dotenv>=1.1.1",
     "requests>=2.32.5",
