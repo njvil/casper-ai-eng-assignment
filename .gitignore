@@ -34,8 +34,6 @@ venv/
 
 # Project specific
 .env
-*.log
-logs/
 tmp/
 .coverage
 htmlcov/
