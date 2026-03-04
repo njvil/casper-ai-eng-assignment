@@ -1,5 +1,5 @@
 """
-Playwright-based AllRecipes scraper (standalone).
+AllRecipes scraper v3 (Playwright, standalone).
 
 Uses a headless Chromium browser so that JS-rendered sections — including
 the Featured Tweaks carousel — are fully present in the HTML before parsing.
@@ -8,7 +8,7 @@ Setup (one-time):
     uv run playwright install chromium
 
 Usage:
-    uv run python src/scraper_playwright.py
+    uv run python src/scraper_v3.py
 """
 
 import json

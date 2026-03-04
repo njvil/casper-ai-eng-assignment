@@ -152,7 +152,7 @@ Between `random.choice` for review selection and LLM temperature at 0.1 (not 0),
 ## Pipeline data flow diagram
 
 ```
-scraper_v2.py (requests)          scraper_playwright.py (headless browser)
+scraper_v2.py (requests)          scraper_v3.py (headless browser)
          │                                       │
          ▼                                       ▼
     data/*.json ◄────────────────────────────────┘

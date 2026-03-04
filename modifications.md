@@ -1,6 +1,6 @@
 # Project Modifications Log
 
-A full record of all changes, investigations, plans, and insights made to this project after the initial commit. `scraper_v2.py` is untouched from its original state. All new functionality lives in new files or targeted pipeline additions.
+A full record of all changes, investigations, plans, and insights made to this project after the initial commit. `scraper_v2.py` is untouched from its original state. All new functionality lives in new files or targeted pipeline changes.
 
 ---
 
@@ -9,8 +9,14 @@ A full record of all changes, investigations, plans, and insights made to this p
 | File | Status |
 |------|--------|
 | `src/scraper_v2.py` | **Unchanged** — original file, no modifications |
-| `src/scraper_v3.py` | **New file** — standalone Playwright-based scraper |
-| `src/llm_pipeline/pipeline.py` | **Modified** — `parse_reviews_data` extended to consume `featured_tweaks` |
+| `src/scraper_v3.py` | **New file** — standalone Playwright-based scraper (renamed from `scraper_playwright.py`) |
+| `src/llm_pipeline/models.py` | **Rewritten** — v2 models with `ExtractionResult`, `RankedModification`, `LineDiff`, `BestSource` |
+| `src/llm_pipeline/prompts.py` | **Rewritten** — few-shot extraction prompt + Phase 2 summarisation prompt |
+| `src/llm_pipeline/tweak_extractor.py` | **Rewritten** — two-phase LLM: extract all → summarise/deduplicate/rank top 5 |
+| `src/llm_pipeline/pipeline.py` | **Rewritten** — v2 orchestrator with featured-tweak preference, batch apply, line diffs |
+| `src/llm_pipeline/enhanced_recipe_generator.py` | **Rewritten** — accepts multiple modifications, builds line diffs, stores originals |
+| `src/llm_pipeline/recipe_modifier.py` | **Modified** — safety validation before each apply, threshold raised to 0.7 |
+| `src/test_pipeline.py` | **Updated** — prints line diffs, asserts diffs exist |
 
 ---
 
@@ -30,103 +36,135 @@ This was confirmed by comparing:
 - `src/example_featured_tweaks.xml`: the exact HTML of one carousel
 - Live HTTP request: returns HTTP 402 (blocked), confirming the site does not serve this content to plain scrapers
 
-The old `photo-dialog__item` + `ugc-review` selectors also had a secondary flaw: they applied an additional `has_modification` regex filter on top of reviews that AllRecipes had already hand-curated as tweaks, silently dropping valid cards.
-
 ---
 
 ## New file: `src/scraper_v3.py`
 
 A fully standalone Playwright-based scraper that replaces the HTTP fetch layer with a headless Chromium browser, making the JS-rendered Featured Tweaks carousel accessible.
 
-**All parsing helpers are copied directly into the file** — it has no imports from `scraper_v2.py` and can be run independently.
-
 ### Key design decisions
 
-- **`wait_until="load"`** (not `"networkidle"`): AllRecipes continuously fires background ad/analytics requests so `networkidle` never triggers and Playwright times out after 30 s. `"load"` waits for the browser's `window.load` event, which completes reliably.
-- **`timeout=60_000`**: explicit 60 s timeout as a safety net for slow connections.
-- **`page.wait_for_timeout(3_000)`**: 3 s settle time after load for Vue carousels to hydrate.
+- **`wait_until="load"`** (not `"networkidle"`): AllRecipes continuously fires background ad/analytics requests so `networkidle` never triggers. `"load"` waits for the browser's `window.load` event which completes reliably.
+- **`timeout=60_000`**: explicit 60 s timeout as a safety net.
+- **`page.wait_for_timeout(3_000)`**: 3 s settle time for Vue carousels to hydrate.
 - **Blocks images/fonts/media** during load to reduce page load time.
-- **Saves to the same `DATA_DIR`** (`project_root/data/`) as the rest of the project.
-
-### Featured Tweaks HTML structure (from `src/example_featured_tweaks.xml`)
-
-```
-div.mm-recipes-ugc-threaded-carousel
-  div.mm-recipes-ugc-threaded-carousel__card  [data-feedback-id="..."]
-    span.mm-recipes-ugc-shared-card-byline__username-text
-    div.mm-recipes-ugc-shared-star-rating
-      span.mm-recipes-ugc-shared-star-rating__star  (×5)
-        svg.ugc-shared-icon-star           ← filled
-        svg.ugc-shared-icon-star-outline   ← empty
-    span.mm-recipes-ugc-shared-card-meta__date
-    div.mm-recipes-ugc-shared-item-card__text
-    button.mm-recipes-ugc-shared-helpful-button   ← ends with integer count
-    span.mm-recipes-ugc-shared-review-chips__text  ← optional tags e.g. "A keeper!"
-```
-
-Each extracted card gets `has_modification: true` and `is_featured: true` unconditionally — AllRecipes curates the carousel themselves.
-
-### Output schema for each `featured_tweaks` entry
-
-```json
-{
-  "feedback_id": "4818e356996b...",
-  "username": "Jen Gerbrandt",
-  "rating": 5,
-  "date": "11/17/2005",
-  "text": "I've tried a lot of different chocolate chip cookie recipes...",
-  "helpful_count": 701,
-  "chips": ["A keeper!", "Great flavors"],
-  "is_featured": true,
-  "has_modification": true
-}
-```
-
-`chips` is optional and only present on newer reviews that use AllRecipes' structured tag system.
+- **Saves to `DATA_DIR`** (`project_root/data/`).
 
 ### Setup and usage
 
 ```bash
-# One-time browser binary install
-uv run playwright install chromium
-
-# Run scraper
+uv run playwright install chromium   # one-time
 uv run python src/scraper_v3.py
 ```
 
-### Confirmed working
-
-`data/recipe_11679_homemade-mac-and-cheese.json` — 11 featured tweaks extracted.
-
 ---
 
-## Pipeline change: `src/llm_pipeline/pipeline.py`
+## Pipeline v2: Two-phase LLM extraction with line-level diffs
 
-### Why the change is needed
+### Assumptions
 
-`parse_reviews_data` originally only read from `recipe_data["reviews"]`. The pipeline hard-fails (returns `None`) if no review in that list has `has_modification: True`.
+- **Featured tweaks are the primary source.** All reviews in `featured_tweaks` have `has_modification: true` by definition (curated by AllRecipes). The pipeline falls back to base `reviews` only if `featured_tweaks` is empty.
+- **One review can contain multiple distinct modifications.** The Phase 1 LLM returns a list of `ModificationObject` items per review, not just one.
+- **Same modification across multiple reviews = one modification with higher confidence.** E.g. "use more brown sugar" from 5 reviewers is ranked higher than a unique tweak from 1 reviewer.
+- **Conflicting modifications are resolved, not both applied.** If one reviewer says "more sugar" and another says "less sugar" targeting the same ingredient, the Phase 2 LLM keeps the one from a featured tweak, then the one with the higher rating, then higher helpful count.
+- **Top 5 unique modifications come from a semantically summarised global list**, not from individual reviews. A Phase 2 LLM call takes the full pool and returns the deduplicated, conflict-resolved, ranked top 5.
+- **The enhanced JSON includes original recipe lines alongside modified lines** so a user can see line-level diffs inline.
+- **The pipeline is recipe-agnostic** — works on any recipe JSON, not just the cookie recipe.
 
-JSON files produced by `scraper_v3.py` may have a populated `featured_tweaks` list with reviews that all have `has_modification: True`, but an empty or sparse `reviews` list. Without the change, the pipeline would skip these recipes entirely.
+### Architecture
 
-### What changed
+```
+Phase 1 (N LLM calls — one per review):
+  For each review with has_modification=True:
+    → LLM returns ExtractionResult { modifications: [ModificationObject, ...] }
+    → Tag each mod with source review metadata (username, rating, helpful_count, is_featured)
+    → Append all to flat global pool
 
-`parse_reviews_data` now iterates both `reviews` and `featured_tweaks`, appending featured tweak entries as `Review` objects with `has_modification=True`. Deduplication is handled via `feedback_id`:
+Phase 2 (1 LLM call — summarisation):
+  Send entire pool to LLM with build_summarize_prompt()
+    → LLM merges semantically identical mods, resolves conflicts, ranks
+    → Returns ranked_modifications (at most 5)
 
-```python
-# Original reviews section (unchanged behaviour)
-for review_data in recipe_data.get("reviews", []):
-    ...
-
-# Featured tweaks — always modifications, deduplicated by feedback_id
-for tweak_data in recipe_data.get("featured_tweaks", []):
-    feedback_id = tweak_data.get("feedback_id") or tweak_data["text"]
-    if feedback_id not in seen_ids:
-        seen_ids.add(feedback_id)
-        reviews.append(Review(..., has_modification=True))
+Apply:
+  For each ranked modification:
+    → validate_modification_safety() — skip if unsafe
+    → apply_modification() via fuzzy string matching
+  Build line_diffs by comparing original vs modified recipe line by line
+  Generate EnhancedRecipe with full attribution
 ```
 
-### Why this is safe to keep regardless of which scraper is used
+### Prompt changes
 
-- If `featured_tweaks` is `[]` (as it always is from `scraper_v2.py`), the loop is a no-op and behaviour is identical to before.
-- If `featured_tweaks` is populated (from `scraper_v3.py`), those reviews are included in the pool the LLM draws from.
-- There is no risk of double-counting: `reviews` and `featured_tweaks` come from different DOM sections and carry different `feedback_id` values.
+- **Phase 1**: Switched from `build_simple_prompt` to `build_few_shot_prompt`. The prompt now requests `{"modifications": [...]}` so the LLM can return multiple distinct modifications from a single review. Includes explicit instruction: "If the review contains multiple distinct modifications, return each as a separate object."
+- **Phase 2**: New `build_summarize_prompt` function. Receives the full pool with source metadata. Instructs the LLM to merge duplicates, resolve conflicts using priority rules (featured > rating > helpful_count), and return at most 5 ranked modifications.
+
+### Model changes
+
+| Model | Change |
+|-------|--------|
+| `ModificationObject` | `modification_type` remains a single `Literal` per object |
+| `ExtractionResult` | **New** — wraps `List[ModificationObject]` for Phase 1 response |
+| `BestSource` | **New** — username, rating, helpful_count, is_featured |
+| `RankedModification` | **New** — extends ModificationObject with `modification_type: List[...]`, `mention_count`, `best_source` |
+| `LineDiff` | **New** — section, line_index, original, modified, operation, source_username, reasoning |
+| `Review` | Added `helpful_count`, `feedback_id`, `is_featured` fields |
+| `EnhancedRecipe` | Added `original_ingredients`, `original_instructions`, `line_diffs` |
+| `ModificationApplied` | `modification_type` is now `List[str]`, added `mention_count` |
+| `EnhancementSummary` | Unchanged |
+
+### Pipeline changes
+
+- `parse_reviews_data` now **prefers `featured_tweaks`** over `reviews`. If featured tweaks are present, only those are used. Falls back to base reviews otherwise.
+- `process_single_recipe` calls `extract_all_modifications` (two-phase) instead of `extract_single_modification` (random pick).
+- `apply_modifications_batch` now calls `validate_modification_safety` before each modification. Unsafe modifications are skipped with a warning instead of silently failing at the fuzzy-match level.
+- Similarity threshold raised from 0.6 to 0.7 to reduce false matches.
+- Pipeline version bumped to `"2.0.0"`.
+
+### Enhanced recipe output schema
+
+```json
+{
+  "recipe_id": "10813_enhanced",
+  "original_recipe_id": "10813",
+  "title": "Best Chocolate Chip Cookies (Community Enhanced)",
+  "original_ingredients": ["1 cup butter, softened", "1 cup white sugar", ...],
+  "ingredients": ["1 cup butter, softened", "0.5 cup white sugar", ...],
+  "original_instructions": ["Preheat the oven to 350...", ...],
+  "instructions": ["Preheat the oven to 350...", ...],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 1,
+      "original": "1 cup white sugar",
+      "modified": "0.5 cup white sugar",
+      "operation": "replace",
+      "source_username": "Jen Gerbrandt",
+      "reasoning": "Increases brown-to-white sugar ratio for chewier texture"
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": { "text": "...", "reviewer": "Jen Gerbrandt", "rating": 5 },
+      "modification_type": ["quantity_adjustment"],
+      "reasoning": "...",
+      "changes_made": [...],
+      "mention_count": 3
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 3,
+    "change_types": ["quantity_adjustment", "removal"],
+    "expected_impact": "..."
+  },
+  "pipeline_version": "2.0.0"
+}
+```
+
+The `line_diffs` array is the primary data a UI uses to render an inline diff view showing exactly what changed, who suggested it, and why.
+
+### Scalability
+
+- **LLM calls per recipe**: N (one per review, typically 5-15) + 1 (summarisation) = ~6-16 calls. At ~$0.001/call with gpt-3.5-turbo, this is ~$0.01-0.02/recipe.
+- **Summarisation call**: receives the full pool as input. With 15 reviews x ~3 mods each = ~45 modification objects, this fits well within gpt-3.5-turbo's context window.
+- **Playwright scraping**: ~10-15s per recipe, independent of the pipeline.
+- **Batch processing**: `process_recipe_directory` loops sequentially. Could be parallelised with `concurrent.futures` if needed.

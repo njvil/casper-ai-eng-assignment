@@ -22,7 +22,7 @@ from .models import (
 class RecipeModifier:
     """Applies structured modifications to recipes using search-and-replace operations."""
 
-    def __init__(self, similarity_threshold: float = 0.6):
+    def __init__(self, similarity_threshold: float = 0.7):
         """
         Initialize the RecipeModifier.
 
@@ -192,30 +192,50 @@ class RecipeModifier:
     def apply_modifications_batch(
         self,
         recipe: Recipe,
-        modifications: List[ModificationObject]
+        modifications: List[ModificationObject],
     ) -> Tuple[Recipe, List[List[ChangeRecord]]]:
         """
         Apply multiple modifications to a recipe sequentially.
-
-        Args:
-            recipe: Original recipe to modify
-            modifications: List of modifications to apply
+        Each modification is validated for safety before application;
+        unsafe modifications are skipped with a warning.
 
         Returns:
             Tuple of (final_modified_recipe, list_of_change_records_per_modification)
         """
         current_recipe = recipe
-        all_change_records = []
+        all_change_records: List[List[ChangeRecord]] = []
 
         logger.info(f"Applying {len(modifications)} modifications sequentially")
 
         for i, modification in enumerate(modifications):
-            logger.info(f"Applying modification {i + 1}/{len(modifications)}: {modification.modification_type}")
+            is_safe, warnings = self.validate_modification_safety(
+                modification, current_recipe
+            )
+            if warnings:
+                for w in warnings:
+                    logger.warning(f"  Mod {i + 1}: {w}")
+            if not is_safe:
+                logger.warning(
+                    f"Skipping unsafe modification {i + 1}/{len(modifications)}: "
+                    f"{modification.modification_type}"
+                )
+                all_change_records.append([])
+                continue
 
-            current_recipe, change_records = self.apply_modification(current_recipe, modification)
+            logger.info(
+                f"Applying modification {i + 1}/{len(modifications)}: "
+                f"{modification.modification_type}"
+            )
+            current_recipe, change_records = self.apply_modification(
+                current_recipe, modification
+            )
             all_change_records.append(change_records)
 
-        logger.info(f"Applied all modifications. Final recipe has {len(current_recipe.ingredients)} ingredients and {len(current_recipe.instructions)} instructions")
+        logger.info(
+            f"Applied all modifications. Final recipe has "
+            f"{len(current_recipe.ingredients)} ingredients and "
+            f"{len(current_recipe.instructions)} instructions"
+        )
         return current_recipe, all_change_records
 
     def validate_modification_safety(
