@@ -1,6 +1,8 @@
-# Current State of the Pipeline
+# Current State of the Pipeline (Pre-v2 Analysis)
 
-A comprehensive analysis of how the pipeline works today, its assumptions, limitations, and areas for improvement.
+This document was written as a pre-v2 analysis of the original pipeline. It identifies the assumptions, limitations, and areas for improvement that informed the v2 redesign. See `modifications.md` for what was changed and `documentation.md` for the full engineering narrative.
+
+**Note**: Many of the issues listed below have been addressed in pipeline v2: multi-review processing, few-shot prompting, safety validation, featured tweak preference, line-level diffs, output directory fix, and log file support.
 
 ---
 

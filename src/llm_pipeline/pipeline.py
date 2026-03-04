@@ -17,6 +17,9 @@ from typing import Any, Dict, List, Optional, Tuple
 from dotenv import load_dotenv
 from loguru import logger
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "data" / "enhanced"
+
 from .enhanced_recipe_generator import EnhancedRecipeGenerator
 from .models import (
     ChangeRecord,
@@ -36,12 +39,12 @@ class LLMAnalysisPipeline:
     def __init__(
         self,
         openai_api_key: Optional[str] = None,
-        output_dir: str = "data/enhanced",
+        output_dir: Optional[str] = None,
         pipeline_version: str = "2.0.0",
     ):
         load_dotenv()
 
-        self.output_dir = Path(output_dir)
+        self.output_dir = Path(output_dir) if output_dir else DEFAULT_OUTPUT_DIR
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
         self.tweak_extractor = TweakExtractor(api_key=openai_api_key)

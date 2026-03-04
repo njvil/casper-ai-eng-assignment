@@ -1,0 +1,305 @@
+{
+  "recipe_id": "23878_enhanced",
+  "original_recipe_id": "23878",
+  "title": "Chinese Chicken Soup (Community Enhanced)",
+  "original_ingredients": [
+    "2 tablespoons sesame oil",
+    "2 tablespoons chile paste",
+    "2 teaspoons chopped fresh ginger root",
+    "0.5 teaspoon ground turmeric",
+    "1 quart chicken broth",
+    "1 pound chopped cooked chicken breast",
+    "1 cup chopped celery",
+    "0.25 cup soy sauce",
+    "2 teaspoons sugar",
+    "1 (3 ounce) package ramen noodles",
+    "1 cup shredded lettuce",
+    "0.5 cup chopped green onion"
+  ],
+  "original_instructions": [
+    "Heat sesame oil in a large pot over medium heat. Add chile paste, ginger, and turmeric; cook and stir until fragrant, 1 to 2 minutes.",
+    "Stir in chicken broth, chicken, celery, soy sauce, and sugar. Bring to a boil; add noodles and simmer for 3 minutes.",
+    "Stir in lettuce and remove from heat. Garnish servings with green onions."
+  ],
+  "ingredients": [
+    "1.5 tablespoons sesame oil",
+    "2 tablespoons chile paste",
+    "2 teaspoons chopped fresh ginger root",
+    "0.5 teaspoon ground turmeric",
+    "1 quart chicken broth",
+    "1 pound cooked chicken thighs",
+    "1 cup chopped celery",
+    "1 cup chopped carrots",
+    "1 cup chopped yellow onion",
+    "0.25 cup soy sauce",
+    "2 teaspoons sugar",
+    "1 (3 ounce) package ramen noodles",
+    "1 cup shredded cabbage",
+    "1 cup frozen chicken/veggie wontons",
+    "0.5 cup chopped green onion"
+  ],
+  "instructions": [
+    "Heat sesame oil in a large pot over medium heat. Add chile paste, ginger, and turmeric; cook and stir until fragrant, 1 to 2 minutes.",
+    "Boil 1 cup water. Add thinly cut celery, turmeric, ginger, chili paste and boil for 1 minute. Add remaining broth and soy sauce. Once heated, add chicken. Bring to a boil. Add 1 cup chopped cabbage (2 cups if desired) and thin spaghetti. Cook until pasta is tender, about 6 minutes. Stir in sesame oil and green onions.",
+    "Stir in lettuce and remove from heat. Garnish servings with green onions."
+  ],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 0,
+      "original": "2 tablespoons sesame oil",
+      "modified": "1.5 tablespoons sesame oil",
+      "operation": "replace",
+      "source_username": "Christi Williams",
+      "reasoning": "Reducing the amount of sesame oil can help balance the flavors in the soup"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 5,
+      "original": "1 pound chopped cooked chicken breast",
+      "modified": "1 pound cooked chicken thighs",
+      "operation": "replace",
+      "source_username": "Christi Williams",
+      "reasoning": "Using chicken thighs instead of chicken breast can add more flavor and tenderness to the soup"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 7,
+      "original": "0.25 cup soy sauce",
+      "modified": "1 cup chopped carrots",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 8,
+      "original": "2 teaspoons sugar",
+      "modified": "1 cup chopped yellow onion",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 9,
+      "original": "1 (3 ounce) package ramen noodles",
+      "modified": "0.25 cup soy sauce",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 10,
+      "original": "1 cup shredded lettuce",
+      "modified": "2 teaspoons sugar",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 11,
+      "original": "0.5 cup chopped green onion",
+      "modified": "1 (3 ounce) package ramen noodles",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 12,
+      "original": "",
+      "modified": "1 cup shredded cabbage",
+      "operation": "add",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 13,
+      "original": "",
+      "modified": "1 cup frozen chicken/veggie wontons",
+      "operation": "add",
+      "source_username": "Christi Williams",
+      "reasoning": "Adding carrots, yellow onion, and frozen chicken/veggie wontons enhances the flavor and texture of the soup"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 0,
+      "original": "2 tablespoons sesame oil",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 5,
+      "original": "1 pound chopped cooked chicken breast",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 10,
+      "original": "1 cup shredded lettuce",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "instructions",
+      "line_index": 1,
+      "original": "Stir in chicken broth, chicken, celery, soy sauce, and sugar. Bring to a boil; add noodles and simmer for 3 minutes.",
+      "modified": "Boil 1 cup water. Add thinly cut celery, turmeric, ginger, chili paste and boil for 1 minute. Add remaining broth and soy sauce. Once heated, add chicken. Bring to a boil. Add 1 cup chopped cabbage (2 cups if desired) and thin spaghetti. Cook until pasta is tender, about 6 minutes. Stir in sesame oil and green onions.",
+      "operation": "replace",
+      "source_username": "BOOKMARKER",
+      "reasoning": "Altering the cooking method by boiling celery, turmeric, ginger, and chili paste in water first may enhance the flavor profile of the soup"
+    },
+    {
+      "section": "instructions",
+      "line_index": 1,
+      "original": "Stir in chicken broth, chicken, celery, soy sauce, and sugar. Bring to a boil; add noodles and simmer for 3 minutes.",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": {
+        "text": "This soup was so good! I cooked chicken thighs in sesame oil and turmeric, then chopped them. I added some carrots and yellow onion and used cabbage instead of lettuce. Delicious!*Edit* I made it again and would also reduce the amount of sesame oil. I also put some frozen chicken/veggie wontons in it and my son loved it!",
+        "reviewer": "Christi Williams",
+        "rating": 5
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Using cabbage instead of lettuce adds a different texture and flavor to the soup",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "1 cup shredded lettuce",
+          "to_text": "1 cup shredded cabbage",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 3
+    },
+    {
+      "source_review": {
+        "text": "This soup was so good! I cooked chicken thighs in sesame oil and turmeric, then chopped them. I added some carrots and yellow onion and used cabbage instead of lettuce. Delicious!*Edit* I made it again and would also reduce the amount of sesame oil. I also put some frozen chicken/veggie wontons in it and my son loved it!",
+        "reviewer": "Christi Williams",
+        "rating": 5
+      },
+      "modification_type": [
+        "addition"
+      ],
+      "reasoning": "Adding carrots, yellow onion, and frozen chicken/veggie wontons enhances the flavor and texture of the soup",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "",
+          "to_text": "1 cup chopped carrots",
+          "operation": "add"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "",
+          "to_text": "1 cup chopped yellow onion",
+          "operation": "add"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "",
+          "to_text": "1 cup frozen chicken/veggie wontons",
+          "operation": "add"
+        }
+      ],
+      "mention_count": 2
+    },
+    {
+      "source_review": {
+        "text": "This soup was so good! I cooked chicken thighs in sesame oil and turmeric, then chopped them. I added some carrots and yellow onion and used cabbage instead of lettuce. Delicious!*Edit* I made it again and would also reduce the amount of sesame oil. I also put some frozen chicken/veggie wontons in it and my son loved it!",
+        "reviewer": "Christi Williams",
+        "rating": 5
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Using chicken thighs instead of chicken breast can add more flavor and tenderness to the soup",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "1 pound chopped cooked chicken breast",
+          "to_text": "1 pound cooked chicken thighs",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 2
+    },
+    {
+      "source_review": {
+        "text": "This soup was so good! I cooked chicken thighs in sesame oil and turmeric, then chopped them. I added some carrots and yellow onion and used cabbage instead of lettuce. Delicious!*Edit* I made it again and would also reduce the amount of sesame oil. I also put some frozen chicken/veggie wontons in it and my son loved it!",
+        "reviewer": "Christi Williams",
+        "rating": 5
+      },
+      "modification_type": [
+        "quantity_adjustment"
+      ],
+      "reasoning": "Reducing the amount of sesame oil can help balance the flavors in the soup",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "2 tablespoons sesame oil",
+          "to_text": "1.5 tablespoons sesame oil",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 2
+    },
+    {
+      "source_review": {
+        "text": "11.17.20 ... https://www.allrecipes.com/recipe/23878/chinese-chicken-soup/ ... Chinese Chicken Soup was quite good! I barely changed the base, which really decides the soup's success. 'Used homemade saltfree chicken broth; halved the ginger; subbed shredded cabbage for the lettuce. 'Changed directions. Me: Boiled 1c water. Added thinly cut celery, tumeric, ginger, chili paste & boiled 1 minute. Added remaining broth & soy sauce. Once heated, added chicken. Brought to a boil. Added 1c chopped cabbage (2c, if again) & thin spaghetti. Cooked until pasta was tender, about 6 minutes. Stirred in sesame oil & green onions. 'Could have added the sugar, but added an additional cup of broth due to spicy/salt factor. 'Looks like a restaurant's offering. :)",
+        "reviewer": "BOOKMARKER",
+        "rating": 4
+      },
+      "modification_type": [
+        "technique_change"
+      ],
+      "reasoning": "Altering the cooking method by boiling celery, turmeric, ginger, and chili paste in water first may enhance the flavor profile of the soup",
+      "changes_made": [
+        {
+          "type": "instruction",
+          "from_text": "Stir in chicken broth, chicken, celery, soy sauce, and sugar. Bring to a boil; add noodles and simmer for 3 minutes.",
+          "to_text": "Boil 1 cup water. Add thinly cut celery, turmeric, ginger, chili paste and boil for 1 minute. Add remaining broth and soy sauce. Once heated, add chicken. Bring to a boil. Add 1 cup chopped cabbage (2 cups if desired) and thin spaghetti. Cook until pasta is tender, about 6 minutes. Stir in sesame oil and green onions.",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 7,
+    "change_types": [
+      "technique_change",
+      "quantity_adjustment",
+      "ingredient_substitution",
+      "addition"
+    ],
+    "expected_impact": "Using cabbage instead of lettuce adds a different texture and flavor to the soup; Adding carrots, yellow onion, and frozen chicken/veggie wontons enhances the flavor and texture of the soup; Using chicken thighs instead of chicken breast can add more flavor and tenderness to the soup (and 2 more improvements)"
+  },
+  "description": "This easy Chinese chicken soup with noodles is flavored with turmeric, chile paste, ginger, and soy for a quick and flavorsome meal in one pot.",
+  "servings": "8",
+  "prep_time": null,
+  "cook_time": null,
+  "total_time": null,
+  "created_at": "2026-03-04T17:09:18.805258",
+  "pipeline_version": "2.0.0"
+}

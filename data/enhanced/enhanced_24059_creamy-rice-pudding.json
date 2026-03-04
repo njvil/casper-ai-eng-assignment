@@ -1,0 +1,188 @@
+{
+  "recipe_id": "24059_enhanced",
+  "original_recipe_id": "24059",
+  "title": "Creamy Rice Pudding (Community Enhanced)",
+  "original_ingredients": [
+    "1.5 cups cold water",
+    "0.75 cup uncooked white rice",
+    "2 cups milk, divided",
+    "0.33333334326744 cup white sugar",
+    "0.25 teaspoon salt",
+    "1 egg, beaten",
+    "0.66666668653488 cup golden raisins",
+    "1 tablespoon butter",
+    "0.5 teaspoon vanilla extract"
+  ],
+  "original_instructions": [
+    "Gather all ingredients.",
+    "Bring water in a saucepan to a boil over medium heat; stir in rice. Reduce heat to low, cover, and simmer until rice is tender and liquid has been absorbed, about 20 minutes.",
+    "Combine cooked rice, 1 ½ cups milk, sugar, and salt in a clean saucepan; cook over medium heat, stirring often, until thick and creamy, about 15 minutes.",
+    "Stir in remaining ½ cup milk, egg, and raisins; cook 2 minutes, stirring constantly. Off heat, stir in butter and vanilla extract until combined.",
+    "Serve warm."
+  ],
+  "ingredients": [
+    "1.5 cups cold water",
+    "0.75 cup uncooked white rice",
+    "2 cups milk, divided",
+    "0.33333334326744 cup white sugar",
+    "0.25 teaspoon salt",
+    "1 egg, beaten",
+    "0.5 cup golden raisins",
+    "1 tablespoon butter",
+    "0.5 teaspoon vanilla extract",
+    "1 teaspoon cinnamon for added flavor"
+  ],
+  "instructions": [
+    "Gather all ingredients.",
+    "Bring water in a saucepan to a boil over medium heat; stir in rice. Reduce heat to low, cover, and simmer until rice is tender and liquid has been absorbed, about 20 minutes.",
+    "Combine cooked rice, 1 ½ cups milk, sugar, and salt in a clean saucepan; cook over medium heat, stirring often, until thick and creamy, about 15 minutes.",
+    "Stir in remaining ½ cup milk, egg, and raisins; cook 2 minutes, stirring constantly. Off heat, stir in butter and vanilla extract until combined.",
+    "Serve warm.",
+    "Divide the pudding into two containers for serving and presentation purposes.",
+    "Sprinkle with cinnamon and other desired toppings before serving."
+  ],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 6,
+      "original": "0.66666668653488 cup golden raisins",
+      "modified": "0.5 cup golden raisins",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": "Reducing the amount of raisins to suit personal preference"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 9,
+      "original": "",
+      "modified": "1 teaspoon cinnamon for added flavor",
+      "operation": "add",
+      "source_username": null,
+      "reasoning": "Personal preference for extra creaminess and flavor"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 6,
+      "original": "0.66666668653488 cup golden raisins",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "instructions",
+      "line_index": 5,
+      "original": "",
+      "modified": "Divide the pudding into two containers for serving and presentation purposes.",
+      "operation": "add",
+      "source_username": null,
+      "reasoning": "Dividing the pudding into two containers for presentation purposes"
+    },
+    {
+      "section": "instructions",
+      "line_index": 6,
+      "original": "",
+      "modified": "Sprinkle with cinnamon and other desired toppings before serving.",
+      "operation": "add",
+      "source_username": null,
+      "reasoning": "Enhances flavor with cinnamon and other toppings"
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": {
+        "text": "It should be noted to temper the eggs in. I did not, even though I added them at the same time as the milk. I've been picking tiny scrambled egg bits out of my yummy pudding lol I absolutely should have known better but was following the directions, too closely I suppose. I messed around with toppings and things after it was done. I felt it needed cinnamon and such. Great recipe with some tweaks!",
+        "reviewer": null,
+        "rating": 4
+      },
+      "modification_type": [
+        "quantity_adjustment"
+      ],
+      "reasoning": "Reducing the amount of raisins to suit personal preference",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "0.66666668653488 cup golden raisins",
+          "to_text": "0.5 cup golden raisins",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    },
+    {
+      "source_review": {
+        "text": "It should be noted to temper the eggs in. I did not, even though I added them at the same time as the milk. I've been picking tiny scrambled egg bits out of my yummy pudding lol I absolutely should have known better but was following the directions, too closely I suppose. I messed around with toppings and things after it was done. I felt it needed cinnamon and such. Great recipe with some tweaks!",
+        "reviewer": null,
+        "rating": 4
+      },
+      "modification_type": [
+        "addition"
+      ],
+      "reasoning": "Personal preference for extra creaminess and flavor",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "",
+          "to_text": "1 teaspoon cinnamon for added flavor",
+          "operation": "add"
+        }
+      ],
+      "mention_count": 1
+    },
+    {
+      "source_review": {
+        "text": "It should be noted to temper the eggs in. I did not, even though I added them at the same time as the milk. I've been picking tiny scrambled egg bits out of my yummy pudding lol I absolutely should have known better but was following the directions, too closely I suppose. I messed around with toppings and things after it was done. I felt it needed cinnamon and such. Great recipe with some tweaks!",
+        "reviewer": null,
+        "rating": 4
+      },
+      "modification_type": [
+        "addition"
+      ],
+      "reasoning": "Enhances flavor with cinnamon and other toppings",
+      "changes_made": [
+        {
+          "type": "instruction",
+          "from_text": "",
+          "to_text": "Sprinkle with cinnamon and other desired toppings before serving.",
+          "operation": "add"
+        }
+      ],
+      "mention_count": 1
+    },
+    {
+      "source_review": {
+        "text": "It should be noted to temper the eggs in. I did not, even though I added them at the same time as the milk. I've been picking tiny scrambled egg bits out of my yummy pudding lol I absolutely should have known better but was following the directions, too closely I suppose. I messed around with toppings and things after it was done. I felt it needed cinnamon and such. Great recipe with some tweaks!",
+        "reviewer": null,
+        "rating": 4
+      },
+      "modification_type": [
+        "addition"
+      ],
+      "reasoning": "Dividing the pudding into two containers for presentation purposes",
+      "changes_made": [
+        {
+          "type": "instruction",
+          "from_text": "",
+          "to_text": "Divide the pudding into two containers for serving and presentation purposes.",
+          "operation": "add"
+        }
+      ],
+      "mention_count": 1
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 4,
+    "change_types": [
+      "quantity_adjustment",
+      "addition"
+    ],
+    "expected_impact": "Reducing the amount of raisins to suit personal preference; Personal preference for extra creaminess and flavor; Enhances flavor with cinnamon and other toppings (and 1 more improvements)"
+  },
+  "description": "This rice pudding with golden raisins makes a comforting dessert that everyone will love. Serve warm with a sprinkling of ground cinnamon or nutmeg.",
+  "servings": "4",
+  "prep_time": null,
+  "cook_time": null,
+  "total_time": null,
+  "created_at": "2026-03-04T17:18:22.611925",
+  "pipeline_version": "2.0.0"
+}

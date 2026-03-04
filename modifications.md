@@ -16,7 +16,21 @@ A full record of all changes, investigations, plans, and insights made to this p
 | `src/llm_pipeline/pipeline.py` | **Rewritten** — v2 orchestrator with featured-tweak preference, batch apply, line diffs |
 | `src/llm_pipeline/enhanced_recipe_generator.py` | **Rewritten** — accepts multiple modifications, builds line diffs, stores originals |
 | `src/llm_pipeline/recipe_modifier.py` | **Modified** — safety validation before each apply, threshold raised to 0.7 |
-| `src/test_pipeline.py` | **Updated** — prints line diffs, asserts diffs exist |
+| `src/test_pipeline.py` | **Updated** — prints line diffs, asserts diffs exist, logs to file |
+
+---
+
+## Output directory and logging fixes
+
+### Output directory anchored to project root
+
+`pipeline.py` originally defaulted `output_dir` to `"data/enhanced"` — a CWD-relative path. When the test runner is executed from `src/`, output went to `src/data/enhanced/` instead of the project root's `data/enhanced/`.
+
+**Fix**: Added `PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent` and `DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "data" / "enhanced"` at module level. The constructor now uses this absolute path by default.
+
+### Pipeline log file
+
+`test_pipeline.py` now adds a `loguru` file sink that writes every pipeline run to `logs/pipeline_{timestamp}.log` in the project root. Logs rotate at 10 MB and auto-clean after 30 days. All DEBUG-level output from every module (pipeline, extractor, modifier, generator) is captured.
 
 ---
 
@@ -168,3 +182,13 @@ The `line_diffs` array is the primary data a UI uses to render an inline diff vi
 - **Summarisation call**: receives the full pool as input. With 15 reviews x ~3 mods each = ~45 modification objects, this fits well within gpt-3.5-turbo's context window.
 - **Playwright scraping**: ~10-15s per recipe, independent of the pipeline.
 - **Batch processing**: `process_recipe_directory` loops sequentially. Could be parallelised with `concurrent.futures` if needed.
+
+### Confirmed run results
+
+Pipeline v2 was run against all 15 recipe files. **13 out of 15 recipes were successfully enhanced**, producing 13 enhanced JSON files in `data/enhanced/`. The pipeline correctly:
+- Used featured tweaks as primary source when available (e.g. Italian Wedding Soup with 11 featured tweaks).
+- Fell back to base reviews when no featured tweaks existed (e.g. Banana Bread).
+- Extracted multiple modifications per review (e.g. 5 modifications from a single review of Italian Wedding Soup).
+- Skipped unsafe modifications with logged warnings (e.g. `find` text not matching any recipe line).
+- Generated line-level diffs for all applied changes.
+- Saved all output to `data/enhanced/` and full logs to `logs/`.

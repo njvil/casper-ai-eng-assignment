@@ -1,0 +1,93 @@
+{
+  "recipe_id": "13434_enhanced",
+  "original_recipe_id": "13434",
+  "title": "Mama&#39;s Italian Wedding Soup (Community Enhanced)",
+  "original_ingredients": [
+    "1 pound extra-lean ground beef",
+    "2 eggs, beaten",
+    "0.25 cup dried bread crumbs",
+    "2 tablespoons grated Parmesan cheese",
+    "1 teaspoon dried basil",
+    "3 tablespoons minced onion",
+    "2.5 quarts chicken broth",
+    "2 cups spinach - packed, rinsed and thinly sliced",
+    "1 cup seashell pasta",
+    "0.75 cup diced carrots"
+  ],
+  "original_instructions": [
+    "In a medium bowl, combine the beef, egg, bread crumbs, cheese, basil and onion. Shape mixture into 3/4-inch balls and set aside.",
+    "In a large stockpot heat chicken broth to boiling; stir in the spinach, pasta, carrot and meatballs. Return to boil; reduce heat to medium. Cook, stirring frequently, at a slow boil for 10 minutes or until pasta is al dente, and meatballs are no longer pink inside. Serve hot with Parmesan cheese sprinkled on top."
+  ],
+  "ingredients": [
+    "1 pound ground turkey",
+    "2 eggs, beaten",
+    "0.25 cup dried bread crumbs",
+    "2 tablespoons grated Parmesan cheese",
+    "1 teaspoon dried basil",
+    "3 tablespoons minced onion",
+    "2.5 quarts chicken broth",
+    "2 cups spinach - packed, rinsed and thinly sliced",
+    "1 cup seashell pasta",
+    "0.75 cup diced carrots"
+  ],
+  "instructions": [
+    "In a medium bowl, combine the beef, egg, bread crumbs, cheese, basil and onion. Shape mixture into 3/4-inch balls and set aside.",
+    "In a large stockpot heat chicken broth to boiling; stir in the spinach, pasta, carrot and meatballs. Return to boil; reduce heat to medium. Cook, stirring frequently, at a slow boil for 10 minutes or until pasta is al dente, and meatballs are no longer pink inside. Serve hot with Parmesan cheese sprinkled on top."
+  ],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 0,
+      "original": "1 pound extra-lean ground beef",
+      "modified": "1 pound ground turkey",
+      "operation": "replace",
+      "source_username": "pandavanda",
+      "reasoning": "Using ground turkey instead of ground beef reduces greasiness and enhances flavor"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 0,
+      "original": "1 pound extra-lean ground beef",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": {
+        "text": "Just added 2-3 T lemon juice to broth. Also added garlic powder to meatballs and cooked the carrots with some chopped onion and garlic in a T of olive oil just to soften. I also cook the pasta by itself while I'm making the meatballs because I like that a little al dente. Perfecto! My family loves it and requests it about once a week. I use ground turkey and have never had any greasiness just dropping them right in soup to cook.",
+        "reviewer": "pandavanda",
+        "rating": 5
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Using ground turkey instead of ground beef reduces greasiness and enhances flavor",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "1 pound extra-lean ground beef",
+          "to_text": "1 pound ground turkey",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 3
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 1,
+    "change_types": [
+      "ingredient_substitution"
+    ],
+    "expected_impact": "Using ground turkey instead of ground beef reduces greasiness and enhances flavor"
+  },
+  "description": "Tiny meatballs made of ground beef, beaten egg, bread crumbs, and parmesan are combined with spinach, carrot, and pasta for this delicious Italian soup. No wedding required!",
+  "servings": "10",
+  "prep_time": null,
+  "cook_time": null,
+  "total_time": null,
+  "created_at": "2026-03-04T17:19:15.443557",
+  "pipeline_version": "2.0.0"
+}

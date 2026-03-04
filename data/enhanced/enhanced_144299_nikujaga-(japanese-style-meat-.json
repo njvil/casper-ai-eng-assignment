@@ -1,0 +1,158 @@
+{
+  "recipe_id": "144299_enhanced",
+  "original_recipe_id": "144299",
+  "title": "Nikujaga (Japanese-Style Meat and Potatoes) (Community Enhanced)",
+  "original_ingredients": [
+    "8 snow peas",
+    "1 tablespoon vegetable oil",
+    "0.25 pound sirloin steak, thinly sliced",
+    "4 potatoes, cut into bite sized pieces",
+    "2 cups dashi soup",
+    "0.25 cup soy sauce",
+    "0.25 cup sake",
+    "1 tablespoon white sugar",
+    "1 onion, chopped"
+  ],
+  "original_instructions": [
+    "Put the snow peas in a small saucepan with enough water to cover; bring to a boil and immediately remove from heat. Drain and set aside.",
+    "Heat the oil in a large skillet over medium heat; cook the beef in the oil until browned. Add the potatoes; cook and stir until soft, 5 to 7 minutes. Stir the dashi soup, soy sauce, sake, and sugar into the mixture; simmer for 10 minutes.",
+    "Reduce heat to low and scatter the chopped onion over the mixture; allow to simmer until the liquid is nearly completely evaporated, about 15 minutes more. Top the mixture with the snow peas to serve."
+  ],
+  "ingredients": [
+    "8 snow peas",
+    "1 tablespoon vegetable oil",
+    "0.25 pound sirloin steak, thinly sliced",
+    "4 potatoes, cut into bite sized pieces",
+    "2 cups beef broth/stock",
+    "0.25 cup soy sauce",
+    "additional soy sauce to taste",
+    "0.25 cup sake",
+    "1 tablespoon white sugar",
+    "additional sugar to taste",
+    "1 onion, chopped"
+  ],
+  "instructions": [
+    "Put the snow peas in a small saucepan with enough water to cover; bring to a boil and immediately remove from heat. Drain and set aside.",
+    "Heat the oil in a large skillet over medium heat; cook the beef in the oil until browned. Add the potatoes; cook and stir until soft, 5 to 7 minutes. Stir the dashi soup, soy sauce, sake, and sugar into the mixture; simmer for 10 minutes.",
+    "Reduce heat to low and scatter the chopped onion over the mixture; allow to simmer until the liquid is nearly completely evaporated, about 15 minutes more. Top the mixture with the snow peas to serve."
+  ],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 4,
+      "original": "2 cups dashi soup",
+      "modified": "2 cups beef broth/stock",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": "Using beef broth/stock as a substitute for dashi soup"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 6,
+      "original": "0.25 cup sake",
+      "modified": "additional soy sauce to taste",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 7,
+      "original": "1 tablespoon white sugar",
+      "modified": "0.25 cup sake",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 8,
+      "original": "1 onion, chopped",
+      "modified": "1 tablespoon white sugar",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 9,
+      "original": "",
+      "modified": "additional sugar to taste",
+      "operation": "add",
+      "source_username": null,
+      "reasoning": "Enhancing flavor by adding extra soy sauce and sugar"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 4,
+      "original": "2 cups dashi soup",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": {
+        "text": "Overall it was pretty good but the measurements were way off. HAS to be a typo. 1/4lb of meat to serve 4??? I used a lil over 1lb and it even then it was swimming in the broth. After following the recipe, i added extra soy and sugar only because i thought the flavor was a little on the lite side. Overall good.** If you cant find dashi, beef broth/stock works just fine. My japanese mom happen to have some so i was able to get some from her.",
+        "reviewer": null,
+        "rating": 4
+      },
+      "modification_type": [
+        "addition"
+      ],
+      "reasoning": "Enhancing flavor by adding extra soy sauce and sugar",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "",
+          "to_text": "additional soy sauce to taste",
+          "operation": "add"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "",
+          "to_text": "additional sugar to taste",
+          "operation": "add"
+        }
+      ],
+      "mention_count": 1
+    },
+    {
+      "source_review": {
+        "text": "Overall it was pretty good but the measurements were way off. HAS to be a typo. 1/4lb of meat to serve 4??? I used a lil over 1lb and it even then it was swimming in the broth. After following the recipe, i added extra soy and sugar only because i thought the flavor was a little on the lite side. Overall good.** If you cant find dashi, beef broth/stock works just fine. My japanese mom happen to have some so i was able to get some from her.",
+        "reviewer": null,
+        "rating": 4
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Using beef broth/stock as a substitute for dashi soup",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "2 cups dashi soup",
+          "to_text": "2 cups beef broth/stock",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 3,
+    "change_types": [
+      "ingredient_substitution",
+      "addition"
+    ],
+    "expected_impact": "Enhancing flavor by adding extra soy sauce and sugar; Using beef broth/stock as a substitute for dashi soup"
+  },
+  "description": "This main dish recipe features sliced beef sirloin cooked with potatoes, and onion in a sauce made with prepared dashi soup, sake, and soy sauce.",
+  "servings": "4",
+  "prep_time": null,
+  "cook_time": null,
+  "total_time": null,
+  "created_at": "2026-03-04T17:20:35.720204",
+  "pipeline_version": "2.0.0"
+}

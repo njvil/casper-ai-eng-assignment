@@ -1,0 +1,239 @@
+{
+  "recipe_id": "23600_enhanced",
+  "original_recipe_id": "23600",
+  "title": "World&#39;s Best Lasagna (Community Enhanced)",
+  "original_ingredients": [
+    "1 pound sweet Italian sausage",
+    "0.75 pound lean ground beef",
+    "0.5 cup minced onion",
+    "2 cloves garlic, crushed",
+    "1 (28 ounce) can crushed tomatoes",
+    "2 (6.5 ounce) cans canned tomato sauce",
+    "2 (6 ounce) cans tomato paste",
+    "0.5 cup water",
+    "2 tablespoons white sugar",
+    "4 tablespoons chopped fresh parsley, divided",
+    "1.5 teaspoons dried basil leaves",
+    "1.5 teaspoons salt, divided, or to taste",
+    "1 teaspoon Italian seasoning",
+    "0.5 teaspoon fennel seeds",
+    "0.25 teaspoon ground black pepper",
+    "12 lasagna noodles",
+    "16 ounces ricotta cheese",
+    "1 egg",
+    "0.75 pound mozzarella cheese, sliced",
+    "0.75 cup grated Parmesan cheese"
+  ],
+  "original_instructions": [
+    "Gather all your ingredients.",
+    "Cook sausage, ground beef, onion, and garlic in a Dutch oven over medium heat until well browned.",
+    "Stir in crushed tomatoes, tomato sauce, tomato paste, and water. Season with sugar, 2 tablespoons parsley, basil, 1 teaspoon salt, Italian seasoning, fennel seeds, and pepper. Simmer, covered, for about 1 ½ hours, stirring occasionally.",
+    "Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in boiling water for 8 to 10 minutes. Drain noodles, and rinse with cold water.",
+    "In a mixing bowl, combine ricotta cheese with egg, remaining 2 tablespoons parsley, and 1/2 teaspoon salt.",
+    "Preheat the oven to 375 degrees F (190 degrees C).",
+    "To assemble, spread 1 ½ cups of meat sauce in the bottom of a 9x13-inch baking dish. Arrange 6 noodles lengthwise over meat sauce, overlapping slightly. Spread with 1/2 of the ricotta cheese mixture. Top with 1/3 of the mozzarella cheese slices. Spoon 1 ½ cups meat sauce over mozzarella, and sprinkle with 1/4 cup Parmesan cheese.",
+    "Repeat layers, and top with remaining mozzarella and Parmesan cheese. Cover with foil: to prevent sticking, either spray foil with cooking spray or make sure the foil does not touch the cheese.",
+    "Bake in the preheated oven for 25 minutes. Remove the foil and bake for an additional 25 minutes.",
+    "Let the lasagna rest at room temperature for about 15 minutes before cutting; this helps it set and firm up."
+  ],
+  "ingredients": [
+    "1 pound hot Italian sausage",
+    "0.75 pound lean ground beef",
+    "0.5 cup minced onion",
+    "2 cloves garlic, crushed",
+    "homemade tomato sauce",
+    "homemade tomato sauce",
+    "homemade tomato sauce",
+    "lasagna sheets made from scratch",
+    "2 tablespoons white sugar",
+    "4 tablespoons chopped fresh parsley, divided",
+    "1.5 teaspoons dried basil leaves",
+    "1.5 teaspoons salt, divided, or to taste",
+    "1 teaspoon Italian seasoning",
+    "0.5 teaspoon fennel seeds",
+    "0.25 teaspoon ground black pepper",
+    "12 lasagna noodles",
+    "16 ounces ricotta cheese",
+    "1 egg",
+    "0.75 pound mozzarella cheese, sliced",
+    "0.75 cup grated Parmesan cheese"
+  ],
+  "instructions": [
+    "Gather all your ingredients.",
+    "Cook sausage, ground beef, onion, and garlic in a Dutch oven over medium heat until well browned.",
+    "Stir in crushed tomatoes, tomato sauce, tomato paste, and water. Season with sugar, 2 tablespoons parsley, basil, 1 teaspoon salt, Italian seasoning, fennel seeds, and pepper. Simmer, covered, for about 1 ½ hours, stirring occasionally.",
+    "Bring a large pot of lightly salted water to a boil. Cook lasagna noodles in boiling water for 8 to 10 minutes. Drain noodles, and rinse with cold water.",
+    "In a mixing bowl, combine ricotta cheese with egg, remaining 2 tablespoons parsley, and 1/2 teaspoon salt.",
+    "Preheat the oven to 375 degrees F (190 degrees C).",
+    "To assemble, spread 1 ½ cups of meat sauce in the bottom of a 9x13-inch baking dish. Arrange 6 noodles lengthwise over meat sauce, overlapping slightly. Spread with 1/2 of the ricotta cheese mixture. Top with 1/3 of the mozzarella cheese slices. Spoon 1 ½ cups meat sauce over mozzarella, and sprinkle with 1/4 cup Parmesan cheese.",
+    "Repeat layers, and top with remaining mozzarella and Parmesan cheese. Cover with foil: to prevent sticking, either spray foil with cooking spray or make sure the foil does not touch the cheese.",
+    "Bake in the preheated oven for 25 minutes. Remove the foil and bake for an additional 25 minutes.",
+    "Let the lasagna rest at room temperature for about 15 minutes before cutting; this helps it set and firm up."
+  ],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 0,
+      "original": "1 pound sweet Italian sausage",
+      "modified": "1 pound hot Italian sausage",
+      "operation": "replace",
+      "source_username": "Vlittle72",
+      "reasoning": "Hot Italian sausage adds more flavor than sweet sausage"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 4,
+      "original": "1 (28 ounce) can crushed tomatoes",
+      "modified": "homemade tomato sauce",
+      "operation": "replace",
+      "source_username": "Joy R",
+      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 5,
+      "original": "2 (6.5 ounce) cans canned tomato sauce",
+      "modified": "homemade tomato sauce",
+      "operation": "replace",
+      "source_username": "Joy R",
+      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 6,
+      "original": "2 (6 ounce) cans tomato paste",
+      "modified": "homemade tomato sauce",
+      "operation": "replace",
+      "source_username": "Joy R",
+      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 7,
+      "original": "0.5 cup water",
+      "modified": "lasagna sheets made from scratch",
+      "operation": "replace",
+      "source_username": "Joy R",
+      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 0,
+      "original": "1 pound sweet Italian sausage",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 4,
+      "original": "1 (28 ounce) can crushed tomatoes",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 5,
+      "original": "2 (6.5 ounce) cans canned tomato sauce",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 6,
+      "original": "2 (6 ounce) cans tomato paste",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 7,
+      "original": "0.5 cup water",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": {
+        "text": "I've made this recipe about 15 times now. The last 3 times we've used our homemade tomato sauce that we canned in the fall and this time I made lasagna sheets from scratch. This is a crowd favorite for sure.",
+        "reviewer": "Joy R",
+        "rating": 5
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "1 (28 ounce) can crushed tomatoes",
+          "to_text": "homemade tomato sauce",
+          "operation": "replace"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "2 (6.5 ounce) cans canned tomato sauce",
+          "to_text": "homemade tomato sauce",
+          "operation": "replace"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "2 (6 ounce) cans tomato paste",
+          "to_text": "homemade tomato sauce",
+          "operation": "replace"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "0.5 cup water",
+          "to_text": "lasagna sheets made from scratch",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    },
+    {
+      "source_review": {
+        "text": "Italian seasoning and tomato sauce are added ingredients. I use hot Italian sausage, which isn't very hot,but gives it more flavor than the sweet. Also, I cook my seasoning in a tablespoon of hot olive oil for about a minute, then I start the recipe from there. I believe cooking them releases their flavors rather than just adding them to the pot.",
+        "reviewer": "Vlittle72",
+        "rating": 1
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Hot Italian sausage adds more flavor than sweet sausage",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "1 pound sweet Italian sausage",
+          "to_text": "1 pound hot Italian sausage",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 5,
+    "change_types": [
+      "ingredient_substitution"
+    ],
+    "expected_impact": "Using homemade tomato sauce and lasagna sheets adds a fresh and personalized touch to the recipe; Hot Italian sausage adds more flavor than sweet sausage"
+  },
+  "description": "This lasagna recipe from John Chandler is our most popular recipe! With sausage, ground beef, basil, and 3 types of cheese, it lives up to its name!",
+  "servings": "12",
+  "prep_time": null,
+  "cook_time": null,
+  "total_time": null,
+  "created_at": "2026-03-04T17:10:01.969023",
+  "pipeline_version": "2.0.0"
+}

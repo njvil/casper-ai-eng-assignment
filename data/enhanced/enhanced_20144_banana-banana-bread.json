@@ -1,0 +1,126 @@
+{
+  "recipe_id": "20144_enhanced",
+  "original_recipe_id": "20144",
+  "title": "Banana Banana Bread (Community Enhanced)",
+  "original_ingredients": [
+    "2 cups all-purpose flour",
+    "1 teaspoon baking soda",
+    "0.25 teaspoon salt",
+    "0.75 cup brown sugar",
+    "0.5 cup butter",
+    "2 eggs, beaten",
+    "2.3333332538605 cups mashed overripe bananas"
+  ],
+  "original_instructions": [
+    "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a 9x5-inch loaf pan.",
+    "Combine flour, baking soda, and salt in a large bowl. Beat brown sugar and butter with an electric mixer in a separate large bowl until smooth. Stir in eggs and mashed bananas until well blended. Stir banana mixture into flour mixture until just combined.",
+    "Pour batter into the prepared loaf pan.",
+    "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 60 minutes.",
+    "Let bread cool in pan for 10 minutes, then turn out onto a wire rack to cool completely.",
+    "Enjoy!"
+  ],
+  "ingredients": [
+    "2 cups all-purpose flour",
+    "1 teaspoon baking soda",
+    "0.25 teaspoon salt",
+    "0.75 cup brown sugar",
+    "0.5 cup butter",
+    "2 eggs, beaten",
+    "2 cups mashed bananas"
+  ],
+  "instructions": [
+    "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a 9x5-inch loaf pan.",
+    "Combine flour, baking soda, and salt in a large bowl. Beat brown sugar and butter with an electric mixer in a separate large bowl until smooth. Stir in eggs and mashed bananas until well blended. Stir banana mixture into flour mixture until just combined.",
+    "Pour batter into the prepared loaf pan.",
+    "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 60 minutes.",
+    "Let bread cool in pan for 10 minutes, then turn out onto a wire rack to cool completely.",
+    "Enjoy!",
+    "Enjoy your Bananarama Bread!"
+  ],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 6,
+      "original": "2.3333332538605 cups mashed overripe bananas",
+      "modified": "2 cups mashed bananas",
+      "operation": "replace",
+      "source_username": null,
+      "reasoning": "Using more bananas adds extra moisture and flavor to the bread"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 6,
+      "original": "2.3333332538605 cups mashed overripe bananas",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "instructions",
+      "line_index": 6,
+      "original": "",
+      "modified": "Enjoy your Bananarama Bread!",
+      "operation": "add",
+      "source_username": null,
+      "reasoning": "Personalizing the name adds a fun touch to the recipe"
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": {
+        "text": "So I didn't follow the banana part I had five bananas that I used about medium size just so they didn't go to waste. Made about 2ish cups fully mashed down. But follow the recipe to the tea beyond that and it was fantastic!!! There's only one slice left and I only made it last night. I'm calling you bananarama bread though if that's okay 😬",
+        "reviewer": null,
+        "rating": 5
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Using more bananas adds extra moisture and flavor to the bread",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "2.3333332538605 cups mashed overripe bananas",
+          "to_text": "2 cups mashed bananas",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 2
+    },
+    {
+      "source_review": {
+        "text": "So I didn't follow the banana part I had five bananas that I used about medium size just so they didn't go to waste. Made about 2ish cups fully mashed down. But follow the recipe to the tea beyond that and it was fantastic!!! There's only one slice left and I only made it last night. I'm calling you bananarama bread though if that's okay 😬",
+        "reviewer": null,
+        "rating": 5
+      },
+      "modification_type": [
+        "addition"
+      ],
+      "reasoning": "Personalizing the name adds a fun touch to the recipe",
+      "changes_made": [
+        {
+          "type": "instruction",
+          "from_text": "",
+          "to_text": "Enjoy your Bananarama Bread!",
+          "operation": "add"
+        }
+      ],
+      "mention_count": 1
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 2,
+    "change_types": [
+      "ingredient_substitution",
+      "addition"
+    ],
+    "expected_impact": "Using more bananas adds extra moisture and flavor to the bread; Personalizing the name adds a fun touch to the recipe"
+  },
+  "description": "This banana bread recipe makes an incredibly moist, delicious loaf with very ripe bananas for loads of banana flavor. It tastes even better toasted!",
+  "servings": "12",
+  "prep_time": null,
+  "cook_time": null,
+  "total_time": null,
+  "created_at": "2026-03-04T17:18:12.218248",
+  "pipeline_version": "2.0.0"
+}

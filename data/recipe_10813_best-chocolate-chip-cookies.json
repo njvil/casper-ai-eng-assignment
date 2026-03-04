@@ -1,12 +1,12 @@
 {
   "url": "https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/",
-  "scraped_at": "2025-09-25T00:24:21.951599",
+  "scraped_at": "2026-03-04T17:16:26.253913",
   "recipe_id": "10813",
   "title": "Best Chocolate Chip Cookies",
   "description": "This classic chocolate chip cookie recipe makes deliciously buttery cookies with crisp edges, chewy middles, and gooey chocolate chips in every bite.",
   "rating": {
     "value": "4.6",
-    "count": "19353"
+    "count": "19400"
   },
   "preptime": "PT20M",
   "cooktime": "PT10M",
@@ -27,12 +27,12 @@
   ],
   "instructions": [
     "Gather your ingredients, making sure your butter is softened, and your eggs are room temperature.",
-    "Preheat the oven to 350 degrees F (175 degrees C). Beat butter, white sugar, and brown sugar with an electric mixer in a large bowl until smooth.",
+    "Preheat the oven to 350 degrees F (175 degrees C). Beat butter, white sugar, and brown sugar in a large bowl with an electric mixer until smooth and creamy.",
     "Beat in eggs, one at a time, then stir in vanilla.",
-    "Dissolve baking soda in hot water. Add to batter along with salt.",
-    "Stir in flour, chocolate chips, and walnuts.",
-    "Drop spoonfuls of dough 2 inches apart onto ungreased baking sheets.",
-    "Bake in the preheated oven until edges are nicely browned, about 10 minutes.",
+    "Dissolve baking soda in hot water; add to batter along with salt and mix until combined.",
+    "Stir in flour, chocolate chips, and walnuts until a soft dough forms.",
+    "Drop rounded spoonfuls of cookie dough 2 inches apart onto ungreased baking sheets.",
+    "Bake in the preheated oven until edges are lightly browned, about 10 minutes.",
     "Cool on the baking sheets briefly before removing to a wire rack to cool completely.",
     "Store in an airtight container or serve immediately and enjoy!"
   ],
@@ -52,72 +52,188 @@
   "categories": [
     "Dessert"
   ],
+  "keywords": [
+    "publisher-tested"
+  ],
   "featured_tweaks": [
     {
-      "text": "I used an ice cream scoop, that made 16 big cookies. I did add an additional egg yolk to help keep the cookie chewy.They turned out fantastic.",
+      "username": "Jen Gerbrandt",
       "rating": 5,
-      "has_modification": true,
-      "is_featured": true
+      "date": "11/17/2005",
+      "text": "I've tried a lot of different chocolate chip cookie recipes and this is the best one by far! The only change I've made is to the sugar amounts: 1/2 cup white sugar and 1 1/2 cups brown sugar-I think it makes them chewier. I omit the nuts and in my oven they take about 12 minutes to bake. So yummy!!",
+      "helpful_count": 701,
+      "chips": [
+        "A keeper!",
+        "Great flavors",
+        "Easy to follow",
+        "Worth the effort",
+        "OK with tweaks",
+        "Might try again",
+        "Crowd-pleaser",
+        "A keeper!",
+        "Great flavors"
+      ],
+      "is_featured": true,
+      "has_modification": true
     },
     {
+      "feedback_id": "4818e356996b1f2864c097c60a326618298473f2_6649624",
+      "username": "Jen Gerbrandt",
+      "rating": 5,
+      "date": "11/17/2005",
+      "text": "I've tried a lot of different chocolate chip cookie recipes and this is the best one by far! The only change I've made is to the sugar amounts: 1/2 cup white sugar and 1 1/2 cups brown sugar-I think it makes them chewier. I omit the nuts and in my oven they take about 12 minutes to bake. So yummy!!",
+      "helpful_count": 701,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "23b3ad92c1f7693683f6d5305d223b0252de9253_6649624",
+      "username": "SPORTSNUT",
+      "rating": 5,
+      "date": "01/05/2006",
+      "text": "These chocolate chip cookies were very, very good. I have been trying chocolate chip cookie recipes forever to find the perfect cookie and this one is very close. They weren't too cake-like and they weren't thin and greasy, they were the perfect in-between cookie. That said, the dough is very thick once you mix all the ingredients together. A bit of advice - if you like a thinner cookie and not so cake-like, make a smaller ball of dough and when you place it on the cookie sheet be sure to flatten it quite a bit as the dough doesn't seem to spread when in the oven. If you like thick cookies, just leave them in the ball and they'll stay big. As the recipe states, they are crisp on the outside and chewy on the inside - still nice and moist the following day. I added some Skor toffee bits to the recipe and they turned out amazing - will definitely make again!! Thanks for sharing.",
+      "helpful_count": 543,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "97bbcf612b88f451460d3554860e81747dd2bdee_6649624",
+      "username": "MommyFromSeattle",
+      "rating": 4,
+      "date": "02/05/2008",
+      "text": "Superb. I give 4 1/2 stars to the original recipe since it calls for 50/50 white & brown sugar. Since then, I've used ALL brown sugar and increased the salt to 2/3 teaspoons, and it was PERFECT. The flavor was a lot richer. I've tried 4 recipes from this site and I'm glad I finally found my Master recipe. Some of the other recipes on this site calls for pudding mix in the batter - which baffles me. This is an excellent cookie (soft and chewy) that has only good old-fashioned ingredients. Most importantly, it stays chewy, not hard. Look no further folks, this is the one. (For walnut sized dough balls, and I did roll them for a more uniform look, 11-12 min. was perfect. 10 min. was still a little doughy). TIP - if your cookies sit around for a few days (if that's possible) and gets a little dry, put a fresh slice of sandwich bread in the same container as the cookies and they will moisten right up.",
+      "helpful_count": 428,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "3e6b6f379d33c7142f874ce72e21caeef582cffb_6649624",
+      "username": "cxgc5b24fd",
+      "rating": 5,
+      "date": "01/06/2022",
+      "text": "Perfect Chocolate Chip recipe. I did not use hot water or nuts and I rolled into two logs and wrapped in plastic wrap. Put both in large freezer bag and sliced and baked off when needed. I baked at 350 for 13 minutes (frozen).",
+      "helpful_count": 17,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "05dffefeacdc91b2d4b4f722f3124bed4aba835b_6649624",
+      "username": "Amy Mendivil",
+      "rating": 5,
+      "date": "08/24/2018",
+      "text": "This cookie was amazing! They baked perfectly in my oven at 325 for 12 minutes. I followed a couple suggestions of reducing white sugar to 1/2 C and increasing brown sugar to 1 1/2 C as well as adding 1 C of white chocolate chips. Instead of walnuts I added roasted pecan pieces to mine. My husband took one bite and said \"you're a goddess\" haha This will be my go-to cookie recipe",
+      "helpful_count": 16,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "1446a5803f060873093e0232a84bbcef38a3d754_6649624",
+      "username": "angelmuffin",
+      "rating": 5,
+      "date": "05/31/2012",
+      "text": "I did as another rater suggested: skipped dissolving baking soda in water and increased the vanilla to 1 tablespoon, and changed the sugar to 1/2 cup white and 1.5 cups brown. Baked for 12 minutes at 350 and OMG they taste like they came from a bakery! I have never made better cookies.\n\nI do not own a mixer and therefore make everything by hand, so this recipe seemed daunting at first... but with a little elbow grease, it was a snap.",
+      "helpful_count": 12,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "2c59f691eb626efeba61c95038142c44e2beff0a_6649624",
+      "username": "litg8r",
+      "rating": 5,
+      "date": "06/21/2025",
       "text": "These are awesome cookies. I followed the advice of others by making the following tweaks: (1) I used a half cup of sugar and one-and-a-half cups of brown sugar; (2) I omitted the water; (3) I added a teaspoon of cream of tartar to the batter; (4) I refrigerated the batter for at least an hour before scooping and baking. The cookies retained their shape and didn't spread when baked. I think the cream of tartar made a difference, and the cookies did not come out too cakey either! This recipe is going in my \"favorites\" cookbook.",
-      "rating": 5,
-      "has_modification": true,
-      "is_featured": true
+      "helpful_count": 1,
+      "chips": [
+        "A keeper!",
+        "Great flavors",
+        "Easy to follow",
+        "Worth the effort"
+      ],
+      "is_featured": true,
+      "has_modification": true
     },
     {
-      "text": "The first batch that I made was a bit bland. But I did love that they weren't flat! They are a nice thick, chewy cookie. The second batch I used 1 tsp. of salt instead of 1/2 tsp. and omitted the nuts. This was better, but still not quite as flavorful at the traditional Tollhouse cookie recipe. I found that if I pressed them down slightly before baking that worked the best.If I were to rate this recipe on look and texture, it would be a 5. But the flavor falls a bit flat for me. I may keep trying to see how I can make it taste better, but maintain the aesthetic.",
-      "rating": 3,
-      "has_modification": true,
-      "is_featured": true
+      "feedback_id": "c88b42248ac6ce222b00efd0c405b690f4a50c42_6649624",
+      "username": "Wickedella",
+      "rating": 4,
+      "date": "12/08/2024",
+      "text": "They came out a little more crunchy than I would've liked. I chilled the dough in the fridge for about 10 minutes. I also have a convection oven so I had to do about 14 minutes in the oven to get them to even be slightly brown, let cool on the pan for about 2 minutes before moving to the cooling rack. I used Ghirardelli chocolate chips and had a great flavor with those.",
+      "helpful_count": 0,
+      "chips": [
+        "OK with tweaks",
+        "Might try again"
+      ],
+      "is_featured": true,
+      "has_modification": true
     },
     {
-      "text": "I just made these and 😍😋!!!! Changes- used a whole cup of white sugar and 1/2 c of brown (because it's what I had) and 1/2 c less flour after reading some other reviews, and added a tiny dash of cinnamon. They are phenomenal! Crispy edges and gooey center. My husband works from home and he can't stop coming out of his office and trying them!!!! HUGE hit and will be my go to. Thank you!!",
+      "feedback_id": "dcad6bce18beaa8710ded4a8d0af698dab20c1f5_6649624",
+      "username": "Lillian Hughes",
+      "rating": 4,
+      "date": "12/05/2024",
+      "text": "To make these as Christmas cookies, I used 1 cup plain white sugar and 1 cup of Moreno or pure cane unbleached sugar. I added a few drops peppermint essential oil. Then instead of plain chocolate chips, I used a combination of crushed peppermint candy and chopped up Andes mints. They did take longer to bake than the recipe said, about 15 minutes.",
+      "helpful_count": 2,
+      "is_featured": true,
+      "has_modification": true
+    },
+    {
+      "feedback_id": "be7198a19b2ab44b21ee868838a1acf0cf388b30_6649624",
+      "username": "Amy Gates",
       "rating": 5,
-      "has_modification": true,
-      "is_featured": true
+      "date": "09/16/2024",
+      "text": "Best cookies I have ever made. I will say that you should weigh your flour in grams. All-Purpose flours weighs 120 grams per cup. If you sift the flour into a cup you will have the right amount but if you just dip the cup in the flour you will get too much. This will end up making the cookies had and not turn out right. Just over 2 cups resulted the in correct weight in grams I needed for the recipe. No one sifts flour anymore and when you are baking it makes a huge difference. I would suggest trying the recipe again weighing the flour if you did not get good results. Also, blend the butter and sugar thoroughly (room temperature no salt added butter is a must). I will definitely make these again. I made exactly as stated.",
+      "helpful_count": 3,
+      "chips": [
+        "Crowd-pleaser",
+        "A keeper!",
+        "Great flavors"
+      ],
+      "is_featured": true,
+      "has_modification": true
     }
   ],
   "reviews": [
     {
-      "text": "I used an ice cream scoop, that made 16 big cookies. I did add an additional egg yolk to help keep the cookie chewy.They turned out fantastic.",
+      "text": "This is my first time i actually attempt to make cookies and the recipe genuinely works out 😭😭 im so happy its so good i added coco powder to the dough sooo.. it might look a lil different",
       "rating": 5,
       "has_modification": true
     },
     {
-      "text": "These are awesome cookies. I followed the advice of others by making the following tweaks: (1) I used a half cup of sugar and one-and-a-half cups of brown sugar; (2) I omitted the water; (3) I added a teaspoon of cream of tartar to the batter; (4) I refrigerated the batter for at least an hour before scooping and baking. The cookies retained their shape and didn't spread when baked. I think the cream of tartar made a difference, and the cookies did not come out too cakey either! This recipe is going in my \"favorites\" cookbook.",
-      "rating": 5,
-      "has_modification": true
-    },
-    {
-      "text": "It is a great recipe",
+      "text": "This recipe is amazing... recommend.",
       "rating": 5
     },
     {
-      "text": "The first batch that I made was a bit bland. But I did love that they weren't flat! They are a nice thick, chewy cookie. The second batch I used 1 tsp. of salt instead of 1/2 tsp. and omitted the nuts. This was better, but still not quite as flavorful at the traditional Tollhouse cookie recipe. I found that if I pressed them down slightly before baking that worked the best.If I were to rate this recipe on look and texture, it would be a 5. But the flavor falls a bit flat for me. I may keep trying to see how I can make it taste better, but maintain the aesthetic.",
-      "rating": 3,
+      "text": "First time making this and it tastes incredible. Exactly like toll house cookies without any artificial ingredients. Nothing needed to be changed. Definitely a keeper. 10 out of 10. I used my cuisinart mixer. It’s best to beat the egg and add the vanilla in a small bowl separate from dry ingredients.",
+      "rating": 5,
       "has_modification": true
     },
     {
-      "text": "Well I am not a Baker by any means but these cookies were very easily prepared. The whole family enjoys these. Thanks so much",
+      "text": "My favorite chocolate chip cookie recipe. Have to use real butter, makes a huge difference. I usually use margarine to make my cookies softer but it made the batter spread too much because of the oil in it. Once out of the oven I just let them sit for a couple minutes and they crinkled on their own before transferring to cooling rack. For me the key was using the right butter.",
+      "rating": 5
+    },
+    {
+      "text": "Like most people who like to bake I’m always looking for the best recipe for a particular item. I will no longer search for another chocolate chip cookie recipe. I understand that the variables that make a cc cookie a favorite-like texture, crisp v. chewy-are personal preferences, but for me this recipe is ideal for the type of cookie that I love. This recipe has a couple of no-stress twists. You use equal parts white and brown sugar (which is a good combo for oatmeal raisin cookies as well) and you add a teaspoon of baking soda dissolved in water. Other than that it’s probably very similar to other cc cookie recipes you’ve tried. If followed as written you will enjoy four dozen of the best cc cookies of your life. I make the following modifications, none of which are necessary: 1) delete the walnuts because I don’t like ‘em. 2) use equal parts semi-sweet and bittersweet cc chips. 3) finish baked cookies with flake sea salt when they come out of the oven and before they go onto the cooling rack. And if you like your cookies flatter and more crinkled, as soon as you remove the baking sheet from your oven, slam it down on your counter a couple of times. As an added bonus these cookies freeze very well.",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "I love the taste but I think they need a bit more baking soda. They spread out a lot.",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "I followed this recipe with the only exception being that I used half the butter and the other half shortening. They came out great! I will be using this recipe for the future.",
+      "rating": 5,
+      "has_modification": true
+    },
+    {
+      "text": "Good cookies, wouldn’t say amazing but still yummy. Make sure to squish them down a bit. I made the 1/2 recipe.",
       "rating": 4
     },
     {
-      "text": "They taste good and were so soft. I had my grandmother try it (she’s the cook of the family) and she said they were good. That made me happy. I would use this recipe again. These were my first batch of cookies.",
-      "rating": 5
-    },
-    {
-      "text": "I just made these and 😍😋!!!! Changes- used a whole cup of white sugar and 1/2 c of brown (because it's what I had) and 1/2 c less flour after reading some other reviews, and added a tiny dash of cinnamon. They are phenomenal! Crispy edges and gooey center. My husband works from home and he can't stop coming out of his office and trying them!!!! HUGE hit and will be my go to. Thank you!!",
+      "text": "I definitely will make this one again, although I made a couple adjustments....I guess my chocolate chips went \"cupboardy\" as I say, since I haven't baked in a while, so I had to toss them, and I didn't have walnuts on hand....however, I had chocolate covered almonds. Chopped them in half (the larger ones chopped in 3's). Also instead of 2 tsp vanilla extract I did 1 vanilla 1 almond. They turned out perfect and so delicious! I made medium sized cookies (not small, not huge) and got 26 out of this recipe. They were so good I think I will do chocolate covered almonds, and vanilla & almond extracts next time too.",
       "rating": 5,
       "has_modification": true
-    },
-    {
-      "text": "This is my favorite cookie recipe, been making it for 15 years.",
-      "rating": 5
-    },
-    {
-      "text": "This is an amazing recipe. I followed it EXACTLY. I will make it many times.",
-      "rating": 5
     }
   ]
 }

@@ -14,9 +14,19 @@ from pathlib import Path
 from dotenv import load_dotenv
 from loguru import logger
 
-from llm_pipeline.pipeline import LLMAnalysisPipeline
+from llm_pipeline.pipeline import LLMAnalysisPipeline, PROJECT_ROOT
 
 load_dotenv()
+
+LOG_DIR = PROJECT_ROOT / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+logger.add(
+    LOG_DIR / "pipeline_{time:YYYY-MM-DD_HH-mm-ss}.log",
+    rotation="10 MB",
+    retention="30 days",
+    level="DEBUG",
+    format="{time:YYYY-MM-DD HH:mm:ss} | {level:<8} | {name}:{function}:{line} - {message}",
+)
 
 
 def test_single_recipe():

@@ -1,0 +1,176 @@
+{
+  "recipe_id": "11679_enhanced",
+  "original_recipe_id": "11679",
+  "title": "Homemade Mac and Cheese (Community Enhanced)",
+  "original_ingredients": [
+    "8 ounces uncooked elbow macaroni",
+    "0.25 cup salted butter",
+    "3 tablespoons all-purpose flour",
+    "2.5 cups milk, or more as needed",
+    "2 cups shredded sharp Cheddar cheese",
+    "0.5 cup finely grated Parmesan cheese",
+    "salt and ground black pepper to taste",
+    "2 tablespoons salted butter",
+    "0.5 cup dry bread crumbs",
+    "1 pinch ground paprika"
+  ],
+  "original_instructions": [
+    "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease an 8-inch square baking dish.",
+    "To make the macaroni and cheese: Bring a large pot of lightly salted water to a boil. Add macaroni and simmer, stirring occasionally, until tender yet firm to the bite, about 8 minutes; it will finish cooking in the oven. Drain and transfer to the prepared baking dish.",
+    "While the macaroni is cooking, melt 1/4 cup butter in a medium skillet over low heat. Whisk in flour and stir until the mixture becomes paste-like and light golden brown, 3 to 5 minutes.",
+    "Gradually whisk 2 ½ cups milk into the flour mixture, and bring to a simmer.",
+    "Stir in shredded Cheddar and finely grated Parmesan cheeses; season with salt and pepper. Cook and stir over low heat until cheese is melted and sauce has thickened, 3 to 5 minutes, adding up to 1/2 cup more milk if needed.",
+    "Pour cheese sauce over macaroni and stir until well combined.",
+    "Make the bread crumb topping: Melt 2 tablespoons butter in a skillet over medium heat. Add bread crumbs; cook and stir until well coated and browned.",
+    "Spread bread crumbs over macaroni and cheese, then sprinkle with paprika.",
+    "Bake in the preheated oven until topping is golden brown and macaroni and cheese is gooey and bubbling, about 30 minutes."
+  ],
+  "ingredients": [
+    "8 ounces uncooked elbow macaroni",
+    "0.25 cup salted butter",
+    "3 tablespoons all-purpose flour",
+    "2 cups milk and 0.5 cup heavy cream",
+    "1/2 cup finely grated Parmesan cheese, 1/2 cup gouda, 1/2 cup Cheddar, 1 cup sharp Cheddar",
+    "0.5 cup finely grated Parmesan cheese",
+    "salt and ground black pepper to taste",
+    "2 tablespoons salted butter",
+    "0.5 cup dry bread crumbs",
+    "1 pinch ground paprika"
+  ],
+  "instructions": [
+    "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease an 8-inch square baking dish.",
+    "To make the macaroni and cheese: Bring a large pot of lightly salted water to a boil. Add macaroni and simmer, stirring occasionally, until tender yet firm to the bite, about 8 minutes; it will finish cooking in the oven. Drain and transfer to the prepared baking dish.",
+    "While the macaroni is cooking, melt 1/4 cup butter in a medium skillet over low heat. Whisk in flour and stir until the mixture becomes paste-like and light golden brown, 3 to 5 minutes.",
+    "Gradually whisk 2 ½ cups milk into the flour mixture, and bring to a simmer.",
+    "Stir in shredded Cheddar and finely grated Parmesan cheeses; season with salt and pepper. Cook and stir over low heat until cheese is melted and sauce has thickened, 3 to 5 minutes, adding up to 1/2 cup more milk if needed.",
+    "Pour cheese sauce over macaroni and stir until well combined.",
+    "Make the bread crumb topping: Melt 2 tablespoons butter in a skillet over medium heat. Add bread crumbs; cook and stir until well coated and browned.",
+    "Spread bread crumbs over macaroni and cheese, then sprinkle with paprika.",
+    "Bake in the preheated oven until topping is golden brown and macaroni and cheese is gooey and bubbling, about 30 minutes.",
+    "Hit the broiler on high for 1-2 minutes and keep watch."
+  ],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 3,
+      "original": "2.5 cups milk, or more as needed",
+      "modified": "2 cups milk and 0.5 cup heavy cream",
+      "operation": "replace",
+      "source_username": "Donna",
+      "reasoning": "Mixing milk with heavy cream adds richness and creaminess to the dish"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 4,
+      "original": "2 cups shredded sharp Cheddar cheese",
+      "modified": "1/2 cup finely grated Parmesan cheese, 1/2 cup gouda, 1/2 cup Cheddar, 1 cup sharp Cheddar",
+      "operation": "replace",
+      "source_username": "dolsgirl",
+      "reasoning": "Using a variety of cheeses can enhance flavor and texture"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 3,
+      "original": "2.5 cups milk, or more as needed",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 4,
+      "original": "2 cups shredded sharp Cheddar cheese",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "instructions",
+      "line_index": 9,
+      "original": "",
+      "modified": "Hit the broiler on high for 1-2 minutes and keep watch.",
+      "operation": "add",
+      "source_username": "dolsgirl",
+      "reasoning": "Broiling at the end can add a crispy finish to the dish"
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": {
+        "text": "Loved the recipe. My favorite. I did use the 1/2 c of Parmesan, 1/2 c gouda, 1/2 c Cheddar & 1 c sharp Cheddar. Came out great. I also used 3t butter & an extra 1/4 c (3/4 c total) of plain panko bread crumbs vs just bread crumbs. I also hit the broiler on high for 1-2 minutes & kept watch. A definite keeper.",
+        "reviewer": "dolsgirl",
+        "rating": 5
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Using a variety of cheeses can enhance flavor and texture",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "2 cups shredded sharp Cheddar cheese",
+          "to_text": "1/2 cup finely grated Parmesan cheese, 1/2 cup gouda, 1/2 cup Cheddar, 1 cup sharp Cheddar",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 2
+    },
+    {
+      "source_review": {
+        "text": "I also mixed the milk with heavy cream, (so that I didn’t use all my husbands milk for morning coffee 😜,) and it was delicious. I have cheddar and mozzarella and it was so yummy. Also, I browned up some chop meat, onion, and garlic and some Italian seasoning and I will make it like this now every time!",
+        "reviewer": "Donna",
+        "rating": 5
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Mixing milk with heavy cream adds richness and creaminess to the dish",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "2.5 cups milk, or more as needed",
+          "to_text": "2 cups milk and 0.5 cup heavy cream",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    },
+    {
+      "source_review": {
+        "text": "Loved the recipe. My favorite. I did use the 1/2 c of Parmesan, 1/2 c gouda, 1/2 c Cheddar & 1 c sharp Cheddar. Came out great. I also used 3t butter & an extra 1/4 c (3/4 c total) of plain panko bread crumbs vs just bread crumbs. I also hit the broiler on high for 1-2 minutes & kept watch. A definite keeper.",
+        "reviewer": "dolsgirl",
+        "rating": 5
+      },
+      "modification_type": [
+        "technique_change"
+      ],
+      "reasoning": "Broiling at the end can add a crispy finish to the dish",
+      "changes_made": [
+        {
+          "type": "instruction",
+          "from_text": "",
+          "to_text": "Hit the broiler on high for 1-2 minutes and keep watch.",
+          "operation": "add"
+        }
+      ],
+      "mention_count": 1
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 3,
+    "change_types": [
+      "ingredient_substitution",
+      "technique_change"
+    ],
+    "expected_impact": "Using a variety of cheeses can enhance flavor and texture; Mixing milk with heavy cream adds richness and creaminess to the dish; Broiling at the end can add a crispy finish to the dish"
+  },
+  "description": "Homemade mac and cheese made with tender macaroni pasta in a decadent creamy cheese sauce topped with bread crumbs and baked until bubbling and delicious.",
+  "servings": "4",
+  "prep_time": null,
+  "cook_time": null,
+  "total_time": null,
+  "created_at": "2026-03-04T17:21:25.953673",
+  "pipeline_version": "2.0.0"
+}

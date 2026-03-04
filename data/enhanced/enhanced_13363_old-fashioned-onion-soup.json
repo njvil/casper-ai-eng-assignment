@@ -1,0 +1,126 @@
+{
+  "recipe_id": "13363_enhanced",
+  "original_recipe_id": "13363",
+  "title": "Old-Fashioned Onion Soup (Community Enhanced)",
+  "original_ingredients": [
+    "3 pounds onions, sliced",
+    "0.5 cup butter, melted",
+    "7 slices French or Italian bread, cut into 1 inch cubes",
+    "4.5 cups chicken broth"
+  ],
+  "original_instructions": [
+    "Place sliced onions and butter into slow cooker, and mix until onions are thoroughly coated. Stir in bread and chicken broth.",
+    "Cover, and cook on LOW for 10 to 18 hours or on HIGH 4 to 5 hours, stirring occasionally. Stir well during last hour."
+  ],
+  "ingredients": [
+    "2.5 pounds onions, sliced",
+    "0.5 cup butter, melted",
+    "7 slices French or Italian bread, cut into 1 inch cubes",
+    "4.5 cups chicken stock (Costco)"
+  ],
+  "instructions": [
+    "Place sliced onions and butter into slow cooker, and mix until onions are thoroughly coated. Stir in bread and chicken broth.",
+    "Cover, and cook on LOW for 10 to 18 hours or on HIGH 4 to 5 hours, stirring occasionally. Stir well during last hour."
+  ],
+  "line_diffs": [
+    {
+      "section": "ingredients",
+      "line_index": 0,
+      "original": "3 pounds onions, sliced",
+      "modified": "2.5 pounds onions, sliced",
+      "operation": "replace",
+      "source_username": "Andrea Slayton Reynolds",
+      "reasoning": "Adjusting onion and broth ratio for personal taste preferences"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 3,
+      "original": "4.5 cups chicken broth",
+      "modified": "4.5 cups chicken stock (Costco)",
+      "operation": "replace",
+      "source_username": "Brilynn",
+      "reasoning": "Using chicken stock instead of chicken broth may add more depth of flavor"
+    },
+    {
+      "section": "ingredients",
+      "line_index": 0,
+      "original": "3 pounds onions, sliced",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    },
+    {
+      "section": "ingredients",
+      "line_index": 3,
+      "original": "4.5 cups chicken broth",
+      "modified": "",
+      "operation": "remove",
+      "source_username": null,
+      "reasoning": ""
+    }
+  ],
+  "modifications_applied": [
+    {
+      "source_review": {
+        "text": "Used Chicken Stock instead of Broth (Costco), tore up the slices of bread. I think next time I'll quarter the slices of onion. It was a little messy to eat.",
+        "reviewer": "Brilynn",
+        "rating": 4
+      },
+      "modification_type": [
+        "ingredient_substitution"
+      ],
+      "reasoning": "Using chicken stock instead of chicken broth may add more depth of flavor",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "4.5 cups chicken broth",
+          "to_text": "4.5 cups chicken stock (Costco)",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    },
+    {
+      "source_review": {
+        "text": "This is a good starter recipe. Next time I make it I will use a bit less onion andquite a bit more broth. The changes I already made were to use beef broth instead of chicken, and I didn't add the bread while it cooked. I added the bread to the bowls and put provolone cheese on top. Delicious!",
+        "reviewer": "Andrea Slayton Reynolds",
+        "rating": 4
+      },
+      "modification_type": [
+        "quantity_adjustment"
+      ],
+      "reasoning": "Adjusting onion and broth ratio for personal taste preferences",
+      "changes_made": [
+        {
+          "type": "ingredient",
+          "from_text": "3 pounds onions, sliced",
+          "to_text": "2.5 pounds onions, sliced",
+          "operation": "replace"
+        },
+        {
+          "type": "ingredient",
+          "from_text": "4.5 cups chicken stock (Costco)",
+          "to_text": "4.5 cups chicken stock (Costco)",
+          "operation": "replace"
+        }
+      ],
+      "mention_count": 1
+    }
+  ],
+  "enhancement_summary": {
+    "total_changes": 3,
+    "change_types": [
+      "ingredient_substitution",
+      "quantity_adjustment"
+    ],
+    "expected_impact": "Using chicken stock instead of chicken broth may add more depth of flavor; Adjusting onion and broth ratio for personal taste preferences"
+  },
+  "description": "This recipe requires only four ingredients (onions, butter, French bread, and chicken broth), but you need to start simmering this soup ten to eighteen hours before you plan to serve it.",
+  "servings": "8",
+  "prep_time": null,
+  "cook_time": null,
+  "total_time": null,
+  "created_at": "2026-03-04T17:20:27.420496",
+  "pipeline_version": "2.0.0"
+}
